@@ -1,0 +1,4 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="4bc25bfd-a699-f4b2-bec2-499e7b934bfa")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,430907,e=>{"use strict";var t=e.i(843476),o=e.i(348978);e.s(["default",0,function(){return(0,t.jsx)(o.default,{href:"https://developers.raycast.com",onClick:()=>parent.window.open("https://developers.raycast.com"),children:"Join developer program"})}])}]);
+
+//# debugId=4bc25bfd-a699-f4b2-bec2-499e7b934bfa
