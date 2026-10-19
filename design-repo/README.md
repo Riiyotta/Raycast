@@ -49,8 +49,8 @@ to one exact policy, and verify_all.py fails if any of them is moved.
 ## Unusual structure (documented, not normalized away)
 
 1. **Excluded saved copy.** A user-saved copy of the live site
-   (`Raycast - Your shortcut to everything.html` and its `_files` folder) sits
-   next to the project. It is never cited, copied or packaged. verify_all.py
+   (`Raycast - Your shortcut to everything.html` and its `_files` folder) is kept
+   under `reference/original-site/` in the project. It is never cited, copied or packaged. verify_all.py
    fails on any citation to it.
 2. **Motion was re-measured during the build.** A concurrent agent was editing
    homepage motion while this repo was built. Every motion value was

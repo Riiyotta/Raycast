@@ -18,8 +18,8 @@ sys.dont_write_bytecode = True  # keep the package free of __pycache__
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 PROJECT = os.path.dirname(REPO)
-SIBLING_FILES = ["src", "ia.json", "tailwind.config.js", "index.html", "CLONE_SPEC.md", "PAGES_SPEC.md"]
-HAS_SIBLING = os.path.isfile(os.path.join(PROJECT, "src", "App.jsx")) and os.path.isfile(os.path.join(PROJECT, "ia.json"))
+SIBLING_FILES = ["src", "ia", "docs", "tailwind.config.js", "index.html"]
+HAS_SIBLING = os.path.isfile(os.path.join(PROJECT, "src", "App.jsx")) and os.path.isfile(os.path.join(PROJECT, "ia", "ia.json"))
 
 
 def rw(root, rel, fn):
@@ -61,7 +61,7 @@ MUTATIONS = [
      lambda r: rw(r, "tokens/00-foundation/color.json", lambda d: d["color"]["grey.900"].update({"$value": "#07080b"}))),
     ("citation to the excluded saved copy of the live site", "EXCLUDED_SOURCE", False,
      lambda r: rw(r, "extraction/measured-values.json", lambda d: d["entries"][first_token_mv(d)]["citations"].append(
-         {"path": "Raycast - Your shortcut to everything.html", "lines": "1", "quote": "x"}))),
+         {"path": "reference/original-site/Raycast - Your shortcut to everything.html", "lines": "1", "quote": "x"}))),
     ("dangling evidence id", "EVIDENCE", False,
      lambda r: rw(r, "sections/hero.home.json", lambda d: d["evidence"].append("mv.does-not-exist"))),
     ("manifest count hand-bumped", "MANIFEST_COUNTS", False,
@@ -83,7 +83,7 @@ MUTATIONS = [
     ("absolute local path in docs", "ABS_PATH", False,
      lambda r: text(r, "README.md", lambda s: s + "\nsee " + "/" + "Users" + "/someone/project\n")),
     ("entry point escaping the package", "ENTRYPOINTS", False,
-     lambda r: rw(r, "registry.manifest.json", lambda d: d["entryPoints"].append("../ia.json"))),
+     lambda r: rw(r, "registry.manifest.json", lambda d: d["entryPoints"].append("../ia/ia.json"))),
     ("template drifts from ia.json", "IA_PARITY", True,
      lambda r: rw(r, "templates/templates.json", lambda d: d["templates"]["template.store"]["nodes"].pop(2))),
 ]

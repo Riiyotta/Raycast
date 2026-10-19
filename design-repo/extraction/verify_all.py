@@ -183,7 +183,7 @@ def norm(s): return re.sub(r"\s+", " ", s).strip().lower()
 
 def check_citations(mvd, tokens):
     counts = mvd["fileLineCounts"]
-    sibling = os.path.isfile(os.path.join(PROJECT, "src", "App.jsx")) and os.path.isfile(os.path.join(PROJECT, "ia.json"))
+    sibling = os.path.isfile(os.path.join(PROJECT, "src", "App.jsx")) and os.path.isfile(os.path.join(PROJECT, "ia", "ia.json"))
     if not sibling:
         warn("CITATIONS", "no sibling source tree next to design-repo/; checking ranges against fileLineCounts only (quotes not re-read)")
     excluded = [x.rstrip("/") for x in mvd["excludedSources"]]
@@ -291,7 +291,7 @@ def check_templates(sections, sv):
             if n["section"] not in sections: fail("TEMPLATES", f"{tid}: unknown section {n['section']}")
             elif n["variant"] not in sections[n["section"]]["variants"]: fail("TEMPLATES", f"{tid}: bad variant {n['section']}/{n['variant']}")
     # cross-check against the sibling IA and router when present
-    ia_p, app_p = os.path.join(PROJECT, "ia.json"), os.path.join(PROJECT, "src", "App.jsx")
+    ia_p, app_p = os.path.join(PROJECT, "ia", "ia.json"), os.path.join(PROJECT, "src", "App.jsx")
     if os.path.isfile(ia_p) and os.path.isfile(app_p):
         ia = json.load(open(ia_p))
         for it in ia["templates"]:

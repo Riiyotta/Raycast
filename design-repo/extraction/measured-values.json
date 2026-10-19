@@ -1,15 +1,15 @@
 {
   "version": "1.0.0",
-  "about": "Citation ledger. Every 'evidence' id used anywhere in the repo resolves here. Citations are 'path:line[-line]' relative to the project root that contains design-repo/ (src/, tailwind.config.js, index.html, ia.json, CLONE_SPEC.md, PAGES_SPEC.md). When that sibling tree is absent (standalone copy), verify_all.py checks ranges against fileLineCounts and WARNS instead of reading the files. QA references point at a session scratchpad outside the project and are descriptive only; their measured numbers are copied here in 'value'/'raw'.",
+  "about": "Citation ledger. Every 'evidence' id used anywhere in the repo resolves here. Citations are 'path:line[-line]' relative to the project root that contains design-repo/ (src/, tailwind.config.js, index.html, ia/, docs/). When that sibling tree is absent (standalone copy), verify_all.py checks ranges against fileLineCounts and WARNS instead of reading the files. QA references point at a session scratchpad outside the project and are descriptive only; their measured numbers are copied here in 'value'/'raw'.",
   "excludedSources": [
     "Raycast - Your shortcut to everything.html",
     "Raycast - Your shortcut to everything_files/"
   ],
   "excludedSourcesNote": "A user-saved copy of the live site sits next to the project. It is excluded entirely: never cited, copied or packaged.",
   "fileLineCounts": {
-    "CLONE_SPEC.md": 668,
-    "PAGES_SPEC.md": 357,
-    "ia.json": 504,
+    "docs/CLONE_SPEC.md": 668,
+    "docs/PAGES_SPEC.md": 357,
+    "ia/ia.json": 504,
     "index.html": 18,
     "src/App.jsx": 59,
     "src/components/AiBento.jsx": 218,
@@ -55,7 +55,7 @@
           "quote": "const LOGOS = [['Northwind', 120]"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "197",
           "quote": "Use neutral wordmark placeholders."
         }
@@ -71,7 +71,7 @@
           "quote": "// Original placeholder store badge (132x36, radius 4)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "179",
           "quote": "a store badge 132x36 (radius 4; original placeholder badge)"
         }
@@ -92,7 +92,7 @@
           "quote": "/* ---------- Placeholder wordmark ---------- */"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "143",
           "quote": "Use an original 24px-tall placeholder mark"
         }
@@ -119,7 +119,7 @@
           "quote": "function Avatar({ person, active })"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "8",
           "quote": "Raycast's logo, product screenshots, illustrations, avatars"
         }
@@ -135,7 +135,7 @@
           "quote": "/* Simple placeholder app tile (generic gradient square) */"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "642",
           "quote": "| Extension icons ×17 | ext cards | 56x56 |"
         }
@@ -156,7 +156,7 @@
           "quote": "rotate-[85deg] opacity-50"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "556",
           "quote": "Use your own blurred red shape."
         }
@@ -172,7 +172,7 @@
           "quote": "const P = (x, y, z) =>"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "522",
           "quote": "Draw original isometric line art at these box sizes."
         }
@@ -210,7 +210,7 @@
           "quote": "/* Mock app window used as a poster on /windows cards"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "663",
           "quote": "They are proprietary UI and should be replaced with original simplified mocks"
         }
@@ -226,7 +226,7 @@
           "quote": "{/* \"video\" layer: covers the whole card at opacity 0, fades in on hover */}"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "652",
           "quote": "| YouTube thumbs ×18 | video ticker |"
         }
@@ -242,7 +242,7 @@
           "quote": "// WebGL2 glass-bars scene (HeroCanvas)."
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "186",
           "quote": "- **WebGL2 canvas** (three.js via react-three-fiber)"
         }
@@ -253,7 +253,7 @@
       "value": "#fff",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "30",
           "quote": "#fff"
         },
@@ -278,7 +278,7 @@
           "quote": "rounded-sm bg-grey-600 text-[14px]"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "57",
           "quote": "| `Badge` | Already matches the \"Tag\""
         }
@@ -299,7 +299,7 @@
           "quote": "rounded-normal bg-btn-dark text-white shadow-btn-dark"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "121",
           "quote": "**Button / dark**:"
         }
@@ -321,7 +321,7 @@
           "quote": "bg-grey-50 px-3 py-2 text-[14px] font-medium leading-4 tracking-ui text-grey-500 shadow-btn-light"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "114",
           "quote": "**Button / light** (Download):"
         }
@@ -339,7 +339,7 @@
           "quote": "md:rounded-bento md:p-6"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "360",
           "quote": "`background:rgba(255,255,255,.02); border-radius:30px; padding:24px"
         }
@@ -360,7 +360,7 @@
           "quote": "rounded-md border border-card-border bg-card px-6 py-[30px] shadow-inset-top"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "137",
           "quote": "Card 590x436"
         }
@@ -374,7 +374,7 @@
       ],
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "318",
           "quote": "`border-radius:20px; display:grid; grid-template-rows:1fr auto"
         }
@@ -396,7 +396,7 @@
           "quote": "rounded-xl border border-card-border bg-dock p-2 shadow-dock backdrop-blur-10"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "253",
           "quote": "- **Dock** (bottom 24px, centered)"
         }
@@ -415,7 +415,7 @@
           "quote": ".faq-item {"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "125",
           "quote": "- **Item**: 103px collapsed"
         }
@@ -435,7 +435,7 @@
           "quote": "bg-frame-outer p-2 shadow-frame-outer backdrop-blur-2 xl:rounded-frame"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "241",
           "quote": "- `.frameOuter`:"
         }
@@ -457,7 +457,7 @@
           "quote": "    border-radius: 11px;"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "283",
           "quote": "`width:110px` (wide keys"
         }
@@ -480,7 +480,7 @@
           "quote": "rounded-lg border border-card-border bg-glass p-4 shadow-nav backdrop-blur-5"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "135",
           "quote": "- **Bar**: `max-width:1204px; height:76px"
         }
@@ -499,7 +499,7 @@
           "quote": "bg-cat-active backdrop-blur-2"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "308",
           "quote": "- **Sliding active pill**"
         }
@@ -519,7 +519,7 @@
           "quote": "rounded-lg border border-grey-500 bg-plan-featured px-6 py-6"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "85",
           "quote": "- **Middle (featured) card**"
         }
@@ -535,7 +535,7 @@
           "quote": "export function AiCard("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "359",
           "quote": "- **Card**:"
         }
@@ -551,7 +551,7 @@
           "quote": "export function AiHeader("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "51",
           "quote": "| `AiBento` | Export `AiHeader`"
         }
@@ -567,7 +567,7 @@
           "quote": "export function DotGrid("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "140",
           "quote": "Card 3 visual is **DotGrid**"
         }
@@ -583,7 +583,7 @@
           "quote": "export function EnterprisePlanCard("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "98",
           "quote": "- **EnterprisePlanCard**:"
         }
@@ -599,7 +599,7 @@
           "quote": "export function ExtensionReel("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "52",
           "quote": "| `ExtensionsCarousel` | Export `ExtensionReel`"
         }
@@ -615,7 +615,7 @@
           "quote": "function Item({ q, a })"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "125",
           "quote": "- **Item**: 103px collapsed"
         }
@@ -631,7 +631,7 @@
           "quote": "export function HeroDownloadInfo("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "166",
           "quote": "- **Download block** (`HeroDownloadInfo`"
         }
@@ -647,7 +647,7 @@
           "quote": "export function IntervalToggle("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "76",
           "quote": "- **IntervalToggle** (centered):"
         }
@@ -663,7 +663,7 @@
           "quote": "export function MockWindow("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "144",
           "quote": "It holds a mock app window"
         }
@@ -679,7 +679,7 @@
           "quote": "export function PairHead("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "164",
           "quote": "| /pro translator (y 4072) |"
         }
@@ -695,7 +695,7 @@
           "quote": "function PlanCard("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "86",
           "quote": "- **Card stack, top to bottom**:"
         }
@@ -711,7 +711,7 @@
           "quote": "export function QrCard("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "182",
           "quote": "then a QR card 158x189"
         }
@@ -727,7 +727,7 @@
           "quote": "export function SearchButton("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "Search button 476x51"
         }
@@ -743,7 +743,7 @@
           "quote": "export function SectionTitle("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "50",
           "quote": "| `SectionTitle` (shared.jsx) | Add `size` prop"
         }
@@ -759,7 +759,7 @@
           "quote": "export function SocialCards("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "53",
           "quote": "| `Community` | Export `SocialCards`"
         }
@@ -775,7 +775,7 @@
           "quote": "export function TeamsHead("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "166",
           "quote": "| /teams highlights x3"
         }
@@ -791,7 +791,7 @@
           "quote": "function TierSwitch("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "89",
           "quote": "- **TierSwitch** segmented control"
         }
@@ -807,7 +807,7 @@
           "quote": "export function typeOut("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "666",
           "quote": "- **Typing speeds** in the automation/AI mocks"
         }
@@ -823,7 +823,7 @@
           "quote": "export function useInView("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "629",
           "quote": "- All reveals are IntersectionObserver-based."
         }
@@ -855,7 +855,7 @@
           "quote": "export function useSequence("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "621",
           "quote": "| 13 | Automation typing / hotkeys |"
         }
@@ -869,7 +869,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "208",
           "quote": "column 2 holds one 385x492 card"
         }
@@ -885,7 +885,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "208",
           "quote": "h3 14px/21 500 .2px white centered (7–24c, 2L)"
         }
@@ -902,7 +902,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "12 cards + browse-more"
         }
@@ -918,12 +918,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "326",
           "quote": "2 lines, about 60–75c"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "Same card size, gap 56"
         }
@@ -939,12 +939,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "325",
           "quote": "title (18px 400, 6–16c)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "Same card size, gap 56"
         }
@@ -960,7 +960,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "ArrowLink 21c below"
         }
@@ -976,7 +976,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "title \"12c + 13c\""
         }
@@ -992,7 +992,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "title \"12c + 13c\""
         }
@@ -1009,7 +1009,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "316",
           "quote": "**17 extension cards** plus 1"
         }
@@ -1025,7 +1025,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "326",
           "quote": "2 lines, about 60–75c"
         }
@@ -1041,7 +1041,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "325",
           "quote": "title (18px 400, 6–16c)"
         }
@@ -1058,7 +1058,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "307",
           "quote": "4 tabs, each 46px tall"
         }
@@ -1074,7 +1074,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "307",
           "quote": "Label lengths: 12, 11, 6, 7 chars."
         }
@@ -1090,7 +1090,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "337",
           "quote": "Left: an ArrowLink, 21c."
         }
@@ -1106,7 +1106,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "304",
           "quote": "SectionTitle with 30c title / 50c subtitle (2L)"
         }
@@ -1122,7 +1122,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "304",
           "quote": "SectionTitle with 30c title / 50c subtitle (2L)"
         }
@@ -1139,7 +1139,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "Grid 3 x 359, gap 32."
         }
@@ -1155,7 +1155,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "13px #9c9c9d, 17c"
         }
@@ -1171,7 +1171,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "centered (32–112c, 1–2L)"
         }
@@ -1187,7 +1187,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "Title 20px (14c)"
         }
@@ -1203,7 +1203,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "p 15px/17.25 white/.4 (32c)"
         }
@@ -1219,7 +1219,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "h3 20px/23 500 left (8c)"
         }
@@ -1235,7 +1235,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "p 20px/23 400 white/.4 (52c)"
         }
@@ -1251,7 +1251,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "h2 40px/46 500 centered (7c)"
         }
@@ -1268,7 +1268,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "211",
           "quote": "**10 cards** of 558x186 per page"
         }
@@ -1284,7 +1284,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "211",
           "quote": "p 15px/17.25 400 #9c9c9d (49c 2L)"
         }
@@ -1300,7 +1300,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "211",
           "quote": "title 16px/18.4 600 white (12c)"
         }
@@ -1316,12 +1316,12 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "placeholder 15px/17.25 #6a6b6c, 9c"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "209",
           "quote": "a search button 320x43 (as in the store hero"
         }
@@ -1338,7 +1338,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "209",
           "quote": "with 3 tabs"
         }
@@ -1381,7 +1381,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "209",
           "quote": "with 3 options"
         }
@@ -1397,7 +1397,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "202",
           "quote": "14px/16 500 .2px black, 24c"
         }
@@ -1414,7 +1414,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "202",
           "quote": "Grid 3 x 337, gap 64."
         }
@@ -1430,7 +1430,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "202",
           "quote": "(92–127c, 3–4L)"
         }
@@ -1446,7 +1446,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "202",
           "quote": "title 16px/24 500 white centered (13–26c)"
         }
@@ -1462,7 +1462,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "182",
           "quote": "`SectionTitle` (38c / 33c)"
         }
@@ -1478,7 +1478,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "183",
           "quote": "#9c9c9d (15c)"
         }
@@ -1494,7 +1494,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "182",
           "quote": "white (16c)"
         }
@@ -1510,7 +1510,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "182",
           "quote": "`SectionTitle` (38c / 33c)"
         }
@@ -1526,7 +1526,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "175",
           "quote": "p 18px/28 400 white/.6 (75c 2L)"
         }
@@ -1558,7 +1558,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "177",
           "quote": "Caption 13px/16 400 .2px white/.4 (9c)"
         }
@@ -1574,7 +1574,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "176",
           "quote": "27c with a `$` prompt"
         }
@@ -1590,7 +1590,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "175",
           "quote": "h2 36px/40 700 (19c)"
         }
@@ -1606,7 +1606,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "180",
           "quote": "text button (18c"
         }
@@ -1622,7 +1622,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "180",
           "quote": "#9c9c9d line (24c)"
         }
@@ -1643,7 +1643,7 @@
           "quote": "Download for Mac"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "548",
           "quote": "- The same HeroDownloadInfo block as the hero"
         }
@@ -1659,7 +1659,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "547",
           "quote": "- SectionTitle: 19c / 34c."
         }
@@ -1675,7 +1675,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "547",
           "quote": "- SectionTitle: 19c / 34c."
         }
@@ -1691,7 +1691,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "295",
           "quote": "NEW `CenteredLead` (38c + 34c, max 436)"
         }
@@ -1707,12 +1707,12 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "180",
           "quote": "#9c9c9d line (24c)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "295",
           "quote": "+ `DownloadBlock variant=windows`"
         }
@@ -1728,7 +1728,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "295",
           "quote": "NEW `CenteredLead` (38c + 34c, max 436)"
         }
@@ -1745,7 +1745,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "130",
           "quote": "- **Item counts**: /pricing 10"
         }
@@ -1761,7 +1761,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "128",
           "quote": "roughly 100–330c"
         }
@@ -1777,7 +1777,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "126",
           "quote": "white left, 20–68c, 1L."
         }
@@ -1793,7 +1793,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "123",
           "quote": "(h2 4c + p 39c, 20px"
         }
@@ -1809,7 +1809,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "123",
           "quote": "(h2 4c + p 39c, 20px"
         }
@@ -1826,12 +1826,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "357",
           "quote": "- Item 1: full width, 1020x477."
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "358",
           "quote": "- Items 2 and 3: 495x513 each"
         }
@@ -1847,7 +1847,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "364",
           "quote": "2L (about 110c)."
         }
@@ -1863,7 +1863,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "363",
           "quote": "max 450, 1L (5–13c)."
         }
@@ -1879,7 +1879,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "352",
           "quote": "- Description: 63c / 2L, max 500."
         }
@@ -1895,7 +1895,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "350",
           "quote": "- Eyebrow: 8c, uppercase JetBrains Mono, red."
         }
@@ -1911,7 +1911,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "370",
           "quote": "(32 on mobile). 27c."
         }
@@ -1928,7 +1928,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "351",
           "quote": "- h2: 31c / 5w / 1L, 32px."
         }
@@ -1945,7 +1945,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "275",
           "quote": "REUSE `AiCard` x4 in the AiBento grid"
         }
@@ -1961,7 +1961,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "275",
           "quote": "desc 84–124c 2L"
         }
@@ -1977,7 +1977,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "275",
           "quote": "titles 8–16c"
         }
@@ -1994,7 +1994,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "278",
           "quote": "`AiCard` x4 (2x2: 495x166, 495x121)"
         }
@@ -2072,7 +2072,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "278",
           "quote": "REUSE `AiHeader` (7c / 18c / 79c)"
         }
@@ -2088,7 +2088,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "278",
           "quote": "REUSE `AiHeader` (7c / 18c / 79c)"
         }
@@ -2104,7 +2104,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "278",
           "quote": "`ArrowLink` (46c)"
         }
@@ -2120,7 +2120,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "278",
           "quote": "REUSE `AiHeader` (7c / 18c / 79c)"
         }
@@ -2137,7 +2137,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "212",
           "quote": "**10 chips**, 30 tall"
         }
@@ -2194,7 +2194,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "276",
           "quote": "REUSE `AiHeader` (eyebrow 8c, h2 31c, desc 92c)"
         }
@@ -2210,7 +2210,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "276",
           "quote": "REUSE `AiHeader` (eyebrow 8c, h2 31c, desc 92c)"
         }
@@ -2226,7 +2226,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "276",
           "quote": "REUSE `AiHeader` (eyebrow 8c, h2 31c, desc 92c)"
         }
@@ -2243,7 +2243,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "410",
           "quote": "areas `\"top top\" \"left right\"`"
         }
@@ -2259,12 +2259,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "419",
           "quote": "p: 14px/160% 500 #9c9c9d, 2L, about 85c."
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "425",
           "quote": "Then the description (max 399), 2L."
         }
@@ -2306,7 +2306,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "409",
           "quote": "SectionTitle centered, max 510. 22c / 40c, 1L each."
         }
@@ -2322,7 +2322,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "409",
           "quote": "SectionTitle centered, max 510. 22c / 40c, 1L each."
         }
@@ -2338,7 +2338,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "213",
           "quote": "p 14px/22 400 white/.5 81c"
         }
@@ -2355,7 +2355,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "213",
           "quote": "Row gap 24: 4 tiles 50x50"
         }
@@ -2371,7 +2371,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "213",
           "quote": "h3 16px/24 500 white 37c"
         }
@@ -2387,7 +2387,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "187",
           "quote": "max 520 (47–107c)"
         }
@@ -2403,7 +2403,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "187",
           "quote": "white, max 520 (17–41c, 1–2L)"
         }
@@ -2419,7 +2419,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "188",
           "quote": "12–38c + 34–67c"
         }
@@ -2435,7 +2435,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "188",
           "quote": "12–38c + 34–67c"
         }
@@ -2468,12 +2468,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "520",
           "quote": "5. Dotted FIG_02–FIG_06"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "518",
           "quote": "3. Dotted FIG_01"
         }
@@ -2489,7 +2489,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "517",
           "quote": "p Geist Mono 106c / 4L"
         }
@@ -2505,7 +2505,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "517",
           "quote": "plus external link 13c."
         }
@@ -2522,7 +2522,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "519",
           "quote": "4. Feature link cells"
         },
@@ -2543,7 +2543,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "519",
           "quote": "p (3L, about 90c)"
         }
@@ -2559,7 +2559,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "519",
           "quote": "h4 24px (14–20c)"
         }
@@ -2575,7 +2575,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "516",
           "quote": "h3 56px, 24c, **3L**"
         }
@@ -2591,7 +2591,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "439",
           "quote": "It begins with a white heading span (25c)."
         }
@@ -2609,12 +2609,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "453",
           "quote": "Inside: 12 stacked feature images"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "440",
           "quote": "Total about 290c"
         }
@@ -2672,7 +2672,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "440",
           "quote": "sentences of about 15–25c each"
         }
@@ -2688,7 +2688,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "446",
           "quote": "An underlined link of 10c."
         }
@@ -2721,7 +2721,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "204",
           "quote": "a row of key caps (reuse `Key`"
         },
@@ -2758,7 +2758,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "204",
           "quote": "h3 20px (20c 2L)"
         }
@@ -2775,7 +2775,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "155",
           "quote": "- **Bento A** (y 3163, 1229 tall)"
         }
@@ -2791,7 +2791,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "154",
           "quote": "#9c9c9d (57–137c, 1–3L)"
         }
@@ -2807,7 +2807,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "155",
           "quote": "footnote of 22c"
         }
@@ -2823,7 +2823,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "154",
           "quote": "`.1s ease-out`, 16–18c"
         }
@@ -2839,7 +2839,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "154",
           "quote": "Title 18px/20.7 500 .2px white (7–28c)"
         }
@@ -2856,7 +2856,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "136",
           "quote": "**`pro`** (/pro 2x2 grid"
         }
@@ -2872,7 +2872,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "139",
           "quote": "Then a `Badge` (10–24c)"
         }
@@ -2888,7 +2888,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "139",
           "quote": "h5 #9c9c9d of 54–78c (2L)"
         }
@@ -2904,7 +2904,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "139",
           "quote": "h2 white is 13–16c"
         }
@@ -2921,7 +2921,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "149",
           "quote": "- 8 cards total (1 wide + 7 regular, 2-up)."
         }
@@ -2953,7 +2953,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "145",
           "quote": "h3 20px/normal 500 .2px white (16–25c, 1–2L)"
         }
@@ -2969,7 +2969,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "p 16px/25.6 500 #9c9c9d 75c 2L"
         }
@@ -2985,7 +2985,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "Footnote below: Geist Mono 12px/19.2 #6a6b6c, 28c"
         }
@@ -3002,7 +3002,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "**13 body rows** of 37px"
         }
@@ -3044,7 +3044,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "Header: SectionTitle size=24 (14c / 17c)"
         }
@@ -3061,7 +3061,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "**12 tabs**, each 48 tall"
         }
@@ -3077,7 +3077,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "labels 3–17c"
         }
@@ -3093,7 +3093,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "Header: SectionTitle size=24 (14c / 17c)"
         }
@@ -3125,7 +3125,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "237",
           "quote": "REUSE `SectionTitle size=24` (28c / 39c)"
         }
@@ -3141,7 +3141,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "237",
           "quote": "REUSE `SectionTitle size=24` (28c / 39c)"
         }
@@ -3157,17 +3157,17 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "305",
           "quote": "REUSE `SectionTitle size=32 eyebrow` (4c / 24c / 119c)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "308",
           "quote": "(13c / 40c / 89c with an inline link)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "310",
           "quote": "REUSE `SectionTitle size=32` (26c / 88c)"
         }
@@ -3183,7 +3183,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "50",
           "quote": "uppercase #6a6b6c, 4–15c"
         }
@@ -3199,17 +3199,17 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "305",
           "quote": "REUSE `SectionTitle size=32 eyebrow` (4c / 24c / 119c)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "308",
           "quote": "(13c / 40c / 89c with an inline link)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "310",
           "quote": "REUSE `SectionTitle size=32` (26c / 88c)"
         }
@@ -3225,7 +3225,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "170",
           "quote": "eyebrow 11c, h2 32c 2L, desc 143c 3L"
         }
@@ -3241,7 +3241,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "170",
           "quote": "eyebrow 11c, h2 32c 2L, desc 143c 3L"
         }
@@ -3257,7 +3257,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "170",
           "quote": "eyebrow 11c, h2 32c 2L, desc 143c 3L"
         }
@@ -3273,7 +3273,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "167",
           "quote": "body 90–106c 3L"
         }
@@ -3289,7 +3289,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "167",
           "quote": "with eyebrow (10–15c)"
         }
@@ -3305,7 +3305,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "167",
           "quote": "link 16px/18.4 400 white 18c"
         }
@@ -3321,7 +3321,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "167",
           "quote": "h2 28–32c 2L"
         }
@@ -3337,12 +3337,12 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "164",
           "quote": "| /pro translator (y 4072) |"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "165",
           "quote": "| /pro themes (y 5512) |"
         }
@@ -3358,7 +3358,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "171",
           "quote": "p 14px/22.4 400 #9c9c9d 70c 2L"
         }
@@ -3374,17 +3374,17 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "164",
           "quote": "| /pro translator (y 4072) |"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "165",
           "quote": "| /pro themes (y 5512) |"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "171",
           "quote": "| /windows game launcher (y 5002) |"
         }
@@ -3400,17 +3400,17 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "164",
           "quote": "| /pro translator (y 4072) |"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "165",
           "quote": "| /pro themes (y 5512) |"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "171",
           "quote": "| /windows game launcher (y 5002) |"
         }
@@ -3426,7 +3426,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "166",
           "quote": "white/.6 (116–243c and 67–116c)"
         }
@@ -3442,7 +3442,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "166",
           "quote": "white/.6 (116–243c and 67–116c)"
         }
@@ -3458,7 +3458,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "166",
           "quote": "`brand-blue` 15–18c"
         }
@@ -3500,7 +3500,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "166",
           "quote": "h4 30px/36 600 white 48–56c 2L"
         }
@@ -3517,7 +3517,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "564",
           "quote": "columns repeat(6, minmax(144px,1fr))"
         }
@@ -3533,7 +3533,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "565",
           "quote": "(14px white, 4–12c)"
         }
@@ -3550,7 +3550,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "566",
           "quote": "Per-group counts are about 13 / 11 / 8 / 9 / 5 / 8."
         }
@@ -3566,7 +3566,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "566",
           "quote": "Links are 3–22c"
         }
@@ -3582,7 +3582,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "573",
           "quote": "placeholder about 17c"
         }
@@ -3598,7 +3598,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "575",
           "quote": "3L (162c) with a 14c inline link"
         }
@@ -3614,7 +3614,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "575",
           "quote": "with a 14c inline link"
         }
@@ -3630,7 +3630,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "571",
           "quote": "2L grey line (about 50c)"
         }
@@ -3646,7 +3646,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "571",
           "quote": "h5 14px white (28c)"
         }
@@ -3662,7 +3662,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "173",
           "quote": "Label is 20c, followed by a 16px"
         }
@@ -3694,7 +3694,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "168",
           "quote": "2. Requirements line, 38c"
         }
@@ -3710,7 +3710,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "169",
           "quote": "Two text buttons of 20c and 11c"
         }
@@ -3726,7 +3726,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "169",
           "quote": "Two text buttons of 20c and 11c"
         }
@@ -3743,7 +3743,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "165",
           "quote": "108c / ~15w / **2 lines**"
         }
@@ -3760,7 +3760,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "164",
           "quote": "28c / 4w / **2 lines**"
         }
@@ -3776,7 +3776,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "69",
           "quote": "16px/24 500 .2px white/.6, 51c 1L"
         }
@@ -3792,7 +3792,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "69",
           "quote": "48px/normal 600 sheen, 29c 2L"
         }
@@ -3808,7 +3808,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "70",
           "quote": "caption 14px/20 400 white/.4 (38c)"
         }
@@ -3824,7 +3824,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "70",
           "quote": "16px/24 400 white/.5, max 320, 63c 2L"
         }
@@ -3840,7 +3840,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "70",
           "quote": "ls **-1.92px**, max 450, 31c 2L"
         }
@@ -3856,7 +3856,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "#6a6b6c caption (22c)"
         }
@@ -3872,7 +3872,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "14px/16.1 500 .2px `#aae1ff`, 11c"
         }
@@ -3888,7 +3888,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "18px/normal 500 .2px #fff, 111c 2L"
         }
@@ -3904,7 +3904,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "`text-sheen` clipped, 18c 1L"
         }
@@ -3920,7 +3920,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "placeholder 15px/17.25 #6a6b6c, 9c"
         }
@@ -3936,7 +3936,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "max 560, 104c 2L"
         }
@@ -3952,7 +3952,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "`padding:0 36px`, 5c"
         }
@@ -3968,7 +3968,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "72",
           "quote": "`#ff9217`, 35c"
         }
@@ -3984,7 +3984,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "72",
           "quote": "18px/28 500 white at opacity .6, 95c 2L"
         }
@@ -4000,7 +4000,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "72",
           "quote": "`text-teams` clipped, 22c 2L"
         }
@@ -4016,7 +4016,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "203",
           "quote": "max 420, 72c 2L"
         }
@@ -4032,7 +4032,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "203",
           "quote": "4 stacked copies of the same 11c line"
         }
@@ -4065,7 +4065,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "144",
           "quote": "- **Center links**: 9 links"
         }
@@ -4081,7 +4081,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "144",
           "quote": "Word lengths of the labels: 5, 3, 2, 3, 7, 5, 10, 4, 7 chars."
         }
@@ -4097,7 +4097,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "145",
           "quote": "Contains a \"Log in\" nav link (6c)"
         }
@@ -4114,7 +4114,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "113",
           "quote": "**4 group-separator rows**"
         }
@@ -4131,7 +4131,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "111",
           "quote": "one label column + 5 plan columns"
         }
@@ -4147,7 +4147,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "115",
           "quote": "plan name 18px/20.7 600 white (4–10c)"
         }
@@ -4164,7 +4164,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "113",
           "quote": "**22 feature rows**"
         }
@@ -4180,7 +4180,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "116",
           "quote": "(#6a6b6c, up to 130c / 7L)"
         }
@@ -4218,7 +4218,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "111",
           "quote": "one label column + 5 plan columns"
         }
@@ -4234,7 +4234,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "117",
           "quote": "short text value 14px/22.4 white (8–9c)"
         }
@@ -4250,7 +4250,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "102",
           "quote": "16px/16.96 500 .3px white with an arrow, 39c"
         }
@@ -4266,7 +4266,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "80",
           "quote": "Geist Mono 12px/22.4 500 `chip.discount`, 4c."
         }
@@ -4282,7 +4282,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "101",
           "quote": "caption (20c)"
         }
@@ -4298,7 +4298,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "101",
           "quote": "label (24px 700, 14c)"
         }
@@ -4314,7 +4314,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "100",
           "quote": "Header = name 20px 700 (22c)"
         }
@@ -4330,7 +4330,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "100",
           "quote": "tagline 14px #9c9c9d (33c)"
         }
@@ -4347,7 +4347,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "84",
           "quote": "- **3 tiers**. Side cards:"
         }
@@ -4363,7 +4363,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "93",
           "quote": "Geist Mono 14px #9c9c9d (20–21c)"
         }
@@ -4406,7 +4406,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "96",
           "quote": "- **Row counts**: tier 1 = 6 rows. Tier 2 = 1 + 11 rows"
         }
@@ -4438,7 +4438,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "87",
           "quote": "20px/normal **700** .2px white, 9–12c"
         }
@@ -4454,7 +4454,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "96",
           "quote": "centered, 48c"
         }
@@ -4471,7 +4471,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "89",
           "quote": "Present on the featured card (3 options) and the third card (4 options)"
         }
@@ -4487,7 +4487,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "91",
           "quote": "14px/16.1 500 (3–4c)"
         }
@@ -4503,7 +4503,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "7",
           "quote": "Pricing is structure only (tier count, row count, toggle and badge UI), with no prices or feature wording."
         }
@@ -4519,7 +4519,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "88",
           "quote": "#9c9c9d, 31–41c, 1L."
         }
@@ -4535,7 +4535,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "92",
           "quote": "#9c9c9d (7–14c) baseline-aligned"
         }
@@ -4551,7 +4551,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "where one 3c word is in `pro.glyph #ffe2e2`"
         }
@@ -4567,7 +4567,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "BlockCta link 23c below"
         }
@@ -4583,7 +4583,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "p 20px/28 400 .3px white/.6, max 800, 111c 2L"
         }
@@ -4600,7 +4600,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "Then a 3-col grid (337, gap 32)"
         }
@@ -4616,7 +4616,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "h4 18px/27 600 white (17c)"
         }
@@ -4648,7 +4648,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "h3 52px/57.2 600 white, 2L, 20c"
         }
@@ -4664,7 +4664,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "494",
           "quote": "p: 14px/160% #9c9c9d, 2L, 83c."
         }
@@ -4697,7 +4697,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "469",
           "quote": "areas `\"title title\" \"slack twitter\"`"
         }
@@ -4713,7 +4713,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "477",
           "quote": "Body p: 14px/160% #9c9c9d, 2L, about 70c."
         }
@@ -4729,7 +4729,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "476",
           "quote": "(11–12c)"
         }
@@ -4745,7 +4745,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "478",
           "quote": "CTA: 14px 500 white, 4–6c"
         }
@@ -4761,7 +4761,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "475",
           "quote": "h5 20px 500 (5–9c), flex-grow"
         }
@@ -4777,7 +4777,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "470",
           "quote": "Title: 17c / 74c (2L), max 486."
         }
@@ -4793,7 +4793,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "470",
           "quote": "Title: 17c / 74c (2L), max 486."
         }
@@ -4810,7 +4810,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "483",
           "quote": "18 videos; the initial track"
         }
@@ -4826,7 +4826,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "489",
           "quote": "1–2L, about 25–45c."
         }
@@ -4842,7 +4842,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "197",
           "quote": "p 16px/24 500 ls -.05px white/.6 (19c)"
         }
@@ -4859,7 +4859,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "197",
           "quote": "of **6 logos**"
         }
@@ -4892,7 +4892,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "206",
           "quote": "**about 20 person chips**"
         }
@@ -4908,12 +4908,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "385",
           "quote": "Name: #fff, 15c"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "206",
           "quote": "Each chip: 48px avatar circle"
         }
@@ -4929,7 +4929,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "206",
           "quote": "title 14px/22.4 500 #6a6b6c (7–21c)"
         }
@@ -4945,7 +4945,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "206",
           "quote": "(about 141–164c, 2L)"
         }
@@ -4962,7 +4962,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "2 cards 454x168"
         }
@@ -4978,12 +4978,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "477",
           "quote": "Body p: 14px/160% #9c9c9d, 2L, about 70c."
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "REUSE `Community` → `SocialCards`"
         }
@@ -4999,12 +4999,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "476",
           "quote": "(11–12c)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "REUSE `Community` → `SocialCards`"
         }
@@ -5020,12 +5020,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "478",
           "quote": "CTA: 14px 500 white, 4–6c"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "REUSE `Community` → `SocialCards`"
         }
@@ -5041,12 +5041,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "475",
           "quote": "h5 20px 500 (5–9c), flex-grow"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "REUSE `Community` → `SocialCards`"
         }
@@ -5062,7 +5062,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "(title 17c / 74c; 2 cards 454x168"
         }
@@ -5078,7 +5078,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "265",
           "quote": "(title 17c / 74c; 2 cards 454x168"
         }
@@ -5095,7 +5095,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "382",
           "quote": "  - 24 people."
         }
@@ -5112,7 +5112,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "393",
           "quote": "Two label/value pairs:"
         }
@@ -5128,7 +5128,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "394",
           "quote": "Label: Geist Mono 14px #6a6b6c, about 15–18c."
         }
@@ -5144,7 +5144,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "385",
           "quote": "Name: #fff, 15c"
         }
@@ -5160,7 +5160,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "399",
           "quote": "2L, about 100c."
         }
@@ -5176,7 +5176,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "386",
           "quote": "Title line: #6a6b6c, about 11–20c."
         }
@@ -5192,7 +5192,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "377",
           "quote": "SectionTitle centered, max 400. 33c / 36c, 1L each."
         }
@@ -5208,7 +5208,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "377",
           "quote": "SectionTitle centered, max 400. 33c / 36c, 1L each."
         }
@@ -5240,7 +5240,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "205",
           "quote": "h2 20px centered (25c 2L)"
         }
@@ -5257,7 +5257,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "207",
           "quote": "2 rows of 56x56 tiles"
         }
@@ -5274,7 +5274,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "207",
           "quote": "each over 512px (8 tiles)"
         }
@@ -5291,7 +5291,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "261",
           "quote": "87c / 13w / 2L"
         }
@@ -5308,12 +5308,12 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "249",
           "quote": "repeat(5, min(1184px,100vw))"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "256",
           "quote": "**5 items**, each 54x54"
         }
@@ -5330,7 +5330,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "230",
           "quote": "Title 28c/4w/1L, subtitle 35c/5w/1L."
         }
@@ -5347,7 +5347,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "230",
           "quote": "Title 28c/4w/1L, subtitle 35c/5w/1L."
         }
@@ -5364,7 +5364,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "199",
           "quote": "Track of 3 slides"
         }
@@ -5380,7 +5380,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "199",
           "quote": "a body 14px/20 500 #9c9c9d (97–119c 3L)"
         }
@@ -5396,7 +5396,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "199",
           "quote": "a title 16px/24 500 white (11–14c)"
         }
@@ -5413,7 +5413,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "293",
           "quote": "- **Feature keys**: four keys in rows 3–4"
         }
@@ -5429,7 +5429,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "293",
           "quote": "(about 20c, 2 lines)"
         }
@@ -5445,7 +5445,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "274",
           "quote": "SectionTitle: 27c title / 48c subtitle"
         }
@@ -5461,7 +5461,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "274",
           "quote": "SectionTitle: 27c title / 48c subtitle"
         }
@@ -5786,7 +5786,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "566",
           "quote": "- 47 links total."
         },
@@ -5860,37 +5860,37 @@
       ],
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "221",
           "quote": "### /store (H 4330 / 6865)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "231",
           "quote": "### /pro (H 10665 / 14522)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "243",
           "quote": "### /pricing (H 7609 / 9496)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "252",
           "quote": "### /teams (H 10971 / 12549)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "270",
           "quote": "### /core-features/ai (H 10962 / 13024)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "285",
           "quote": "### /windows (H 10220 / 10284)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "301",
           "quote": "### /ios (H 11110 / 11711)"
         }
@@ -5924,7 +5924,7 @@
           "quote": "<PricingSection className=\"!pb-0\" />"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "201",
           "quote": "*Lean option: substitute `PricingSection` if pixel parity is not required.*"
         }
@@ -5940,12 +5940,12 @@
           "quote": "family=Geist+Mono"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "73",
           "quote": "| Main UI / all headings | **Inter**"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "25",
           "quote": "| `fontFamily.serif` |"
         }
@@ -6011,7 +6011,7 @@
       },
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "304",
           "quote": "\"templates\": ["
         }
@@ -6589,7 +6589,7 @@
           "quote": "'grid-gap': '32px'"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "53",
           "quote": "`--grid-gap` 32px"
         }
@@ -6605,7 +6605,7 @@
           "quote": "px-4 pt-4"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "53",
           "quote": "navbar top padding 16px"
         }
@@ -6621,7 +6621,7 @@
           "quote": "    padding: 168px 24px;"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "56",
           "quote": "`max-width:100vw; padding:168px 24px` (below 720)"
         }
@@ -6637,7 +6637,7 @@
           "quote": "@media (min-width: 720px) { .section-container { padding: 224px 24px; } }"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "56",
           "quote": "→ `224px 24px` (720 and up)"
         }
@@ -6653,7 +6653,7 @@
           "quote": "    padding: 168px 24px;"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "56",
           "quote": "`max-width:100vw; padding:168px 24px` (below 720)"
         }
@@ -6664,12 +6664,12 @@
       "value": "168px 24px",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "42",
           "quote": "Section shell: `padding:168px 24px`"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "42",
           "quote": "Section shell: `padding:168px 24px`"
         }
@@ -6685,7 +6685,7 @@
           "quote": "max-w-[700px]"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "122",
           "quote": "- Column max 700, centered."
         }
@@ -6696,12 +6696,12 @@
       "value": "1067px",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "40",
           "quote": "**1067** (iOS SectionContainer)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "302",
           "quote": "Sections use a 1067 shell"
         }
@@ -6717,7 +6717,7 @@
           "quote": "max-w-[1110px]"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "40",
           "quote": "**1110** (pricing page body)"
         }
@@ -6733,7 +6733,7 @@
           "quote": "'ext-top': '1252px'"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "40",
           "quote": "**1252** (`ext-top`; 1204 plus 24px padding each side"
         }
@@ -6749,7 +6749,7 @@
           "quote": "max-w-[740px]"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "40",
           "quote": "**740** (store header)"
         }
@@ -6764,7 +6764,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "208",
           "quote": "| `ComingSoonGrid` | /windows y 6597–7537 |"
         }
@@ -6779,7 +6779,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "293",
           "quote": "`slideIn .7s cubic-bezier(.215,.61,.355,1)`"
         }
@@ -6794,7 +6794,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "330",
           "quote": "Delays measured: **100ms + 80ms × index**"
         }
@@ -6809,7 +6809,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "`background-color .15s ease-in-out` on hover"
         }
@@ -6824,7 +6824,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "211",
           "quote": "`inset 0 1px rgba(255,255,255,.05)`, `bg .15s`"
         }
@@ -6839,7 +6839,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "209",
           "quote": "`color/background .15s`"
         }
@@ -6854,7 +6854,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "202",
           "quote": "`transform .1s ease-in-out`"
         }
@@ -6869,7 +6869,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "176",
           "quote": "`bg-color .2s`"
         }
@@ -6884,7 +6884,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "537",
           "quote": "- **Glowing keys** (left command plus space bar) when the container is ≥90% visible"
         }
@@ -6899,7 +6899,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "180",
           "quote": "Then a Geist Mono 12px/19.2 500 .2px #9c9c9d line (24c) with an inline \"install via\" text button (18c, `opacity .2s`)."
         }
@@ -6915,7 +6915,7 @@
           "quote": "animation: rotating2 3s linear -0.64s infinite"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "613",
           "quote": "| 5 | Announcement border |"
         }
@@ -6931,7 +6931,7 @@
           "quote": "blurIn: 'blurIn .5s ease-out both'"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "70",
           "quote": "**Motion**: h1, p and actions each run `blurIn .5s ease-out` on load."
         }
@@ -6947,7 +6947,7 @@
           "quote": ".caret-blink { animation: blink 1.1s"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "616",
           "quote": "| 8 | Text cursors |"
         }
@@ -6963,7 +6963,7 @@
           "quote": "animation: slideIn .7s var(--delay)"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "618",
           "quote": "| 10 | Extension cards |"
         }
@@ -6979,7 +6979,7 @@
           "quote": "transitionDuration: { 400: '400ms'"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "127",
           "quote": "`transition: transform .4s`"
         }
@@ -6995,7 +6995,7 @@
           "quote": "[data-reveal='hero-sub'] { animation-delay: 1s; }"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "610",
           "quote": "| 2 | Hero sub p | load |"
         }
@@ -7011,7 +7011,7 @@
           "quote": "animation: fade-in-up 1s ease 0s forwards"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "609",
           "quote": "| 1 | Hero text block | load |"
         }
@@ -7027,7 +7027,7 @@
           "quote": "box-shadow 1.5s cubic-bezier(.23, 1, .32, 1) var(--delay, 0s)"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "624",
           "quote": "| 16 | Cmd+Space keys |"
         }
@@ -7043,7 +7043,7 @@
           "quote": "marqueeL: 'marqueeL 120s linear infinite'"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "207",
           "quote": "| `GameLauncherMarquee` | /windows |"
         }
@@ -7059,7 +7059,7 @@
           "quote": ".orbit-l { animation: orbitL 180s linear infinite; }"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "198",
           "quote": "| `TeamsOrbit` | /teams hero art |"
         }
@@ -7075,7 +7075,7 @@
           "quote": "animation: fadeIn .7s ease-in-out 0s forwards"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "620",
           "quote": "| 12 | Testimonial quote |"
         }
@@ -7091,7 +7091,7 @@
           "quote": ".anim-bgEnter { animation: bgEnter 2s ease both; }"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "Back layer `bgEnter 2s ease`"
         }
@@ -7107,7 +7107,7 @@
           "quote": "transition-transform duration-200 ease-in-out"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "79",
           "quote": "`transition: transform .2s ease`"
         }
@@ -7123,7 +7123,7 @@
           "quote": "animation: progress 5000ms linear forwards;"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "622",
           "quote": "| 14 | Feature wall |"
         }
@@ -7138,7 +7138,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "128",
           "quote": "`transition: grid-template-rows .2s, opacity .2s`"
         }
@@ -7168,7 +7168,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "283",
           "quote": "Card visuals follow the existing AiBento reveal"
         }
@@ -7183,7 +7183,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "278",
           "quote": "`AiCard` x4 (2x2: 495x166, 495x121)"
         }
@@ -7198,7 +7198,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "212",
           "quote": "Stage 1020x800 (`riseIn .7s ease-out .45s backwards`)"
         }
@@ -7213,7 +7213,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "212",
           "quote": "`color/bg/border .15s`. Click swaps the stage content."
         }
@@ -7228,7 +7228,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "276",
           "quote": "one wide AiCard visual 1020x675 (radius 25)"
         }
@@ -7243,7 +7243,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "429",
           "quote": "- Trigger: container IO threshold 0.1 starts the typing animations."
         }
@@ -7258,7 +7258,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "213",
           "quote": "| `ByokRow` | /core-features/ai y 2225 |"
         }
@@ -7273,7 +7273,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "328",
           "quote": "7. `CenteredLead`. Pages: /teams, /windows."
         }
@@ -7288,7 +7288,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "524",
           "quote": "Dotted cells are IO-observed at thresholds .7 and 1."
         }
@@ -7303,7 +7303,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "524",
           "quote": "Dotted cells are IO-observed at thresholds .7 and 1."
         }
@@ -7318,7 +7318,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "458",
           "quote": "auto-advances **every 5s**"
         }
@@ -7333,7 +7333,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "204",
           "quote": "| `HotkeysBanner` | /windows y 3324 |"
         }
@@ -7348,7 +7348,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "140",
           "quote": "animate `dotPulse1/2/3 6s ease infinite`"
         }
@@ -7363,7 +7363,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "146",
           "quote": "- **Hover**: border goes to `rgba(255,255,255,.12)`"
         }
@@ -7378,7 +7378,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "Active #fff, others #9c9c9d, `transition color .3s`"
         }
@@ -7393,7 +7393,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "50",
           "quote": "| `SectionTitle` (shared.jsx) | Add `size` prop"
         }
@@ -7408,7 +7408,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "159",
           "quote": "### 2.6 `SplitFeature` (text column + visual"
         }
@@ -7423,7 +7423,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "315",
           "quote": "glass panels transition `opacity 1.5s, transform 1s cubic-bezier(.05,.9,.1,1)`"
         }
@@ -7438,7 +7438,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "567",
           "quote": "Link color goes from `#9c9c9d` to `#fff` (.3s)."
         }
@@ -7453,7 +7453,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "219",
           "quote": "`.heroText` plays `fade-in-up 1s ease 0s forwards`"
         }
@@ -7464,7 +7464,7 @@
       "value": "webgl-ambient",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "214",
           "quote": "Frame loop is `\"always\"` only while the canvas intersects the viewport"
         }
@@ -7475,7 +7475,7 @@
       "value": "border-sweep",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "176",
           "quote": "Keyframes, both `3s linear -0.64s infinite`:"
         }
@@ -7490,7 +7490,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "| `sheen` | /pro |"
         }
@@ -7505,7 +7505,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "70",
           "quote": "**Motion**: h1, p and actions each run `blurIn .5s ease-out` on load."
         }
@@ -7520,7 +7520,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "Back layer `bgEnter 2s ease`"
         }
@@ -7535,7 +7535,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "198",
           "quote": "`orbitL`/`orbitR` **180s linear infinite**"
         }
@@ -7550,7 +7550,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "245",
           "quote": "Plain absolute `<img>` placeholder (soft glow), no animation."
         }
@@ -7565,7 +7565,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "203",
           "quote": "**Motion**: window, p and actions run `fadeInUp 1s ease` on load."
         }
@@ -7580,7 +7580,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "144",
           "quote": "hover `#fff`. Word lengths"
         }
@@ -7595,7 +7595,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "149",
           "quote": "The toggle rotates 180deg (.5s)"
         }
@@ -7610,7 +7610,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "116",
           "quote": "opens a popover (`slideUpAndFade`"
         }
@@ -7625,7 +7625,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "108",
           "quote": "- **Motion**: none on scroll. Interactions are toggle pill .2s"
         }
@@ -7640,7 +7640,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "| `ProUpsell` | /teams y 4095–5680 |"
         }
@@ -7655,7 +7655,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "490",
           "quote": "- Measured: no autoplay over 3s; drag/swipe only."
         }
@@ -7670,7 +7670,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "197",
           "quote": "at opacity .6 (`opacity .2s`"
         }
@@ -7685,7 +7685,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "206",
           "quote": "Click selects. No autoplay in 6s."
         }
@@ -7700,7 +7700,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "479",
           "quote": "Hover: `::after` overlay `rgba(255,255,255,.04)` (.3s)"
         }
@@ -7730,7 +7730,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "401",
           "quote": "When the quote changes it plays `fadeIn .7s ease-in-out`"
         }
@@ -7745,7 +7745,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "205",
           "quote": "| `AiShowcaseFrame` | /windows y 3513–4508 |"
         }
@@ -7760,7 +7760,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "308",
           "quote": "full-bleed image 1440x828"
         }
@@ -7775,7 +7775,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "207",
           "quote": "Row 1 runs `marqueeL 120s linear infinite`"
         }
@@ -7790,7 +7790,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "305",
           "quote": "a phone composite visual: 395x854 phone"
         }
@@ -7816,7 +7816,7 @@
       "value": "caret-blink",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "260",
           "quote": "A blinking text cursor animates at `1.1s infinite`."
         }
@@ -7831,7 +7831,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "199",
           "quote": "**Autoplay every about 6.05s**"
         }
@@ -7857,12 +7857,12 @@
       "value": "The clone renders no <img> or <video>; every visual is CSS/SVG.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "634",
           "quote": "## 16. Asset manifest (geometry only, all to be replaced with originals)"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "352",
           "quote": "- Images and videos are proprietary: geometry only, use original placeholders."
         }
@@ -7879,7 +7879,7 @@
           "quote": "export function AppTile("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "645",
           "quote": "| App icons (AI) | AI visuals | 16x16 |"
         }
@@ -7895,7 +7895,7 @@
           "quote": "export function ArrowLink("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "123",
           "quote": "**ArrowLink**:"
         }
@@ -7911,7 +7911,7 @@
           "quote": "export function Badge("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "57",
           "quote": "| `Badge` | Already matches the \"Tag\""
         }
@@ -7927,7 +7927,7 @@
           "quote": "export function BlockCta("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "102",
           "quote": "- **BlockCta link**:"
         }
@@ -7943,7 +7943,7 @@
           "quote": "export function DarkButton("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "121",
           "quote": "**Button / dark**:"
         }
@@ -7959,7 +7959,7 @@
           "quote": "export function LightButton("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "114",
           "quote": "**Button / light** (Download):"
         }
@@ -7975,7 +7975,7 @@
           "quote": "export function Eyebrow("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "95",
           "quote": "| Eyebrow | JetBrains Mono |"
         }
@@ -7991,7 +7991,7 @@
           "quote": "export function HeroPill("
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "Pill 133x34 above"
         }
@@ -8007,7 +8007,7 @@
           "quote": "export function Icon("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "125",
           "quote": "16px arrow svg with `transition: transform .3s`."
         }
@@ -8023,7 +8023,7 @@
           "quote": "export function Key("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "282",
           "quote": "- **Key**:"
         }
@@ -8039,7 +8039,7 @@
           "quote": "export function LogoMark("
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "143",
           "quote": "Use an original 24px-tall placeholder mark"
         }
@@ -8303,7 +8303,7 @@
           "quote": "const t = setTimeout(() => select(pos + 1), 10000)"
         },
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "389",
           "quote": "- Behavior: **click to select**. No autoplay (unchanged after 7s)."
         }
@@ -8344,7 +8344,7 @@
       "value": "One column at 390 (1554 tall).",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "208",
           "quote": "390: one column, 1554 tall."
         }
@@ -8355,7 +8355,7 @@
       "value": "Cards 300x446 on mobile, gap 24.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "317",
           "quote": "(360x536; 300 wide and 446 tall on mobile)"
         }
@@ -8366,7 +8366,7 @@
       "value": "Top row stacks with gap 40 at 1024 and below.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "303",
           "quote": "Stacks into a column with gap 40px at ≤1024."
         }
@@ -8377,7 +8377,7 @@
       "value": "h2 40px to 32px at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "210",
           "quote": "390: h2 32px/36.8."
         }
@@ -8388,7 +8388,7 @@
       "value": "ios: the fixed QR card is absent at 390; an App-Store-style button replaces it.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "184",
           "quote": "At 390 the fixed card is absent"
         }
@@ -8399,7 +8399,7 @@
       "value": "Download block hidden below 720.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "548",
           "quote": "(button + requirements + sub links; hidden below 720)"
         }
@@ -8410,7 +8410,7 @@
       "value": "Questions wrap to 2 lines at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "132",
           "quote": "- 390: the same items wrap to 2L"
         }
@@ -8421,7 +8421,7 @@
       "value": "Bento becomes a column with gap 15, card radius 20 and padding 15.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "356",
           "quote": "Becomes a flex column with gap 15 at ≤767."
         }
@@ -8432,7 +8432,7 @@
       "value": "Stage 350x226 at 390, chips wrap.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "212",
           "quote": "390: stage 350x226, chips wrap to 182 tall."
         }
@@ -8443,7 +8443,7 @@
       "value": "Top, left and right cards stack.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "595",
           "quote": "| Automation grid | all stacked (top/left/right) |"
         }
@@ -8454,7 +8454,7 @@
       "value": "Column layout at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "213",
           "quote": "390: column, 140 tall."
         }
@@ -8465,7 +8465,7 @@
       "value": "Teams h2 36px to 24px at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "187",
           "quote": "390: h2 24px/36."
         }
@@ -8476,7 +8476,7 @@
       "value": "1 column below 784, 2 from 784, 3 from 1200.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "503",
           "quote": "with N=1 base, 2 at ≥784, 3 at ≥1200."
         }
@@ -8487,7 +8487,7 @@
       "value": "Image first (342x342), wall below.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "596",
           "quote": "| Feature wall | image first (342x342), wall below |"
         }
@@ -8498,7 +8498,7 @@
       "value": "All three variants become a single column at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "141",
           "quote": "- 390: single column, cards 342 wide"
         }
@@ -8509,7 +8509,7 @@
       "value": "Same height at 390; the table scrolls.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "196",
           "quote": "same height at 390 (table scrolls)"
         }
@@ -8520,7 +8520,7 @@
       "value": "size32 drops to 20px/32 below 720.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "50",
           "quote": "`32` (/ios and AI page: 32px/51.2px 500 .2px, 20px/32px at 390)"
         }
@@ -8542,7 +8542,7 @@
       "value": "Link grid goes from 6 columns to 2; newsletter stacks.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "578",
           "quote": "**Mobile**: links in 2 columns (167px each), newsletter stacked."
         }
@@ -8553,7 +8553,7 @@
       "value": "Download block is hidden below 720; only the announcement pill shows under the text.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "166",
           "quote": "**Hidden below 720.**"
         }
@@ -8564,7 +8564,7 @@
       "value": "h1 is 36px base, 48px from 420, 64px from 720.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "89",
           "quote": "| Hero h1 | Inter | 64px / 110% (70.4px); 48px from 420; 36px base |"
         }
@@ -8575,7 +8575,7 @@
       "value": "Store h1 80px to 44px; teams 72px to 44px; ios 48px to 27px at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "| `store` | /store |"
         }
@@ -8586,7 +8586,7 @@
       "value": "1064x385 to 600x217 at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "245",
           "quote": "(natural 1080x391; 600x217 at 390)"
         }
@@ -8597,7 +8597,7 @@
       "value": "Serif title 168px to 86px; section 615 tall at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "203",
           "quote": "(390: `150 16 100`, 615 tall)"
         }
@@ -8608,7 +8608,7 @@
       "value": "Below 880 the links collapse into a hamburger grid menu.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "146",
           "quote": "- **Below 880 (mobile)**:"
         }
@@ -8619,7 +8619,7 @@
       "value": "Wordmark text and the Download button only show at 1064 and up.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "141",
           "quote": "The full wordmark shows at ≥1064."
         }
@@ -8630,7 +8630,7 @@
       "value": "Keeps 6 columns of 164 in a 390 wrapper and scrolls.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "119",
           "quote": "so it scrolls horizontally. Height 2078."
         }
@@ -8641,7 +8641,7 @@
       "value": "At 390 tier 1 collapses to a compact card; tiers 2 and 3 stack.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "105",
           "quote": "- Tier 1 collapses into a compact 358x133 card"
         }
@@ -8652,7 +8652,7 @@
       "value": "h3 52px to 32px at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "200",
           "quote": "(390: 32px/35.2)"
         }
@@ -8663,7 +8663,7 @@
       "value": "Socials become 1 column (342 wide).",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "597",
           "quote": "| Socials | 1 column, 342 wide |"
         }
@@ -8674,7 +8674,7 @@
       "value": "Logos wrap to 3 rows at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "197",
           "quote": "390: wraps to 3 rows (192 tall)."
         }
@@ -8685,7 +8685,7 @@
       "value": "Single column; the divider becomes horizontal; quote fade only at 720 and up.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "594",
           "quote": "| Testimonial | single column, divider becomes horizontal |"
         }
@@ -8696,7 +8696,7 @@
       "value": "Section 566 tall at 390.",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "205",
           "quote": "390: 566 tall."
         }
@@ -8707,7 +8707,7 @@
       "value": "Frame 409x508 at 390, no menubar, slides advance on a fixed timer.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "263",
           "quote": "**Mobile (390)**: frame is 409x508"
         }
@@ -8718,7 +8718,7 @@
       "value": "Keys first (490 tall, vertical mask), text below and centered.",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "278",
           "quote": "- On mobile: height 490px"
         }
@@ -8754,7 +8754,7 @@
           "quote": "const ROUTES = {"
         },
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "348",
           "quote": "- Paths to support:"
         }
@@ -8765,7 +8765,7 @@
       "value": "{color.brand.blue}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "39",
           "quote": "| `--blue-dark` | `#56c2ff` |"
         }
@@ -8776,7 +8776,7 @@
       "value": "{color.accent.periwinkle}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "41",
           "quote": "hover glows, active wall text-shadow"
         }
@@ -8787,7 +8787,7 @@
       "value": "{color.card-border}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "35",
           "quote": "1px card borders everywhere"
         }
@@ -8798,7 +8798,7 @@
       "value": "{color.grey.600}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "23",
           "quote": "dividers, footer top border, grid lines"
         }
@@ -8809,7 +8809,7 @@
       "value": "{color.grey.500}",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "83",
           "quote": "1px `#2f3031` (grey-500), radius 16"
         }
@@ -8820,7 +8820,7 @@
       "value": "{color.grey.600}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "395",
           "quote": "Value: a badge, `height:26px; padding:0 6px; radius 6px; bg #1b1c1e"
         }
@@ -8831,7 +8831,7 @@
       "value": "{color.grey.50}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "29",
           "quote": "| `--grey-50` | `#e6e6e6` | light button bg |"
         }
@@ -8842,7 +8842,7 @@
       "value": "{color.grey.100}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "28",
           "quote": "| `--grey-100` | `#cdcece` | button active bg |"
         }
@@ -8853,7 +8853,7 @@
       "value": "{color.grey.800}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "21",
           "quote": "hover bg of API grid cells, code bg"
         }
@@ -8864,7 +8864,7 @@
       "value": "{color.grey.900}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "20",
           "quote": "page bg (body `background`)"
         }
@@ -8875,7 +8875,7 @@
       "value": "{color.grey.700}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "22",
           "quote": "\"browse more\" card bg"
         }
@@ -8886,7 +8886,7 @@
       "value": "{color.brand.red}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "38",
           "quote": "eyebrow, snippet, code text"
         }
@@ -8897,7 +8897,7 @@
       "value": "{color.fg.300}",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "128",
           "quote": "Text 15px/22 400 `fg-300 #78787c`"
         }
@@ -8908,7 +8908,7 @@
       "value": "{color.grey.200}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "27",
           "quote": "\"default\" text (nav links, body copy)"
         }
@@ -8919,7 +8919,7 @@
       "value": "{color.grey.400}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "25",
           "quote": "\"faint\" text (inactive wall text, usernames)"
         }
@@ -8930,7 +8930,7 @@
       "value": "{color.base-white}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "30",
           "quote": "\"loud\" text (headings)"
         }
@@ -8941,7 +8941,7 @@
       "value": "{color.grey.300}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "26",
           "quote": "\"muted\" text (section subtitles)"
         }
@@ -8952,7 +8952,7 @@
       "value": "{color.grey.500}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "24",
           "quote": "button-light text, dock item border"
         }
@@ -8963,7 +8963,7 @@
       "value": "{gradient.card}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "36",
           "quote": "| card fill |"
         }
@@ -8974,7 +8974,7 @@
       "value": "{gradient.glass}",
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "37",
           "quote": "| navbar, social cards |"
         }
@@ -8985,7 +8985,7 @@
       "value": "{gradient.plan-featured}",
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "17",
           "quote": "featured PlanCard, EnterprisePlanCard"
         }
@@ -9010,7 +9010,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "423",
           "quote": "\"id\": \"template.ai\""
         },
@@ -9045,7 +9045,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "306",
           "quote": "\"id\": \"template.home\""
         },
@@ -9076,7 +9076,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "477",
           "quote": "\"id\": \"template.ios\""
         },
@@ -9114,7 +9114,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "375",
           "quote": "\"id\": \"template.pricing\""
         },
@@ -9147,7 +9147,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "351",
           "quote": "\"id\": \"template.pro\""
         },
@@ -9190,7 +9190,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "332",
           "quote": "\"id\": \"template.store\""
         },
@@ -9228,7 +9228,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "394",
           "quote": "\"id\": \"template.teams\""
         },
@@ -9275,7 +9275,7 @@
       ],
       "citations": [
         {
-          "path": "ia.json",
+          "path": "ia/ia.json",
           "lines": "449",
           "quote": "\"id\": \"template.windows\""
         },
@@ -11328,7 +11328,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "94",
           "quote": "| AI description |"
         }
@@ -11342,7 +11342,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "93",
           "quote": "| AI title h2 |"
         }
@@ -11356,7 +11356,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "107",
           "quote": "| API caption"
         }
@@ -11370,7 +11370,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "104",
           "quote": "| API h3 |"
         }
@@ -11384,7 +11384,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "105",
           "quote": "| API h4 |"
         }
@@ -11398,7 +11398,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "106",
           "quote": "| API p | Geist Mono |"
         }
@@ -11412,7 +11412,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "101",
           "quote": "| Arrow link | Inter |"
         }
@@ -11426,7 +11426,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "100",
           "quote": "| Body 14 | Inter |"
         }
@@ -11440,7 +11440,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "99",
           "quote": "| Body 16 | Inter |"
         }
@@ -11454,7 +11454,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "97",
           "quote": "| Button | Inter |"
         }
@@ -11468,7 +11468,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "95",
           "quote": "| Eyebrow | JetBrains Mono |"
         }
@@ -11482,7 +11482,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "126",
           "quote": "- Trigger: full-width `<button>`"
         }
@@ -11496,7 +11496,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "108",
           "quote": "| Footer group head |"
         }
@@ -11510,7 +11510,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "109",
           "quote": "| Footer link |"
         }
@@ -11524,7 +11524,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "89",
           "quote": "| Hero h1 | Inter |"
         }
@@ -11538,7 +11538,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "90",
           "quote": "| Hero sub p | Inter |"
         }
@@ -11552,7 +11552,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "110",
           "quote": "| Legal small |"
         }
@@ -11566,7 +11566,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "98",
           "quote": "| Mono small (requirements"
         }
@@ -11580,7 +11580,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "96",
           "quote": "| Nav link | Inter |"
         }
@@ -11594,7 +11594,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "68",
           "quote": "| `sheen` | /pro |"
         }
@@ -11608,7 +11608,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "71",
           "quote": "| `store` | /store |"
         }
@@ -11622,7 +11622,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "72",
           "quote": "| `teams` | /teams |"
         }
@@ -11636,7 +11636,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "92",
           "quote": "- Price: Inter 64px/64 600"
         }
@@ -11650,7 +11650,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "103",
           "quote": "| Testimonial quote |"
         }
@@ -11664,7 +11664,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "91",
           "quote": "| Section title h2 (SectionTitle) |"
         }
@@ -11678,7 +11678,7 @@
       },
       "citations": [
         {
-          "path": "PAGES_SPEC.md",
+          "path": "docs/PAGES_SPEC.md",
           "lines": "203",
           "quote": "| `SerifHero` | /windows"
         }
@@ -11692,7 +11692,7 @@
       },
       "citations": [
         {
-          "path": "CLONE_SPEC.md",
+          "path": "docs/CLONE_SPEC.md",
           "lines": "102",
           "quote": "| Feature wall text |"
         }
