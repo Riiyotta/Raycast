@@ -23,3 +23,4 @@
   confirmed as not being corrections.
 - Known deviations are recorded: secondary-page mobile heights, the `/teams`
   PricingSection substitution, footer link count, and reduced-motion coverage.
+- Citations re-pinned after the tablet (810-1199px) pass moved lines in `src/index.css` and `src/components/Navbar.jsx`; `measured-values.json` regenerated, no contract or token values changed.
