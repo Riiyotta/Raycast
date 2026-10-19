@@ -1,0 +1,18 @@
+{
+  "id": "button-light",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > LightButton",
+  "props": [
+    "children",
+    "icon",
+    "size",
+    "sub",
+    "block"
+  ],
+  "componentTokens": [
+    "button.light"
+  ],
+  "evidence": [
+    "mv.primitive.button-light"
+  ]
+}

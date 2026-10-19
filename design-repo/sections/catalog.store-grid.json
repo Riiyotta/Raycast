@@ -1,0 +1,85 @@
+{
+  "id": "catalog.store-grid",
+  "category": "CATALOG",
+  "description": "Paginated grid of store extension cards.",
+  "purpose": "Paginated grid of store plugin cards.",
+  "scope": "Store page only.",
+  "implementedBy": "pages/Store.jsx > StoreExtensionCard + Pagination",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 10,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "12c",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.store-grid.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 49,
+            "measured": "49c 2L",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.store-grid.cards.description"
+            ]
+          },
+          "icon": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.app-tile"
+            ]
+          },
+          "authorAvatar": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "person.avatar-placeholder"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.store-grid.cards"
+        ]
+      },
+      "pageCount": {
+        "kind": "integer",
+        "required": true,
+        "minimum": 1,
+        "maximum": 99
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.catalog.store-grid.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.catalog.store-grid"
+  ]
+}

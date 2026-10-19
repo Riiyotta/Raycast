@@ -1,0 +1,243 @@
+{
+  "id": "pricing.plans",
+  "category": "PRICING",
+  "description": "Plan section: monthly/yearly toggle, tier cards, tier switch and enterprise card.",
+  "purpose": "Structure-only plan comparison: interval toggle, three tier cards and an enterprise card. Names and prices are placeholders.",
+  "scope": "Pricing, Pro, AI and Teams pages.",
+  "implementedBy": "PricingSection.jsx",
+  "variants": [
+    "wide",
+    "narrow"
+  ],
+  "content": {
+    "shared": {
+      "tiers": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "name": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "9–12c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.name"
+            ]
+          },
+          "tagline": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 41,
+            "measured": "31–41c, 1L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.tagline"
+            ]
+          },
+          "options": {
+            "kind": "list",
+            "required": false,
+            "minItems": 0,
+            "maxItems": 4,
+            "item": {
+              "label": {
+                "kind": "text",
+                "required": true,
+                "maxChars": 4,
+                "measured": "3–4c",
+                "budgetRule": "range-upper-bound",
+                "basis": "spec-measured",
+                "evidence": [
+                  "mv.copy.pricing.plans.tiers.options.label"
+                ]
+              }
+            },
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.options"
+            ]
+          },
+          "price": {
+            "kind": "placeholder-price",
+            "required": true,
+            "pattern": "^\\$[0-9]{1,3}$",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.price"
+            ]
+          },
+          "unit": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 14,
+            "measured": "7–14c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.unit"
+            ]
+          },
+          "billing": {
+            "kind": "text",
+            "required": false,
+            "maxChars": 21,
+            "measured": "20–21c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.billing"
+            ]
+          },
+          "ctaLabel": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 14,
+            "measured": "clone longest of 3",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.ctaLabel"
+            ]
+          },
+          "features": {
+            "kind": "list",
+            "required": true,
+            "minItems": 1,
+            "maxItems": 12,
+            "item": {
+              "text": {
+                "kind": "text",
+                "required": true,
+                "maxChars": 60,
+                "measured": "clone longest of 1",
+                "budgetRule": "clone-implementation-longest",
+                "basis": "clone-implementation",
+                "evidence": [
+                  "mv.copy.pricing.plans.tiers.features.text"
+                ]
+              }
+            },
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.features"
+            ]
+          },
+          "note": {
+            "kind": "text",
+            "required": false,
+            "maxChars": 48,
+            "measured": "48c",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.plans.tiers.note"
+            ]
+          },
+          "featured": {
+            "kind": "boolean",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.tiers"
+        ]
+      },
+      "discountChip": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 4,
+        "measured": "4c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.discountChip"
+        ]
+      },
+      "enterpriseName": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 22,
+        "measured": "22c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.enterpriseName"
+        ]
+      },
+      "enterpriseTagline": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 33,
+        "measured": "33c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.enterpriseTagline"
+        ]
+      },
+      "enterpriseLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 14,
+        "measured": "14c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.enterpriseLabel"
+        ]
+      },
+      "enterpriseCaption": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 20,
+        "measured": "20c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.enterpriseCaption"
+        ]
+      },
+      "blockCta": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 39,
+        "measured": "39c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.plans.blockCta"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "interval-toggle",
+        "trigger": "click",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.pricing.plans.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.lg",
+      "change": "compact-variant",
+      "detail": "At 390 tier 1 collapses to a compact card; tiers 2 and 3 stack.",
+      "evidence": [
+        "mv.responsive.pricing.plans.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.pricing.plans"
+  ]
+}

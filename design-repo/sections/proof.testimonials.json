@@ -1,0 +1,151 @@
+{
+  "id": "proof.testimonials",
+  "category": "PROOF",
+  "description": "Person carousel with auto-advance and click-select, plus quote panel and highlight grid.",
+  "purpose": "Social proof from (fictional) users: a person carousel driving a quote panel with highlights.",
+  "scope": "Homepage only.",
+  "implementedBy": "Testimonials.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 33,
+        "measured": "33c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.testimonials.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 36,
+        "measured": "36c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.testimonials.subtitle"
+        ]
+      },
+      "people": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 24,
+        "item": {
+          "name": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 15,
+            "measured": "15c",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.testimonials.people.name"
+            ]
+          },
+          "role": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 20,
+            "measured": "about 11–20c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.testimonials.people.role"
+            ]
+          },
+          "quote": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 110,
+            "measured": "about 100c",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.testimonials.people.quote"
+            ]
+          },
+          "avatar": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "person.avatar-placeholder"
+            ]
+          },
+          "highlights": {
+            "kind": "list",
+            "required": true,
+            "minItems": 2,
+            "maxItems": 2,
+            "item": {
+              "label": {
+                "kind": "text",
+                "required": true,
+                "maxChars": 18,
+                "measured": "about 15–18c",
+                "budgetRule": "range-upper-bound",
+                "basis": "spec-measured",
+                "evidence": [
+                  "mv.copy.proof.testimonials.people.highlights.label"
+                ]
+              }
+            },
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.testimonials.people.highlights"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.testimonials.people"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "carousel-auto-advance",
+        "trigger": "timer",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.proof.testimonials.0"
+        ]
+      },
+      {
+        "pattern": "quote-fade",
+        "trigger": "click",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.proof.testimonials.1"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "Auto-advances about every 10s (overrides CLONE_SPEC 'no autoplay').",
+      "evidence": [
+        "mv.qa.testimonials-advance"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "Single column; the divider becomes horizontal; quote fade only at 720 and up.",
+      "evidence": [
+        "mv.responsive.proof.testimonials.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.proof.testimonials"
+  ]
+}

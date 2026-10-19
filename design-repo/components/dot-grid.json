@@ -1,0 +1,11 @@
+{
+  "id": "dot-grid",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/MediaCard.jsx > DotGrid",
+  "props": [],
+  "uses": [],
+  "evidence": [
+    "mv.component.dot-grid"
+  ]
+}

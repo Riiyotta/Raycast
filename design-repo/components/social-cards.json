@@ -1,0 +1,14 @@
+{
+  "id": "social-cards",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/Community.jsx > SocialCards",
+  "props": [
+    "title",
+    "subtitle"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.social-cards"
+  ]
+}

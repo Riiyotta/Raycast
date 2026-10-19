@@ -1,0 +1,274 @@
+{
+  "id": "feature.split",
+  "category": "FEATURE",
+  "description": "Text column beside a visual; side and head style vary by prop.",
+  "purpose": "Text column beside a visual; the most reused feature block across secondary pages.",
+  "scope": "Pro, teams, AI, Windows and iOS pages, often several per page.",
+  "implementedBy": "SplitFeature.jsx",
+  "variants": [
+    "pair",
+    "teams",
+    "ios",
+    "ai"
+  ],
+  "content": {
+    "byVariant": {
+      "pair": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 30,
+          "measured": "30c / 17c / 18c",
+          "budgetRule": "max-of-instances",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.pair.title"
+          ]
+        },
+        "sub": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 81,
+          "measured": "81c / 73c / 81c",
+          "budgetRule": "max-of-instances",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.pair.sub"
+          ]
+        },
+        "body": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 70,
+          "measured": "70c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.pair.body"
+          ]
+        },
+        "badge": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 13,
+          "measured": "10c / 13c",
+          "budgetRule": "max-of-instances",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.pair.badge"
+          ]
+        },
+        "visual": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.ui-mock",
+            "visual.gradient-art",
+            "visual.app-tile"
+          ]
+        }
+      },
+      "teams": {
+        "eyebrow": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 18,
+          "measured": "15–18c",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.teams.eyebrow"
+          ]
+        },
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 56,
+          "measured": "48–56c 2L",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.teams.title"
+          ]
+        },
+        "body": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 243,
+          "measured": "116–243c",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.teams.body"
+          ]
+        },
+        "body2": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 116,
+          "measured": "67–116c",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.teams.body2"
+          ]
+        },
+        "link": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 25,
+          "measured": "clone longest of 3",
+          "budgetRule": "clone-implementation-longest",
+          "basis": "clone-implementation",
+          "evidence": [
+            "mv.copy.feature.split.teams.link"
+          ]
+        },
+        "visual": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.ui-mock"
+          ]
+        }
+      },
+      "ios": {
+        "eyebrow": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 15,
+          "measured": "10–15c",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ios.eyebrow"
+          ]
+        },
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 32,
+          "measured": "28–32c 2L",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ios.title"
+          ]
+        },
+        "body": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 106,
+          "measured": "90–106c 3L",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ios.body"
+          ]
+        },
+        "link": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 18,
+          "measured": "18c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ios.link"
+          ]
+        },
+        "visual": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.ui-mock"
+          ]
+        }
+      },
+      "ai": {
+        "eyebrow": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 11,
+          "measured": "11c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ai.eyebrow"
+          ]
+        },
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 32,
+          "measured": "32c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ai.title"
+          ]
+        },
+        "description": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 143,
+          "measured": "143c 3L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.split.ai.description"
+          ]
+        },
+        "visual": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.ui-mock",
+            "visual.app-tile"
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "variants": [
+          "pair",
+          "teams",
+          "ai"
+        ],
+        "evidence": [
+          "mv.motion.feature.split.0"
+        ]
+      },
+      {
+        "pattern": "glass-settle",
+        "trigger": "in-view-0.2",
+        "reducedMotionFallback": "final-state",
+        "variants": [
+          "ios"
+        ],
+        "evidence": [
+          "mv.motion.feature.split.1"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.lg",
+      "change": "stack",
+      "detail": "Below lg the two columns stack (visual after text unless visualFirst).",
+      "evidence": [
+        "mv.responsive.feature.split.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.split"
+  ]
+}

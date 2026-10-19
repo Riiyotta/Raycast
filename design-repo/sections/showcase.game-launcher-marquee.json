@@ -1,0 +1,62 @@
+{
+  "id": "showcase.game-launcher-marquee",
+  "category": "SHOWCASE",
+  "description": "Slow infinite marquee of game-launcher tiles paired with a split feature.",
+  "purpose": "Ambient proof of breadth: two slow opposing rows of app tiles.",
+  "scope": "Windows page only.",
+  "implementedBy": "pages/Windows.jsx > GameLauncherMarquee",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "rows": {
+        "kind": "list",
+        "required": true,
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "tiles": {
+            "kind": "list",
+            "required": true,
+            "minItems": 8,
+            "maxItems": 8,
+            "item": {
+              "tile": {
+                "kind": "media",
+                "required": true,
+                "assetRoles": [
+                  "visual.app-tile"
+                ]
+              }
+            },
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.showcase.game-launcher-marquee.rows.tiles"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.game-launcher-marquee.rows"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "marquee",
+        "trigger": "always",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.showcase.game-launcher-marquee.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.showcase.game-launcher-marquee"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "cta.final-keyboard",
+  "category": "CTA",
+  "description": "Final call to action over a large keyboard whose Cmd and Space keys glow at high visibility.",
+  "purpose": "Close the homepage with a glowing Cmd+Space keyboard and the download block.",
+  "scope": "Homepage only.",
+  "implementedBy": "FinalCta.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 19,
+        "measured": "19c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.cta.final-keyboard.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 34,
+        "measured": "34c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.cta.final-keyboard.subtitle"
+        ]
+      },
+      "downloadLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 16,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "spec-sibling",
+        "evidence": [
+          "mv.copy.cta.final-keyboard.downloadLabel"
+        ]
+      },
+      "keyboard": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.keyboard"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "key-glow",
+        "trigger": "in-view-0.9",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.cta.final-keyboard.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "hide",
+      "detail": "Download block hidden below 720.",
+      "evidence": [
+        "mv.responsive.cta.final-keyboard.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.cta.final-keyboard"
+  ]
+}

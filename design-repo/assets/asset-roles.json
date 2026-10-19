@@ -1,0 +1,158 @@
+{
+  "version": "1.0.0",
+  "sourceIsRealCompany": true,
+  "licensingNotice": "The measured source is a real, live company's marketing site. This repo carries geometry, tokens, structure and timing only. Never reproduce the source company's logo or wordmark, product screenshots, extension/app icons, illustrations, marketing copy, real prices, or any real person's photo, name, handle or quote. All copy must be original and all visuals must be original CSS/SVG placeholders.",
+  "forbiddenContent": [
+    "source-company logo or wordmark",
+    "source-company product screenshots or UI replicas",
+    "source-company extension/app icons",
+    "source-company illustrations or 3D renders",
+    "source-company marketing copy (headlines, taglines, FAQ text)",
+    "source-company plan names or real prices",
+    "real people's photos, names, handles or quotes",
+    "real third-party logos or app-store badges"
+  ],
+  "generationPolicies": {
+    "must-reuse-exact": "Use the repo's own neutral asset exactly as implemented. Never substitute a different mark.",
+    "must-reuse-component": "Render through the named component. Do not generate a new visual for this slot.",
+    "may-generate-new": "Generate a new ORIGINAL abstract or simplified visual (CSS/SVG) at the measured geometry. Never trace, recreate or approximate the source company's screenshots, illustrations or product UI.",
+    "must-not-fabricate-real": "Only invented, clearly fictional people. Never a real person's name, photo, likeness, handle or quote, and never the source company's real customers or staff.",
+    "must-not-use-real-mark": "Only neutral invented wordmarks/badges. Never a real company's logo, wordmark or app-store badge artwork.",
+    "must-be-nonfunctional": "Decorative pattern only. Must not encode a real URL or be scannable to any destination."
+  },
+  "roles": {
+    "brand.wordmark": {
+      "generationPolicy": "must-reuse-exact",
+      "description": "The neutral 'Launchpad' wordmark plus the original gradient LogoMark. This replaces the source company's logo everywhere.",
+      "evidence": [
+        "mv.asset-role.brand.wordmark"
+      ],
+      "complianceCritical": true
+    },
+    "icon.glyph": {
+      "generationPolicy": "must-reuse-exact",
+      "description": "One of the original 16px line glyphs in shared.jsx Icon (closed name list).",
+      "evidence": [
+        "mv.asset-role.icon.glyph"
+      ]
+    },
+    "visual.app-tile": {
+      "generationPolicy": "may-generate-new",
+      "description": "Generic gradient square standing in for an app or plugin icon (AppTile hue gradient).",
+      "evidence": [
+        "mv.asset-role.visual.app-tile"
+      ]
+    },
+    "visual.gradient-art": {
+      "generationPolicy": "may-generate-new",
+      "description": "Abstract blurred gradient art (hero fallback bars, frame wallpaper, footer cube, community and page-hero glows).",
+      "evidence": [
+        "mv.asset-role.visual.gradient-art"
+      ]
+    },
+    "visual.webgl-scene": {
+      "generationPolicy": "must-reuse-component",
+      "description": "The homepage hero's WebGL glass-bars scene (HeroCanvas) with its CSS fallback.",
+      "evidence": [
+        "mv.asset-role.visual.webgl-scene"
+      ]
+    },
+    "visual.ui-mock": {
+      "generationPolicy": "may-generate-new",
+      "description": "Simplified original UI mock (launcher window, chat window, app window) drawn with CSS boxes.",
+      "evidence": [
+        "mv.asset-role.visual.ui-mock"
+      ]
+    },
+    "visual.isometric-figure": {
+      "generationPolicy": "may-generate-new",
+      "description": "Original isometric line-art SVG on the dotted developer-grid cells.",
+      "evidence": [
+        "mv.asset-role.visual.isometric-figure"
+      ]
+    },
+    "visual.keyboard": {
+      "generationPolicy": "must-reuse-component",
+      "description": "Keyboard keys rendered with the Key primitive (.key CSS).",
+      "evidence": [
+        "mv.asset-role.visual.keyboard"
+      ]
+    },
+    "visual.video-placeholder": {
+      "generationPolicy": "may-generate-new",
+      "description": "Gradient layer standing in for a video or video thumbnail. No real video files exist in the clone.",
+      "evidence": [
+        "mv.asset-role.visual.video-placeholder"
+      ]
+    },
+    "person.avatar-placeholder": {
+      "generationPolicy": "must-not-fabricate-real",
+      "description": "Gradient circle with initials for a fictional person (testimonials, quote chips, store authors).",
+      "evidence": [
+        "mv.asset-role.person.avatar-placeholder"
+      ],
+      "complianceCritical": true
+    },
+    "brand.customer-logo-slot": {
+      "generationPolicy": "must-not-use-real-mark",
+      "description": "Neutral invented text wordmark in a customer-logo slot.",
+      "evidence": [
+        "mv.asset-role.brand.customer-logo-slot"
+      ],
+      "complianceCritical": true
+    },
+    "brand.store-badge-placeholder": {
+      "generationPolicy": "must-not-use-real-mark",
+      "description": "Invented 'App Shelf' store badge (132x36) in place of a real app-store badge.",
+      "evidence": [
+        "mv.asset-role.brand.store-badge-placeholder"
+      ],
+      "complianceCritical": true
+    },
+    "visual.qr-placeholder": {
+      "generationPolicy": "must-be-nonfunctional",
+      "description": "Deterministic pseudo-random module grid that is not a real QR code.",
+      "evidence": [
+        "mv.asset-role.visual.qr-placeholder"
+      ],
+      "complianceCritical": true
+    }
+  },
+  "iconNames": [
+    "arrow-right",
+    "arrow-left",
+    "arrow-ne",
+    "chevron-right",
+    "download",
+    "spark",
+    "grid",
+    "clip",
+    "window",
+    "bolt",
+    "search",
+    "note",
+    "calendar",
+    "chat",
+    "cmd",
+    "hash",
+    "bird",
+    "shield",
+    "star",
+    "apple",
+    "check",
+    "dash",
+    "chevron-down",
+    "info",
+    "play",
+    "users",
+    "globe",
+    "lock",
+    "image",
+    "mic",
+    "qr"
+  ],
+  "evidence": [
+    "mv.icon-names",
+    "mv.no-raster-assets"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "catalog.store-toolbar",
+  "category": "CATALOG",
+  "description": "Store search / filter / sort toolbar.",
+  "purpose": "Filter, switch view and search the store list.",
+  "scope": "Store page only.",
+  "implementedBy": "pages/Store.jsx > StoreToolbar",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "tabs": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 14,
+            "measured": "clone longest of 3",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.catalog.store-toolbar.tabs.label"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.store-toolbar.tabs"
+        ]
+      },
+      "views": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "icon": {
+            "kind": "icon",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.store-toolbar.views"
+        ]
+      },
+      "searchPlaceholder": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 9,
+        "measured": "9c",
+        "budgetRule": "exact",
+        "basis": "spec-sibling",
+        "evidence": [
+          "mv.copy.catalog.store-toolbar.searchPlaceholder"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "chip-tabs",
+        "trigger": "click",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.catalog.store-toolbar.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.catalog.store-toolbar"
+  ]
+}

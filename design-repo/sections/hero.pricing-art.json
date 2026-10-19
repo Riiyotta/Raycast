@@ -1,0 +1,47 @@
+{
+  "id": "hero.pricing-art",
+  "category": "HERO",
+  "description": "Decorative soft-glow image positioned behind the pricing toggle; no animation.",
+  "purpose": "Decorative soft-glow art that opens the pricing page behind the interval toggle; carries no copy.",
+  "scope": "Pricing page only.",
+  "implementedBy": "pages/Pricing.jsx > TopArt",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "art": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.gradient-art"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.hero.pricing-art.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-geometry",
+      "detail": "1064x385 to 600x217 at 390.",
+      "evidence": [
+        "mv.responsive.hero.pricing-art.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.hero.pricing-art"
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "easing": {
+    "spring": {
+      "$type": "cubicBezier",
+      "$value": "linear(0 0%, .005927 1%, .022466 2%, .047872 3%, .080554 4%, .119068 5%, .162116 6%, .208536 7%, .2573 8%, .3075 9%, .358346 10%, .409157 11%, .45935 12%, .508438 13%, .556014 14%, .601751 15%, .645389 16%, .686733 17%, .72564 18%, .762019 19%, .795818 20%, .827026 21%, .855662 22%, .881772 23%, .905423 24%, .926704 25%, .945714 26%, .962568 27%, .977386 28%, .990295 29%, 1.00143 30%, 1.01091 31%, 1.01888 32%, 1.02547 33%, 1.03079 34%, 1.03498 35%, 1.03816 36%, 1.04042 37%, 1.04189 38%, 1.04266 39%, 1.04283 40%, 1.04247 41%, 1.04168 42%, 1.04052 43%, 1.03907 44%, 1.03737 45%, 1.03549 46%, 1.03348 47%, 1.03138 48%, 1.02922 49%, 1.02704 50%, 1.02486 51%, 1.02272 52%, 1.02063 53%, 1.01861 54%, 1.01667 55%, 1.01482 56%, 1.01307 57%, 1.01142 58%, 1.00989 59%, 1.00846 60%, 1.00715 61%, 1.00594 62%, 1.00485 63%, 1.00386 64%, 1.00296 65%, 1.00217 66%, 1.00147 67%, 1.00085 68%, 1.00031 69%, .999849 70%, .999457 71%, .999128 72%, .998858 73%, .99864 74%, .99847 75%, .998342 76%, .998253 77%, .998196 78%, .998169 79%, .998167 80%, .998186 81%, .998224 82%, .998276 83%, .998341 84%, .998415 85%, .998497 86%, .998584 87%, .998675 88%, .998768 89%, .998861 90%, .998954 91%, .999045 92%, .999134 93%, .99922 94%, .999303 95%, .999381 96%, .999455 97%, .999525 98%, .999589 99%, .99965 100%)",
+      "evidence": [
+        "mv.tw.easing.spring"
+      ],
+      "valueInSource": true
+    },
+    "out-quint": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+      "evidence": [
+        "mv.tw.easing.out-quint"
+      ],
+      "valueInSource": true
+    },
+    "out-cubic": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.215, .61, .355, 1)",
+      "evidence": [
+        "mv.tw.easing.out-cubic"
+      ],
+      "valueInSource": true
+    },
+    "wall": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(0.4, 0, 0.22, 0.96)",
+      "evidence": [
+        "mv.tw.easing.wall"
+      ],
+      "valueInSource": true
+    },
+    "ease-out-quart": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.165, .84, .44, 1)",
+      "evidence": [
+        "mv.css.easing.ease-out-quart"
+      ],
+      "valueInSource": true
+    },
+    "ease-out-circ-ish": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.075, .82, .165, 1)",
+      "evidence": [
+        "mv.css.easing.ease-out-circ-ish"
+      ],
+      "valueInSource": true
+    },
+    "hotkey-swap": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.4, 0, .22, .96)",
+      "evidence": [
+        "mv.css.easing.hotkey-swap"
+      ],
+      "valueInSource": true
+    }
+  },
+  "duration": {
+    "400": {
+      "$type": "duration",
+      "$value": "400ms",
+      "evidence": [
+        "mv.tw.duration.400"
+      ],
+      "valueInSource": true
+    },
+    "600": {
+      "$type": "duration",
+      "$value": "600ms",
+      "evidence": [
+        "mv.tw.duration.600"
+      ],
+      "valueInSource": true
+    },
+    "700": {
+      "$type": "duration",
+      "$value": "700ms",
+      "evidence": [
+        "mv.tw.duration.700"
+      ],
+      "valueInSource": true
+    },
+    "hero-text-fade": {
+      "$type": "duration",
+      "$value": "1s",
+      "evidence": [
+        "mv.motion.duration.hero-text-fade"
+      ],
+      "valueInSource": true
+    },
+    "hero-sub-delay": {
+      "$type": "duration",
+      "$value": "1s",
+      "evidence": [
+        "mv.motion.duration.hero-sub-delay"
+      ],
+      "valueInSource": true
+    },
+    "ext-card-slide": {
+      "$type": "duration",
+      "$value": ".7s",
+      "evidence": [
+        "mv.motion.duration.ext-card-slide"
+      ],
+      "valueInSource": true
+    },
+    "quote-fade": {
+      "$type": "duration",
+      "$value": ".7s",
+      "evidence": [
+        "mv.motion.duration.quote-fade"
+      ],
+      "valueInSource": true
+    },
+    "wall-progress": {
+      "$type": "duration",
+      "$value": "5000ms",
+      "evidence": [
+        "mv.motion.duration.wall-progress"
+      ],
+      "valueInSource": true
+    },
+    "caret-blink": {
+      "$type": "duration",
+      "$value": "1.1s",
+      "evidence": [
+        "mv.motion.duration.caret-blink"
+      ],
+      "valueInSource": true
+    },
+    "announce-sweep": {
+      "$type": "duration",
+      "$value": "3s",
+      "evidence": [
+        "mv.motion.duration.announce-sweep"
+      ],
+      "valueInSource": true
+    },
+    "key-glow": {
+      "$type": "duration",
+      "$value": "1.5s",
+      "evidence": [
+        "mv.motion.duration.key-glow"
+      ],
+      "valueInSource": true
+    },
+    "marquee": {
+      "$type": "duration",
+      "$value": "120s",
+      "evidence": [
+        "mv.motion.duration.marquee"
+      ],
+      "valueInSource": true
+    },
+    "orbit": {
+      "$type": "duration",
+      "$value": "180s",
+      "evidence": [
+        "mv.motion.duration.orbit"
+      ],
+      "valueInSource": true
+    },
+    "faq-chevron": {
+      "$type": "duration",
+      "$value": "400ms",
+      "evidence": [
+        "mv.motion.duration.faq-chevron"
+      ],
+      "valueInSource": true
+    },
+    "toggle-pill": {
+      "$type": "duration",
+      "$value": ".2s",
+      "evidence": [
+        "mv.motion.duration.toggle-pill"
+      ],
+      "valueInSource": true
+    },
+    "blur-in": {
+      "$type": "duration",
+      "$value": ".5s",
+      "evidence": [
+        "mv.motion.duration.blur-in"
+      ],
+      "valueInSource": true
+    },
+    "store-bg-enter": {
+      "$type": "duration",
+      "$value": "2s",
+      "evidence": [
+        "mv.motion.duration.store-bg-enter"
+      ],
+      "valueInSource": true
+    }
+  },
+  "keyframes": {
+    "fade-in-up": {
+      "$type": "keyframes",
+      "$value": "fade-in-up",
+      "evidence": [
+        "mv.css.keyframes.fade-in-up"
+      ],
+      "valueInSource": true
+    },
+    "fadeIn": {
+      "$type": "keyframes",
+      "$value": "fadeIn",
+      "evidence": [
+        "mv.css.keyframes.fadeIn"
+      ],
+      "valueInSource": true
+    },
+    "slideIn": {
+      "$type": "keyframes",
+      "$value": "slideIn",
+      "evidence": [
+        "mv.css.keyframes.slideIn"
+      ],
+      "valueInSource": true
+    },
+    "x": {
+      "$type": "keyframes",
+      "$value": "x",
+      "evidence": [
+        "mv.css.keyframes.x"
+      ],
+      "valueInSource": true
+    },
+    "rotating2": {
+      "$type": "keyframes",
+      "$value": "rotating2",
+      "evidence": [
+        "mv.css.keyframes.rotating2"
+      ],
+      "valueInSource": true
+    },
+    "blink": {
+      "$type": "keyframes",
+      "$value": "blink",
+      "evidence": [
+        "mv.css.keyframes.blink"
+      ],
+      "valueInSource": true
+    },
+    "progress": {
+      "$type": "keyframes",
+      "$value": "progress",
+      "evidence": [
+        "mv.css.keyframes.progress"
+      ],
+      "valueInSource": true
+    },
+    "float": {
+      "$type": "keyframes",
+      "$value": "float",
+      "evidence": [
+        "mv.css.keyframes.float"
+      ],
+      "valueInSource": true
+    },
+    "screenBlinkStartup": {
+      "$type": "keyframes",
+      "$value": "screenBlinkStartup",
+      "evidence": [
+        "mv.css.keyframes.screenBlinkStartup"
+      ],
+      "valueInSource": true
+    },
+    "shimmer": {
+      "$type": "keyframes",
+      "$value": "shimmer",
+      "evidence": [
+        "mv.css.keyframes.shimmer"
+      ],
+      "valueInSource": true
+    },
+    "reveal": {
+      "$type": "keyframes",
+      "$value": "reveal",
+      "evidence": [
+        "mv.css.keyframes.reveal"
+      ],
+      "valueInSource": true
+    },
+    "fadeInScaleUp": {
+      "$type": "keyframes",
+      "$value": "fadeInScaleUp",
+      "evidence": [
+        "mv.css.keyframes.fadeInScaleUp"
+      ],
+      "valueInSource": true
+    },
+    "hero-drift": {
+      "$type": "keyframes",
+      "$value": "hero-drift",
+      "evidence": [
+        "mv.css.keyframes.hero-drift"
+      ],
+      "valueInSource": true
+    },
+    "hero-light-drift": {
+      "$type": "keyframes",
+      "$value": "hero-light-drift",
+      "evidence": [
+        "mv.css.keyframes.hero-light-drift"
+      ],
+      "valueInSource": true
+    },
+    "bgEnter": {
+      "$type": "keyframes",
+      "$value": "bgEnter",
+      "evidence": [
+        "mv.css.keyframes.bgEnter"
+      ],
+      "valueInSource": true
+    },
+    "fgEnter": {
+      "$type": "keyframes",
+      "$value": "fgEnter",
+      "evidence": [
+        "mv.css.keyframes.fgEnter"
+      ],
+      "valueInSource": true
+    },
+    "slideUpAndFade": {
+      "$type": "keyframes",
+      "$value": "slideUpAndFade",
+      "evidence": [
+        "mv.css.keyframes.slideUpAndFade"
+      ],
+      "valueInSource": true
+    },
+    "dotPulse1": {
+      "$type": "keyframes",
+      "$value": "dotPulse1",
+      "evidence": [
+        "mv.css.keyframes.dotPulse1"
+      ],
+      "valueInSource": true
+    },
+    "dotPulse2": {
+      "$type": "keyframes",
+      "$value": "dotPulse2",
+      "evidence": [
+        "mv.css.keyframes.dotPulse2"
+      ],
+      "valueInSource": true
+    },
+    "dotPulse3": {
+      "$type": "keyframes",
+      "$value": "dotPulse3",
+      "evidence": [
+        "mv.css.keyframes.dotPulse3"
+      ],
+      "valueInSource": true
+    },
+    "orbitL": {
+      "$type": "keyframes",
+      "$value": "orbitL",
+      "evidence": [
+        "mv.css.keyframes.orbitL"
+      ],
+      "valueInSource": true
+    },
+    "orbitR": {
+      "$type": "keyframes",
+      "$value": "orbitR",
+      "evidence": [
+        "mv.css.keyframes.orbitR"
+      ],
+      "valueInSource": true
+    },
+    "orbitIconL": {
+      "$type": "keyframes",
+      "$value": "orbitIconL",
+      "evidence": [
+        "mv.css.keyframes.orbitIconL"
+      ],
+      "valueInSource": true
+    },
+    "orbitIconR": {
+      "$type": "keyframes",
+      "$value": "orbitIconR",
+      "evidence": [
+        "mv.css.keyframes.orbitIconR"
+      ],
+      "valueInSource": true
+    },
+    "videoDrift": {
+      "$type": "keyframes",
+      "$value": "videoDrift",
+      "evidence": [
+        "mv.css.keyframes.videoDrift"
+      ],
+      "valueInSource": true
+    },
+    "blurIn": {
+      "$type": "keyframes",
+      "$value": "blurIn",
+      "evidence": [
+        "mv.tw.keyframes.blurIn"
+      ],
+      "valueInSource": true
+    },
+    "riseIn": {
+      "$type": "keyframes",
+      "$value": "riseIn",
+      "evidence": [
+        "mv.tw.keyframes.riseIn"
+      ],
+      "valueInSource": true
+    },
+    "fadeInUp": {
+      "$type": "keyframes",
+      "$value": "fadeInUp",
+      "evidence": [
+        "mv.tw.keyframes.fadeInUp"
+      ],
+      "valueInSource": true
+    },
+    "marqueeL": {
+      "$type": "keyframes",
+      "$value": "marqueeL",
+      "evidence": [
+        "mv.tw.keyframes.marqueeL"
+      ],
+      "valueInSource": true
+    },
+    "marqueeR": {
+      "$type": "keyframes",
+      "$value": "marqueeR",
+      "evidence": [
+        "mv.tw.keyframes.marqueeR"
+      ],
+      "valueInSource": true
+    }
+  }
+}

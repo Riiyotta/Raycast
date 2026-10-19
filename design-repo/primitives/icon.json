@@ -1,0 +1,13 @@
+{
+  "id": "icon",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > Icon",
+  "props": [
+    "name",
+    "size"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.icon"
+  ]
+}

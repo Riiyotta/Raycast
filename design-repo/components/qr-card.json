@@ -1,0 +1,13 @@
+{
+  "id": "qr-card",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/DownloadBlock.jsx > QrCard",
+  "props": [
+    "fixed"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.qr-card"
+  ]
+}

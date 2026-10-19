@@ -1,0 +1,19 @@
+{
+  "id": "plan-card",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/PricingSection.jsx > PlanCard",
+  "props": [
+    "tier",
+    "yearly"
+  ],
+  "uses": [
+    "tier-switch",
+    "button-light",
+    "button-dark",
+    "badge"
+  ],
+  "evidence": [
+    "mv.component.plan-card"
+  ]
+}

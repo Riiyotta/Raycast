@@ -1,0 +1,103 @@
+{
+  "breakpoint": {
+    "xs": {
+      "$type": "dimension",
+      "$value": "420px",
+      "evidence": [
+        "mv.tw.breakpoint.xs"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "720px",
+      "evidence": [
+        "mv.tw.breakpoint.sm"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "768px",
+      "evidence": [
+        "mv.tw.breakpoint.md"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "api2": {
+      "$type": "dimension",
+      "$value": "784px",
+      "evidence": [
+        "mv.tw.breakpoint.api2"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "nav": {
+      "$type": "dimension",
+      "$value": "880px",
+      "evidence": [
+        "mv.tw.breakpoint.nav"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "w920": {
+      "$type": "dimension",
+      "$value": "920px",
+      "evidence": [
+        "mv.tw.breakpoint.w920"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "1064px",
+      "evidence": [
+        "mv.tw.breakpoint.lg"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "api3": {
+      "$type": "dimension",
+      "$value": "1200px",
+      "evidence": [
+        "mv.tw.breakpoint.api3"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "1204px",
+      "evidence": [
+        "mv.tw.breakpoint.xl"
+      ],
+      "valueInSource": true,
+      "query": "min-width"
+    },
+    "max-ai": {
+      "$type": "dimension",
+      "$value": "767px",
+      "evidence": [
+        "mv.tw.breakpoint.max-ai"
+      ],
+      "valueInSource": true,
+      "query": "max-width"
+    },
+    "max-ext": {
+      "$type": "dimension",
+      "$value": "1024px",
+      "evidence": [
+        "mv.tw.breakpoint.max-ext"
+      ],
+      "valueInSource": true,
+      "query": "max-width"
+    }
+  }
+}

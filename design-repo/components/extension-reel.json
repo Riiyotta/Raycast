@@ -1,0 +1,17 @@
+{
+  "id": "extension-reel",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/ExtensionsCarousel.jsx > ExtensionReel",
+  "props": [
+    "title",
+    "link",
+    "count"
+  ],
+  "uses": [
+    "app-tile"
+  ],
+  "evidence": [
+    "mv.component.extension-reel"
+  ]
+}

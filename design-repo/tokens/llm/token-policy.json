@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "resolutionOrder": [
+    "foundation",
+    "theme (dark only)",
+    "semantic",
+    "component",
+    "layout"
+  ],
+  "rawValueRestrictions": {
+    "backdropBlur": "discouraged: reference a catalog id",
+    "blur": "discouraged: reference a catalog id",
+    "breakpoint": "discouraged: reference a catalog id",
+    "color": "forbidden: reference a catalog id",
+    "container": "discouraged: reference a catalog id",
+    "duration": "discouraged: reference a catalog id",
+    "easing": "discouraged: reference a catalog id",
+    "fontFamily": "discouraged: reference a catalog id",
+    "gradient": "forbidden: reference a catalog id",
+    "keyframes": "discouraged: reference a catalog id",
+    "letterSpacing": "discouraged: reference a catalog id",
+    "radius": "discouraged: reference a catalog id",
+    "shadow": "forbidden: reference a catalog id",
+    "spacing": "discouraged: reference a catalog id",
+    "typeRole": "discouraged: reference a catalog id"
+  },
+  "enforcement": {
+    "machineChecked": [
+      "PageSpec structure (schema)",
+      "composition and copy rules (semantic_validate.py)",
+      "token alias resolution and value-in-source (verify_all.py)"
+    ],
+    "conventionOnly": [
+      "rawValueRestrictions apply to code written from this repo, not to PageSpecs"
+    ]
+  },
+  "overrides": {
+    "pageSpecTokenOverrides": "none",
+    "note": "PageSpecs carry no per-instance style or token field. Styling is owned by section/component contracts, so there is nothing token-shaped in a PageSpec to validate or mutate."
+  },
+  "copyBudgetPolicy": {
+    "unit": "characters (the specs measured c and L, words only occasionally)",
+    "rules": {
+      "exact": "measured 'Nc' -> maxChars N",
+      "max-of-list": "measured list of lengths -> the longest",
+      "range-upper-bound": "measured 'A-Bc' -> maxChars B",
+      "about-plus-10pct": "measured 'about N' -> round(N x 1.1)",
+      "max-of-instances": "max over several measured instances of the same slot",
+      "spec-sibling": "same component, typography and line count as a measured sibling field",
+      "clone-implementation-longest": "nothing measured: longest original string the clone ships for that slot"
+    },
+    "maxWords": "only where the spec measured words (w)"
+  },
+  "contentPolicy": "See assets/asset-roles.json licensingNotice. All copy original; no source-company names, prices, people or marks."
+}

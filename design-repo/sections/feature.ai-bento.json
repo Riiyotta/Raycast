@@ -1,0 +1,132 @@
+{
+  "id": "feature.ai-bento",
+  "category": "FEATURE",
+  "description": "Homepage-style AI section: header plus one wide and two half cards in a bento grid with in-card scripted workflow.",
+  "purpose": "Explain the assistant with one wide and two half cards, the wide one playing a scripted workflow.",
+  "scope": "Homepage and Pro page.",
+  "implementedBy": "AiBento.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "eyebrow": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 8,
+        "measured": "8c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-bento.eyebrow"
+        ]
+      },
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 31,
+        "measured": "31c / 5w / 1L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "maxWords": 5,
+        "evidence": [
+          "mv.copy.feature.ai-bento.title"
+        ]
+      },
+      "description": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 63,
+        "measured": "63c / 2L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-bento.description"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 13,
+            "measured": "5–13c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.ai-bento.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 121,
+            "measured": "about 110c",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.ai-bento.cards.description"
+            ]
+          },
+          "visual": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-bento.cards"
+        ]
+      },
+      "link": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 27,
+        "measured": "27c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-bento.link"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "workflow-sequence",
+        "trigger": "in-view-0.05",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.feature.ai-bento.0"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "workflowDelay prop: homepage passes 3400 (first tool ~3.4-3.9s after entry on the original); /pro keeps the default 600. Tool steps 1.2s.",
+      "evidence": [
+        "mv.qa.ai-workflow-start"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.max-ai",
+      "change": "stack",
+      "detail": "Bento becomes a column with gap 15, card radius 20 and padding 15.",
+      "evidence": [
+        "mv.responsive.feature.ai-bento.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.ai-bento"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "feature.section-title",
+  "category": "FEATURE",
+  "description": "Standalone section heading (optional eyebrow and body) introducing the content that follows.",
+  "purpose": "A standalone heading (optional eyebrow and body) that introduces the next block.",
+  "scope": "Pro and iOS pages, repeated within a page.",
+  "implementedBy": "shared.jsx > SectionTitle",
+  "variants": [
+    "size24",
+    "size32"
+  ],
+  "content": {
+    "byVariant": {
+      "size24": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 28,
+          "measured": "28c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.section-title.size24.title"
+          ]
+        },
+        "subtitle": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 39,
+          "measured": "39c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.section-title.size24.subtitle"
+          ]
+        },
+        "actionLabel": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 8,
+          "measured": "clone longest of 1",
+          "budgetRule": "clone-implementation-longest",
+          "basis": "clone-implementation",
+          "evidence": [
+            "mv.copy.feature.section-title.size24.actionLabel"
+          ]
+        }
+      },
+      "size32": {
+        "eyebrow": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 15,
+          "measured": "4–15c",
+          "budgetRule": "range-upper-bound",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.section-title.size32.eyebrow"
+          ]
+        },
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 40,
+          "measured": "24c / 40c / 26c",
+          "budgetRule": "max-of-instances",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.section-title.size32.title"
+          ]
+        },
+        "body": {
+          "kind": "text",
+          "required": false,
+          "maxChars": 119,
+          "measured": "119c / 89c / 88c",
+          "budgetRule": "max-of-instances",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.section-title.size32.body"
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.section-title.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-type",
+      "detail": "size32 drops to 20px/32 below 720.",
+      "evidence": [
+        "mv.responsive.feature.section-title.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.section-title"
+  ]
+}

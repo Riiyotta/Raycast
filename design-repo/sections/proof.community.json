@@ -1,0 +1,181 @@
+{
+  "id": "proof.community",
+  "category": "PROOF",
+  "description": "Community section: two social cards plus a draggable video thumbnail strip.",
+  "purpose": "Point to the community: two social cards over abstract art plus a draggable video strip.",
+  "scope": "Homepage only.",
+  "implementedBy": "Community.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 17,
+        "measured": "17c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.community.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 74,
+        "measured": "74c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.community.subtitle"
+        ]
+      },
+      "socials": {
+        "kind": "list",
+        "required": true,
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 9,
+            "measured": "5–9c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.community.socials.title"
+            ]
+          },
+          "count": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "11–12c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.community.socials.count"
+            ]
+          },
+          "body": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 77,
+            "measured": "about 70c",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.community.socials.body"
+            ]
+          },
+          "cta": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 6,
+            "measured": "4–6c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.community.socials.cta"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.community.socials"
+        ]
+      },
+      "videos": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 18,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 45,
+            "measured": "about 25–45c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.community.videos.title"
+            ]
+          },
+          "thumb": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.video-placeholder"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.community.videos"
+        ]
+      },
+      "footer": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 83,
+        "measured": "83c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.community.footer"
+        ]
+      },
+      "footerLink": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 12,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.proof.community.footerLink"
+        ]
+      },
+      "background": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.gradient-art"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.proof.community.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "Socials become 1 column (342 wide).",
+      "evidence": [
+        "mv.responsive.proof.community.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.proof.community"
+  ]
+}

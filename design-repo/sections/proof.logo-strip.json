@@ -1,0 +1,81 @@
+{
+  "id": "proof.logo-strip",
+  "category": "PROOF",
+  "description": "Row of customer logo placeholders.",
+  "purpose": "A quiet row of (invented) customer wordmarks under one line of copy.",
+  "scope": "Teams page only.",
+  "implementedBy": "pages/Teams.jsx > LogoStrip",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "lead": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 19,
+        "measured": "19c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.logo-strip.lead"
+        ]
+      },
+      "logos": {
+        "kind": "list",
+        "required": true,
+        "minItems": 6,
+        "maxItems": 6,
+        "item": {
+          "name": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 15,
+            "measured": "clone longest of 1",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.proof.logo-strip.logos.name"
+            ]
+          },
+          "logo": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "brand.customer-logo-slot"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.logo-strip.logos"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.proof.logo-strip.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "Logos wrap to 3 rows at 390.",
+      "evidence": [
+        "mv.responsive.proof.logo-strip.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.proof.logo-strip"
+  ]
+}

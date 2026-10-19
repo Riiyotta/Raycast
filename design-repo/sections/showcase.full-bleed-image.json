@@ -1,0 +1,39 @@
+{
+  "id": "showcase.full-bleed-image",
+  "category": "SHOWCASE",
+  "description": "Full-bleed wide image under a section title.",
+  "purpose": "A single full-bleed visual break under a section title.",
+  "scope": "iOS page only.",
+  "implementedBy": "pages/Ios.jsx > Vis",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "image": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.gradient-art",
+          "visual.ui-mock"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.showcase.full-bleed-image.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.showcase.full-bleed-image"
+  ]
+}

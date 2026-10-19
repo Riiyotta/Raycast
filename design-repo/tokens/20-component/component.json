@@ -1,0 +1,243 @@
+{
+  "button.light": {
+    "background": {
+      "$type": "alias",
+      "$value": "{color.grey.50}"
+    },
+    "text": {
+      "$type": "alias",
+      "$value": "{color.grey.500}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.btn-light}"
+    },
+    "shadowFocus": {
+      "$type": "alias",
+      "$value": "{shadow.btn-light-focus}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.normal}"
+    },
+    "evidence": [
+      "mv.component-token.button.light"
+    ]
+  },
+  "button.dark": {
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.btn-dark}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.btn-dark}"
+    },
+    "shadowHover": {
+      "$type": "alias",
+      "$value": "{shadow.btn-dark-hover}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.normal}"
+    },
+    "evidence": [
+      "mv.component-token.button.dark"
+    ]
+  },
+  "badge": {
+    "background": {
+      "$type": "alias",
+      "$value": "{color.grey.600}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.sm}"
+    },
+    "evidence": [
+      "mv.component-token.badge"
+    ]
+  },
+  "card.default": {
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.card}"
+    },
+    "border": {
+      "$type": "alias",
+      "$value": "{color.card-border}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.md}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.inset-top}"
+    },
+    "evidence": [
+      "mv.component-token.card.default"
+    ]
+  },
+  "card.ai": {
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.bento}"
+    },
+    "evidence": [
+      "mv.component-token.card.ai"
+    ]
+  },
+  "card.extension": {
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.xl}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.ext-card}"
+    },
+    "evidence": [
+      "mv.component-token.card.extension"
+    ]
+  },
+  "nav.bar": {
+    "height": {
+      "$type": "alias",
+      "$value": "{spacing.nav}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.lg}"
+    },
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.glass}"
+    },
+    "border": {
+      "$type": "alias",
+      "$value": "{color.card-border}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.nav}"
+    },
+    "backdropBlur": {
+      "$type": "alias",
+      "$value": "{backdropBlur.5}"
+    },
+    "evidence": [
+      "mv.component-token.nav.bar"
+    ]
+  },
+  "key": {
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.key}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.key}"
+    },
+    "shadowHover": {
+      "$type": "alias",
+      "$value": "{shadow.key-hover}"
+    },
+    "shadowGlow": {
+      "$type": "alias",
+      "$value": "{shadow.key-glow}"
+    },
+    "glowBackground": {
+      "$type": "alias",
+      "$value": "{gradient.key-glow}"
+    },
+    "evidence": [
+      "mv.component-token.key"
+    ]
+  },
+  "frame.outer": {
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.frame}"
+    },
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.frame-outer}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.frame-outer}"
+    },
+    "evidence": [
+      "mv.component-token.frame.outer"
+    ]
+  },
+  "dock": {
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.xl}"
+    },
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.dock}"
+    },
+    "shadow": {
+      "$type": "alias",
+      "$value": "{shadow.dock}"
+    },
+    "item": {
+      "$type": "alias",
+      "$value": "{gradient.dock-item}"
+    },
+    "itemActive": {
+      "$type": "alias",
+      "$value": "{gradient.dock-item-active}"
+    },
+    "evidence": [
+      "mv.component-token.dock"
+    ]
+  },
+  "plan.featured": {
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.plan-featured}"
+    },
+    "border": {
+      "$type": "alias",
+      "$value": "{color.grey.500}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.lg}"
+    },
+    "evidence": [
+      "mv.component-token.plan.featured"
+    ]
+  },
+  "faq.item": {
+    "border": {
+      "$type": "alias",
+      "$value": "{gradient.faq-line}"
+    },
+    "answerText": {
+      "$type": "alias",
+      "$value": "{color.fg.300}"
+    },
+    "evidence": [
+      "mv.component-token.faq.item"
+    ]
+  },
+  "pill.category-active": {
+    "background": {
+      "$type": "alias",
+      "$value": "{gradient.cat-active}"
+    },
+    "radius": {
+      "$type": "alias",
+      "$value": "{radius.cat-active}"
+    },
+    "evidence": [
+      "mv.component-token.pill.category-active"
+    ]
+  }
+}

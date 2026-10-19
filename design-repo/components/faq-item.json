@@ -1,0 +1,16 @@
+{
+  "id": "faq-item",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/FaqAccordion.jsx > Item (FaqAccordion)",
+  "props": [
+    "q",
+    "a"
+  ],
+  "uses": [
+    "icon"
+  ],
+  "evidence": [
+    "mv.component.faq-item"
+  ]
+}

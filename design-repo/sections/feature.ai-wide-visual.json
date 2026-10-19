@@ -1,0 +1,71 @@
+{
+  "id": "feature.ai-wide-visual",
+  "category": "FEATURE",
+  "description": "AI header over a single wide card visual.",
+  "purpose": "One assistant topic introduced by a header over a single wide visual card.",
+  "scope": "AI page only.",
+  "implementedBy": "AiBento.jsx > AiHeader + AiCard",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "eyebrow": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 8,
+        "measured": "8c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-wide-visual.eyebrow"
+        ]
+      },
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 31,
+        "measured": "31c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-wide-visual.title"
+        ]
+      },
+      "description": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 92,
+        "measured": "92c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-wide-visual.description"
+        ]
+      },
+      "visual": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.ui-mock"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.ai-wide-visual.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.feature.ai-wide-visual"
+  ]
+}

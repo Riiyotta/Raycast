@@ -1,0 +1,18 @@
+{
+  "id": "pair-head",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/SplitFeature.jsx > PairHead",
+  "props": [
+    "title",
+    "sub",
+    "badge",
+    "badgeIcon"
+  ],
+  "uses": [
+    "badge"
+  ],
+  "evidence": [
+    "mv.component.pair-head"
+  ]
+}

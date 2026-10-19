@@ -1,0 +1,143 @@
+{
+  "id": "catalog.featured-grid",
+  "category": "CATALOG",
+  "description": "Featured extensions block: headings over a three-card grid.",
+  "purpose": "Spotlight three hand-picked plugins under the store's section headings.",
+  "scope": "Store page only.",
+  "implementedBy": "pages/Store.jsx > FeaturedExtensionCard",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 7,
+        "measured": "7c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.featured-grid.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 52,
+        "measured": "52c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.featured-grid.subtitle"
+        ]
+      },
+      "groupTitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 8,
+        "measured": "8c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.featured-grid.groupTitle"
+        ]
+      },
+      "groupSubtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 32,
+        "measured": "32c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.featured-grid.groupSubtitle"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 14,
+            "measured": "14c",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.featured-grid.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 112,
+            "measured": "32–112c, 1–2L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.featured-grid.cards.description"
+            ]
+          },
+          "author": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 17,
+            "measured": "17c",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.featured-grid.cards.author"
+            ]
+          },
+          "icon": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.app-tile"
+            ]
+          },
+          "authorAvatar": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "person.avatar-placeholder"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.featured-grid.cards"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.catalog.featured-grid.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-type",
+      "detail": "h2 40px to 32px at 390.",
+      "evidence": [
+        "mv.responsive.catalog.featured-grid.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.catalog.featured-grid"
+  ]
+}

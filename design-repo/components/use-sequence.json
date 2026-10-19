@@ -1,0 +1,15 @@
+{
+  "id": "use-sequence",
+  "layer": "component",
+  "kind": "behavior",
+  "implementedBy": "src/components/shared.jsx > useSequence",
+  "props": [
+    "steps",
+    "playing",
+    "resetKey"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.use-sequence"
+  ]
+}

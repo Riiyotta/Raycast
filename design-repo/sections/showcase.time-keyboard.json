@@ -1,0 +1,102 @@
+{
+  "id": "showcase.time-keyboard",
+  "category": "SHOWCASE",
+  "description": "Text column beside a masked 3D keyboard grid whose feature keys light up in a staggered sequence on scroll-in.",
+  "purpose": "Make 'time saved' tangible: four feature keys light up in a masked keyboard beside a short title.",
+  "scope": "Homepage only.",
+  "implementedBy": "TimeKeyboard.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 27,
+        "measured": "27c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.time-keyboard.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 48,
+        "measured": "48c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.time-keyboard.subtitle"
+        ]
+      },
+      "featureKeys": {
+        "kind": "list",
+        "required": true,
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 22,
+            "measured": "about 20c, 2 lines",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.showcase.time-keyboard.featureKeys.label"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.time-keyboard.featureKeys"
+        ]
+      },
+      "keyboard": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.keyboard"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "feature-key-stagger",
+        "trigger": "in-view-0",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.showcase.time-keyboard.0"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "Feature keys opacity .2 to 1, .3s x index stagger, settle ~1.47s.",
+      "evidence": [
+        "mv.qa.time-keyboard"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "reorder",
+      "detail": "Keys first (490 tall, vertical mask), text below and centered.",
+      "evidence": [
+        "mv.responsive.showcase.time-keyboard.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.showcase.time-keyboard"
+  ]
+}

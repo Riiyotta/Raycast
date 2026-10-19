@@ -1,0 +1,83 @@
+{
+  "id": "feature.ai-chip-tabs",
+  "category": "FEATURE",
+  "description": "Row of chip tabs switching the AI stage below the hero.",
+  "purpose": "Let visitors switch the assistant demo stage with a row of task chips.",
+  "scope": "AI page only.",
+  "implementedBy": "pages/Ai.jsx > AiChipTabs",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "chips": {
+        "kind": "list",
+        "required": true,
+        "minItems": 10,
+        "maxItems": 10,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 9,
+            "measured": "clone longest of 6",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.ai-chip-tabs.chips.label"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-chip-tabs.chips"
+        ]
+      },
+      "stage": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.ui-mock",
+          "visual.gradient-art"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "rise-in-load",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.feature.ai-chip-tabs.0"
+        ]
+      },
+      {
+        "pattern": "chip-tabs",
+        "trigger": "click",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.ai-chip-tabs.1"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-geometry",
+      "detail": "Stage 350x226 at 390, chips wrap.",
+      "evidence": [
+        "mv.responsive.feature.ai-chip-tabs.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.ai-chip-tabs"
+  ]
+}

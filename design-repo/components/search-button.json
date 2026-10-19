@@ -1,0 +1,16 @@
+{
+  "id": "search-button",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/PageHero.jsx > SearchButton",
+  "props": [
+    "label",
+    "compact"
+  ],
+  "uses": [
+    "icon"
+  ],
+  "evidence": [
+    "mv.component.search-button"
+  ]
+}

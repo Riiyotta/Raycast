@@ -1,0 +1,14 @@
+{
+  "id": "arrow-link",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > ArrowLink",
+  "props": [
+    "children",
+    "href",
+    "variant"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.arrow-link"
+  ]
+}

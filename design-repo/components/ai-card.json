@@ -1,0 +1,16 @@
+{
+  "id": "ai-card",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/AiBento.jsx > AiCard",
+  "props": [
+    "title",
+    "desc",
+    "visualH",
+    "children"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.ai-card"
+  ]
+}

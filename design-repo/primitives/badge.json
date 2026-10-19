@@ -1,0 +1,16 @@
+{
+  "id": "badge",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > Badge",
+  "props": [
+    "icon",
+    "children",
+    "size"
+  ],
+  "componentTokens": [
+    "badge"
+  ],
+  "evidence": [
+    "mv.primitive.badge"
+  ]
+}

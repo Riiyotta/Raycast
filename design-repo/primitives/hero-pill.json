@@ -1,0 +1,15 @@
+{
+  "id": "hero-pill",
+  "layer": "primitive",
+  "implementedBy": "src/components/PageHero.jsx > HeroPill",
+  "props": [
+    "tone",
+    "icon",
+    "href",
+    "children"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.hero-pill"
+  ]
+}

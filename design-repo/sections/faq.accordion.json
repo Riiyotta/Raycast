@@ -1,0 +1,98 @@
+{
+  "id": "faq.accordion",
+  "category": "FAQ",
+  "description": "Question-and-answer accordion with heading.",
+  "purpose": "Answer objections near the end of a page in a multi-open accordion.",
+  "scope": "Pricing, Pro, AI, Windows and iOS pages.",
+  "implementedBy": "FaqAccordion.jsx",
+  "variants": [
+    "h20",
+    "h48",
+    "h18"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 4,
+        "measured": "4c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.faq.accordion.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": false,
+        "maxChars": 39,
+        "measured": "39c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.faq.accordion.subtitle"
+        ]
+      },
+      "items": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 10,
+        "item": {
+          "question": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 68,
+            "measured": "20–68c, 1L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.faq.accordion.items.question"
+            ]
+          },
+          "answer": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 330,
+            "measured": "roughly 100–330c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.faq.accordion.items.answer"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.faq.accordion.items"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.faq.accordion.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-geometry",
+      "detail": "Questions wrap to 2 lines at 390.",
+      "evidence": [
+        "mv.responsive.faq.accordion.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.faq.accordion"
+  ]
+}

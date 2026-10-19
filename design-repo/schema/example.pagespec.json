@@ -1,0 +1,760 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "template": "template.home",
+  "route": "/",
+  "title": "Launchpad - one key to everything",
+  "attestations": {
+    "originalCopy": true,
+    "placeholderVisualsOnly": true,
+    "placeholderPricing": true
+  },
+  "nodes": [
+    {
+      "id": "nav",
+      "type": "nav.navbar",
+      "variant": "default",
+      "content": {
+        "links": [
+          {
+            "label": "Plugins"
+          },
+          {
+            "label": "Plus"
+          },
+          {
+            "label": "Assist"
+          },
+          {
+            "label": "Mac"
+          },
+          {
+            "label": "Windows"
+          },
+          {
+            "label": "Teams"
+          },
+          {
+            "label": "Builders"
+          },
+          {
+            "label": "Notes"
+          },
+          {
+            "label": "Pricing"
+          }
+        ],
+        "loginLabel": "Log in",
+        "ctaLabel": "Get it",
+        "wordmark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Launchpad home"
+        }
+      },
+      "motion": {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero.home",
+      "variant": "default",
+      "content": {
+        "title": "Every task, one keystroke",
+        "subtitle": "A quiet command bar for your desktop that opens apps, finds files and runs scripts.",
+        "downloadLabel": "Download for Mac",
+        "requirements": "v1.0 · macOS 13 or later · 40 MB",
+        "subLinkPrimary": "Install via script",
+        "subLinkSecondary": "Linux build",
+        "announcement": "New: shared spaces",
+        "background": {
+          "assetRole": "visual.webgl-scene",
+          "decorative": true
+        }
+      },
+      "motion": {
+        "pattern": "fade-in-up-load",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "shortcuts",
+      "type": "showcase.shortcuts-frame",
+      "variant": "default",
+      "content": {
+        "title": "Shortcuts for every habit",
+        "subtitle": "Learned once, used all day.",
+        "caption": "Press one hotkey and the bar opens over any window, ready to type.",
+        "slides": [
+          {
+            "mock": {
+              "assetRole": "visual.ui-mock",
+              "hue": 350
+            },
+            "dockIcon": "clip"
+          },
+          {
+            "mock": {
+              "assetRole": "visual.ui-mock",
+              "hue": 210
+            },
+            "dockIcon": "spark"
+          },
+          {
+            "mock": {
+              "assetRole": "visual.ui-mock",
+              "hue": 40
+            },
+            "dockIcon": "search"
+          },
+          {
+            "mock": {
+              "assetRole": "visual.ui-mock",
+              "hue": 140
+            },
+            "dockIcon": "grid"
+          },
+          {
+            "mock": {
+              "assetRole": "visual.ui-mock",
+              "hue": 260
+            },
+            "dockIcon": "window"
+          }
+        ],
+        "wallpaper": {
+          "assetRole": "visual.gradient-art",
+          "decorative": true
+        }
+      },
+      "motion": {
+        "pattern": "scripted-reel",
+        "trigger": "in-view-0.2",
+        "reducedMotionFallback": "first-state-static"
+      }
+    },
+    {
+      "id": "time",
+      "type": "showcase.time-keyboard",
+      "variant": "default",
+      "content": {
+        "title": "Get an hour back each day",
+        "subtitle": "Small shortcuts add up to whole free afternoons.",
+        "featureKeys": [
+          {
+            "label": "Open apps instantly",
+            "icon": "bolt"
+          },
+          {
+            "label": "Find any file",
+            "icon": "search"
+          },
+          {
+            "label": "Paste past copies",
+            "icon": "clip"
+          },
+          {
+            "label": "Snap windows fast",
+            "icon": "window"
+          }
+        ],
+        "keyboard": {
+          "assetRole": "visual.keyboard",
+          "decorative": true
+        }
+      },
+      "motion": {
+        "pattern": "feature-key-stagger",
+        "trigger": "in-view-0",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "plugins",
+      "type": "catalog.extensions-carousel",
+      "variant": "default",
+      "content": {
+        "title": "Plugins for the tools you use",
+        "subtitle": "Hundreds of small add-ons, one keystroke away.",
+        "categories": [
+          {
+            "label": "Work"
+          },
+          {
+            "label": "Code"
+          },
+          {
+            "label": "Design"
+          },
+          {
+            "label": "Writing"
+          }
+        ],
+        "cards": [
+          {
+            "title": "Kanban Lite",
+            "description": "Move cards between columns and close tasks without touching the mouse.",
+            "icon": {
+              "assetRole": "visual.app-tile",
+              "hue": 230
+            },
+            "illustration": {
+              "assetRole": "visual.gradient-art",
+              "hue": 230,
+              "decorative": true
+            }
+          },
+          {
+            "title": "Link Shelf",
+            "description": "Keep the URLs you share most and paste any of them in two keys.",
+            "icon": {
+              "assetRole": "visual.app-tile",
+              "hue": 20
+            },
+            "illustration": {
+              "assetRole": "visual.gradient-art",
+              "hue": 20,
+              "decorative": true
+            }
+          },
+          {
+            "title": "Focus Timer",
+            "description": "Start a timed work block and silence alerts until it is done.",
+            "icon": {
+              "assetRole": "visual.app-tile",
+              "hue": 140
+            },
+            "illustration": {
+              "assetRole": "visual.gradient-art",
+              "hue": 140,
+              "decorative": true
+            }
+          }
+        ],
+        "link": "See every plugin"
+      },
+      "motion": {
+        "pattern": "slide-in-stagger",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "assist",
+      "type": "feature.ai-bento",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Assist",
+        "title": "Help right where you type",
+        "description": "Draft, ask and act on your apps without leaving the keyboard.",
+        "cards": [
+          {
+            "title": "Acts for you",
+            "description": "Describe a chore in plain words. The assistant picks the right app, makes the change and shows what it did.",
+            "visual": {
+              "assetRole": "visual.ui-mock"
+            }
+          },
+          {
+            "title": "Saved prompts",
+            "description": "Keep the prompts you reach for daily and run them on any selected text with a short alias.",
+            "visual": {
+              "assetRole": "visual.ui-mock"
+            }
+          },
+          {
+            "title": "Knows context",
+            "description": "Replies can draw on the tools you connect, pointing back to your own notes and tasks.",
+            "visual": {
+              "assetRole": "visual.ui-mock"
+            }
+          }
+        ],
+        "link": "How the assistant works"
+      },
+      "motion": {
+        "pattern": "workflow-sequence",
+        "trigger": "in-view-0.05",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "voices",
+      "type": "proof.testimonials",
+      "variant": "default",
+      "content": {
+        "title": "People who live on the keyboard",
+        "subtitle": "Notes from a few daily users.",
+        "people": [
+          {
+            "name": "Tova Ellison",
+            "role": "Interface designer",
+            "quote": "It took over from four little utilities, and my dock is quiet for the first time in years.",
+            "avatar": {
+              "assetRole": "person.avatar-placeholder",
+              "hue": 200
+            },
+            "highlights": [
+              {
+                "label": "Go-to command:"
+              },
+              {
+                "label": "Daily hotkey:"
+              }
+            ]
+          },
+          {
+            "name": "Bram Okonkwo",
+            "role": "Platform engineer",
+            "quote": "Writing my own plugin took one evening, and now the whole team uses it every morning.",
+            "avatar": {
+              "assetRole": "person.avatar-placeholder",
+              "hue": 30
+            },
+            "highlights": [
+              {
+                "label": "Go-to command:"
+              },
+              {
+                "label": "Daily hotkey:"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel-auto-advance",
+        "trigger": "timer",
+        "reducedMotionFallback": "first-state-static"
+      }
+    },
+    {
+      "id": "automate",
+      "type": "feature.automation",
+      "variant": "default",
+      "content": {
+        "title": "Let the routine run",
+        "subtitle": "Snippets, links and keys that do chores.",
+        "cards": [
+          {
+            "title": "Expanders",
+            "description": "Type a short code in any text field and it turns into a full reply or address.",
+            "icon": "note",
+            "visual": {
+              "assetRole": "visual.ui-mock"
+            }
+          },
+          {
+            "title": "Bookmarks",
+            "description": "Save a link with a blank for a search term and open it from anywhere.",
+            "icon": "bolt",
+            "visual": {
+              "assetRole": "visual.ui-mock"
+            }
+          },
+          {
+            "title": "Key combos",
+            "description": "Tie any command or script to a key combo and fire it from every app.",
+            "icon": "cmd",
+            "visual": {
+              "assetRole": "visual.keyboard"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "typing-and-hotkeys",
+        "trigger": "in-view-0.1",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "wall",
+      "type": "feature.feature-wall",
+      "variant": "default",
+      "content": {
+        "heading": "Little things, big wins.",
+        "items": [
+          {
+            "text": "Pin a file. ",
+            "badge": "Pinned",
+            "detail": "Pinned keeps one small chore a single keystroke away.",
+            "icon": "star",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 0
+            }
+          },
+          {
+            "text": "Rename windows. ",
+            "badge": "Window names",
+            "detail": "Window names keeps one small chore a single keystroke away.",
+            "icon": "window",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 30
+            }
+          },
+          {
+            "text": "Hide the dock. ",
+            "badge": "Quiet mode",
+            "detail": "Quiet mode keeps one small chore a single keystroke away.",
+            "icon": "shield",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 60
+            }
+          },
+          {
+            "text": "Emoji by name. ",
+            "badge": "Emoji",
+            "detail": "Emoji keeps one small chore a single keystroke away.",
+            "icon": "spark",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 90
+            }
+          },
+          {
+            "text": "Scratch notes. ",
+            "badge": "Notes",
+            "detail": "Notes keeps one small chore a single keystroke away.",
+            "icon": "note",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 120
+            }
+          },
+          {
+            "text": "End stuck apps. ",
+            "badge": "Tasks",
+            "detail": "Tasks keeps one small chore a single keystroke away.",
+            "icon": "bolt",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 150
+            }
+          },
+          {
+            "text": "Search mail. ",
+            "badge": "Mail",
+            "detail": "Mail keeps one small chore a single keystroke away.",
+            "icon": "search",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 180
+            }
+          },
+          {
+            "text": "Quick reminders. ",
+            "badge": "Reminders",
+            "detail": "Reminders keeps one small chore a single keystroke away.",
+            "icon": "calendar",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 210
+            }
+          },
+          {
+            "text": "Script hotkeys. ",
+            "badge": "Scripts",
+            "detail": "Scripts keeps one small chore a single keystroke away.",
+            "icon": "cmd",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 240
+            }
+          },
+          {
+            "text": "Pick a color. ",
+            "badge": "Colors",
+            "detail": "Colors keeps one small chore a single keystroke away.",
+            "icon": "grid",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 270
+            }
+          },
+          {
+            "text": "Ask a question. ",
+            "badge": "Ask",
+            "detail": "Ask keeps one small chore a single keystroke away.",
+            "icon": "chat",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 300
+            }
+          },
+          {
+            "text": "Time a task. ",
+            "badge": "Timers",
+            "detail": "Timers keeps one small chore a single keystroke away.",
+            "icon": "clip",
+            "preview": {
+              "assetRole": "visual.ui-mock",
+              "hue": 330
+            }
+          }
+        ],
+        "link": "Read more"
+      },
+      "motion": {
+        "pattern": "crossfade-auto-advance",
+        "trigger": "in-view-0.2",
+        "reducedMotionFallback": "first-state-static"
+      }
+    },
+    {
+      "id": "community",
+      "type": "proof.community",
+      "variant": "default",
+      "content": {
+        "title": "Find your people",
+        "subtitle": "Thousands of members trade setups, plugins and tips with each other daily.",
+        "socials": [
+          {
+            "title": "Forum",
+            "count": "30k members",
+            "body": "Ask for help, show off a workflow and hear about betas before anyone.",
+            "cta": "Join",
+            "icon": "hash"
+          },
+          {
+            "title": "Updates",
+            "count": "90k readers",
+            "body": "Short tips and release notes, posted a few times a week.",
+            "cta": "Follow",
+            "icon": "bird"
+          }
+        ],
+        "videos": [
+          {
+            "title": "Five hotkeys worth learning first",
+            "thumb": {
+              "assetRole": "visual.video-placeholder",
+              "hue": 10
+            }
+          },
+          {
+            "title": "Write a tiny plugin before lunch",
+            "thumb": {
+              "assetRole": "visual.video-placeholder",
+              "hue": 200
+            }
+          }
+        ],
+        "footer": "Short videos on setups, plugins and habits, made by people who use it every day.",
+        "footerLink": "See videos",
+        "background": {
+          "assetRole": "visual.gradient-art",
+          "decorative": true
+        }
+      },
+      "motion": {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed"
+      }
+    },
+    {
+      "id": "developers",
+      "type": "feature.developer-grid",
+      "variant": "default",
+      "content": {
+        "title": "Build it your own way",
+        "intro": "Write plugins with web tools you already know and share them with your team the same afternoon.",
+        "introLink": "Open the docs",
+        "linkCells": [
+          {
+            "title": "Typed views",
+            "body": "Lists, forms and detail panes that look right without any styling work."
+          },
+          {
+            "title": "Live reload",
+            "body": "Save a file and the change shows in the bar at once, logs in your terminal."
+          },
+          {
+            "title": "Key-value store",
+            "body": "Keep settings and cached data per user with a tiny storage helper."
+          },
+          {
+            "title": "Private sharing",
+            "body": "Publish plugins inside your company with versions and a review step."
+          }
+        ],
+        "figures": [
+          {
+            "figure": {
+              "assetRole": "visual.isometric-figure",
+              "decorative": true
+            }
+          },
+          {
+            "figure": {
+              "assetRole": "visual.isometric-figure",
+              "decorative": true
+            }
+          },
+          {
+            "figure": {
+              "assetRole": "visual.isometric-figure",
+              "decorative": true
+            }
+          },
+          {
+            "figure": {
+              "assetRole": "visual.isometric-figure",
+              "decorative": true
+            }
+          },
+          {
+            "figure": {
+              "assetRole": "visual.isometric-figure",
+              "decorative": true
+            }
+          },
+          {
+            "figure": {
+              "assetRole": "visual.isometric-figure",
+              "decorative": true
+            }
+          }
+        ],
+        "ctaLabel": "Get started"
+      },
+      "motion": {
+        "pattern": "figure-reveal",
+        "trigger": "in-view-0.7",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "final",
+      "type": "cta.final-keyboard",
+      "variant": "default",
+      "content": {
+        "title": "Start saving time",
+        "subtitle": "Free to install, simple to learn.",
+        "downloadLabel": "Download for Mac",
+        "keyboard": {
+          "assetRole": "visual.keyboard",
+          "decorative": true
+        }
+      },
+      "motion": {
+        "pattern": "key-glow",
+        "trigger": "in-view-0.9",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "footer.footer",
+      "variant": "cube",
+      "content": {
+        "groups": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Overview"
+              },
+              {
+                "label": "Plugins"
+              },
+              {
+                "label": "Plus plan"
+              },
+              {
+                "label": "Changelog"
+              }
+            ]
+          },
+          {
+            "heading": "Features",
+            "links": [
+              {
+                "label": "Clipboard"
+              },
+              {
+                "label": "Windows"
+              },
+              {
+                "label": "Snippets"
+              }
+            ]
+          },
+          {
+            "heading": "Builders",
+            "links": [
+              {
+                "label": "Docs"
+              },
+              {
+                "label": "API reference"
+              },
+              {
+                "label": "Examples"
+              }
+            ]
+          },
+          {
+            "heading": "Learn",
+            "links": [
+              {
+                "label": "Guides"
+              },
+              {
+                "label": "Videos"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About"
+              },
+              {
+                "label": "Careers"
+              },
+              {
+                "label": "Contact"
+              }
+            ]
+          },
+          {
+            "heading": "Legal",
+            "links": [
+              {
+                "label": "Terms"
+              },
+              {
+                "label": "Privacy"
+              },
+              {
+                "label": "Security"
+              }
+            ]
+          }
+        ],
+        "newsletterTitle": "Monthly notes from the team",
+        "newsletterBody": "New plugins and tips, never more than once a month.",
+        "inputPlaceholder": "name@example.com",
+        "legal": "By subscribing you agree that we may email you about product news. Unsubscribe any time with one click; we never sell or share your address.",
+        "legalLink": "Privacy terms",
+        "art": {
+          "assetRole": "visual.gradient-art",
+          "decorative": true
+        }
+      },
+      "motion": {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed"
+      }
+    }
+  ]
+}

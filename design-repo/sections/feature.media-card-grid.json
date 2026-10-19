@@ -1,0 +1,232 @@
+{
+  "id": "feature.media-card-grid",
+  "category": "FEATURE",
+  "description": "Grid of feature cards each pairing a visual with text; pro / windows / ios variants.",
+  "purpose": "Grid of feature cards each pairing a visual with a short title; one component, three page-family variants.",
+  "scope": "Pro, Windows and iOS pages.",
+  "implementedBy": "MediaCard.jsx",
+  "variants": [
+    "pro",
+    "windows",
+    "ios"
+  ],
+  "content": {
+    "byVariant": {
+      "pro": {
+        "cards": {
+          "kind": "list",
+          "required": true,
+          "minItems": 4,
+          "maxItems": 4,
+          "item": {
+            "title": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 16,
+              "measured": "13–16c",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.pro.cards.title"
+              ]
+            },
+            "sub": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 78,
+              "measured": "54–78c (2L)",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.pro.cards.sub"
+              ]
+            },
+            "badge": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 24,
+              "measured": "10–24c",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.pro.cards.badge"
+              ]
+            },
+            "visual": {
+              "kind": "media",
+              "required": true,
+              "assetRoles": [
+                "visual.ui-mock",
+                "visual.gradient-art"
+              ]
+            }
+          },
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.media-card-grid.pro.cards"
+          ]
+        }
+      },
+      "windows": {
+        "cards": {
+          "kind": "list",
+          "required": true,
+          "minItems": 8,
+          "maxItems": 8,
+          "item": {
+            "title": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 25,
+              "measured": "16–25c, 1–2L",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.windows.cards.title"
+              ]
+            },
+            "badge": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 16,
+              "measured": "clone longest of 1",
+              "budgetRule": "clone-implementation-longest",
+              "basis": "clone-implementation",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.windows.cards.badge"
+              ]
+            },
+            "icon": {
+              "kind": "icon",
+              "required": false
+            },
+            "poster": {
+              "kind": "media",
+              "required": true,
+              "assetRoles": [
+                "visual.ui-mock"
+              ]
+            },
+            "video": {
+              "kind": "media",
+              "required": false,
+              "assetRoles": [
+                "visual.video-placeholder"
+              ]
+            }
+          },
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.media-card-grid.windows.cards"
+          ]
+        }
+      },
+      "ios": {
+        "cards": {
+          "kind": "list",
+          "required": true,
+          "minItems": 4,
+          "maxItems": 5,
+          "item": {
+            "title": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 28,
+              "measured": "7–28c",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.ios.cards.title"
+              ]
+            },
+            "description": {
+              "kind": "text",
+              "required": true,
+              "maxChars": 137,
+              "measured": "57–137c, 1–3L",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.ios.cards.description"
+              ]
+            },
+            "link": {
+              "kind": "text",
+              "required": false,
+              "maxChars": 18,
+              "measured": "16–18c",
+              "budgetRule": "range-upper-bound",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.ios.cards.link"
+              ]
+            },
+            "footnote": {
+              "kind": "text",
+              "required": false,
+              "maxChars": 22,
+              "measured": "22c",
+              "budgetRule": "exact",
+              "basis": "spec-measured",
+              "evidence": [
+                "mv.copy.feature.media-card-grid.ios.cards.footnote"
+              ]
+            },
+            "visual": {
+              "kind": "media",
+              "required": true,
+              "assetRoles": [
+                "visual.ui-mock",
+                "visual.gradient-art"
+              ]
+            }
+          },
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.feature.media-card-grid.ios.cards"
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "dot-pulse",
+        "trigger": "always",
+        "reducedMotionFallback": "first-state-static",
+        "variants": [
+          "pro"
+        ],
+        "evidence": [
+          "mv.motion.feature.media-card-grid.0"
+        ]
+      },
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "variants": [
+          "windows",
+          "ios"
+        ],
+        "evidence": [
+          "mv.motion.feature.media-card-grid.1"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "All three variants become a single column at 390.",
+      "evidence": [
+        "mv.responsive.feature.media-card-grid.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.media-card-grid"
+  ]
+}

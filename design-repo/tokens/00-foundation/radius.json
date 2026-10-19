@@ -1,0 +1,140 @@
+{
+  "radius": {
+    "xs": {
+      "$type": "dimension",
+      "$value": "4px",
+      "evidence": [
+        "mv.tw.radius.xs"
+      ],
+      "valueInSource": true
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "6px",
+      "evidence": [
+        "mv.tw.radius.sm"
+      ],
+      "valueInSource": true
+    },
+    "normal": {
+      "$type": "dimension",
+      "$value": "8px",
+      "evidence": [
+        "mv.tw.radius.normal"
+      ],
+      "valueInSource": true
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "12px",
+      "evidence": [
+        "mv.tw.radius.md"
+      ],
+      "valueInSource": true
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "16px",
+      "evidence": [
+        "mv.tw.radius.lg"
+      ],
+      "valueInSource": true
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "20px",
+      "evidence": [
+        "mv.tw.radius.xl"
+      ],
+      "valueInSource": true
+    },
+    "xxl": {
+      "$type": "dimension",
+      "$value": "24px",
+      "evidence": [
+        "mv.tw.radius.xxl"
+      ],
+      "valueInSource": true
+    },
+    "frame": {
+      "$type": "dimension",
+      "$value": "19px",
+      "evidence": [
+        "mv.tw.radius.frame"
+      ],
+      "valueInSource": true
+    },
+    "bento": {
+      "$type": "dimension",
+      "$value": "30px",
+      "evidence": [
+        "mv.tw.radius.bento"
+      ],
+      "valueInSource": true
+    },
+    "cat-pill": {
+      "$type": "dimension",
+      "$value": "31px",
+      "evidence": [
+        "mv.tw.radius.cat-pill"
+      ],
+      "valueInSource": true
+    },
+    "cat-active": {
+      "$type": "dimension",
+      "$value": "36px",
+      "evidence": [
+        "mv.tw.radius.cat-active"
+      ],
+      "valueInSource": true
+    },
+    "pagination": {
+      "$type": "dimension",
+      "$value": "86px",
+      "evidence": [
+        "mv.tw.radius.pagination"
+      ],
+      "valueInSource": true
+    },
+    "announce": {
+      "$type": "dimension",
+      "$value": "43px",
+      "evidence": [
+        "mv.tw.radius.announce"
+      ],
+      "valueInSource": true
+    },
+    "announce-inner": {
+      "$type": "dimension",
+      "$value": "1000px",
+      "evidence": [
+        "mv.tw.radius.announce-inner"
+      ],
+      "valueInSource": true
+    },
+    "key": {
+      "$type": "dimension",
+      "$value": "11px",
+      "evidence": [
+        "mv.tw.radius.key"
+      ],
+      "valueInSource": true
+    },
+    "browse": {
+      "$type": "dimension",
+      "$value": "22px",
+      "evidence": [
+        "mv.tw.radius.browse"
+      ],
+      "valueInSource": true
+    },
+    "feature-img": {
+      "$type": "dimension",
+      "$value": "9px",
+      "evidence": [
+        "mv.tw.radius.feature-img"
+      ],
+      "valueInSource": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "button-dark",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > DarkButton",
+  "props": [
+    "children",
+    "size",
+    "sub",
+    "block"
+  ],
+  "componentTokens": [
+    "button.dark"
+  ],
+  "evidence": [
+    "mv.primitive.button-dark"
+  ]
+}

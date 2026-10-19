@@ -1,0 +1,12 @@
+{
+  "id": "eyebrow",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > Eyebrow",
+  "props": [
+    "children"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.eyebrow"
+  ]
+}

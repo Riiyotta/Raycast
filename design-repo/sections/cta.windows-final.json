@@ -1,0 +1,71 @@
+{
+  "id": "cta.windows-final",
+  "category": "CTA",
+  "description": "Windows closing call to action: centered lead over the Windows download block, no keyboard art.",
+  "purpose": "Windows closing call to action: a centered lead over the Windows download block, no keyboard art.",
+  "scope": "Windows page only.",
+  "implementedBy": "CenteredLead.jsx + DownloadBlock.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 38,
+        "measured": "38c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.cta.windows-final.title"
+        ]
+      },
+      "body": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 34,
+        "measured": "34c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.cta.windows-final.body"
+        ]
+      },
+      "line": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 24,
+        "measured": "24c",
+        "budgetRule": "exact",
+        "basis": "spec-sibling",
+        "evidence": [
+          "mv.copy.cta.windows-final.line"
+        ]
+      },
+      "badge": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "brand.store-badge-placeholder"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.cta.windows-final.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.cta.windows-final"
+  ]
+}

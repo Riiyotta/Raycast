@@ -1,0 +1,113 @@
+{
+  "id": "feature.ai-card-pairs",
+  "category": "FEATURE",
+  "description": "AI header over a two-by-two card grid with an arrow link.",
+  "purpose": "A short header over a two-by-two grid of small assistant cards and a link.",
+  "scope": "AI page only.",
+  "implementedBy": "AiBento.jsx > AiHeader + AiCard",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "eyebrow": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 7,
+        "measured": "7c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-card-pairs.eyebrow"
+        ]
+      },
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 18,
+        "measured": "18c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-card-pairs.title"
+        ]
+      },
+      "description": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 79,
+        "measured": "79c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-card-pairs.description"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 15,
+            "measured": "clone longest of 4",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.ai-card-pairs.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 43,
+            "measured": "clone longest of 4",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.ai-card-pairs.cards.description"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": false
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-card-pairs.cards"
+        ]
+      },
+      "link": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 46,
+        "measured": "46c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-card-pairs.link"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.ai-card-pairs.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.feature.ai-card-pairs"
+  ]
+}

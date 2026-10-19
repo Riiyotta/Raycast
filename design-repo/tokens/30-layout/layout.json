@@ -1,0 +1,98 @@
+{
+  "section.paddingY.mobile": {
+    "$type": "dimension",
+    "$value": "168px",
+    "evidence": [
+      "mv.layout.section.paddingY.mobile"
+    ],
+    "valueInSource": true
+  },
+  "section.paddingY.desktop": {
+    "$type": "dimension",
+    "$value": "224px",
+    "evidence": [
+      "mv.layout.section.paddingY.desktop"
+    ],
+    "valueInSource": true
+  },
+  "section.gutter": {
+    "$type": "dimension",
+    "$value": "24px",
+    "evidence": [
+      "mv.layout.section.gutter"
+    ],
+    "valueInSource": true
+  },
+  "shell.secondary": {
+    "$type": "dimension",
+    "$value": "1252px",
+    "evidence": [
+      "mv.layout.shell.secondary"
+    ],
+    "valueInSource": true
+  },
+  "shell.pricing": {
+    "$type": "dimension",
+    "$value": "1110px",
+    "evidence": [
+      "mv.layout.shell.pricing"
+    ],
+    "valueInSource": true
+  },
+  "shell.ios": {
+    "$type": "dimension",
+    "$value": "1067px",
+    "evidence": [
+      "mv.layout.shell.ios"
+    ],
+    "valueInSource": true
+  },
+  "shell.faq": {
+    "$type": "dimension",
+    "$value": "700px",
+    "evidence": [
+      "mv.layout.shell.faq"
+    ],
+    "valueInSource": true
+  },
+  "shell.store-header": {
+    "$type": "dimension",
+    "$value": "740px",
+    "evidence": [
+      "mv.layout.shell.store-header"
+    ],
+    "valueInSource": true
+  },
+  "nav.topOffset": {
+    "$type": "dimension",
+    "$value": "16px",
+    "evidence": [
+      "mv.layout.nav.topOffset"
+    ],
+    "valueInSource": true
+  },
+  "grid.gap": {
+    "$type": "dimension",
+    "$value": "32px",
+    "evidence": [
+      "mv.layout.grid.gap"
+    ],
+    "valueInSource": true
+  },
+  "section.secondary.padding": {
+    "$type": "dimension",
+    "$value": "168px 24px",
+    "evidence": [
+      "mv.layout.section.secondary.padding"
+    ],
+    "valueInSource": true
+  },
+  "container": {
+    "$type": "alias",
+    "$value": "{container.container}"
+  },
+  "container.ai": {
+    "$type": "alias",
+    "$value": "{container.ai}"
+  }
+}

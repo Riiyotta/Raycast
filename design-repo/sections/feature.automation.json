@@ -1,0 +1,117 @@
+{
+  "id": "feature.automation",
+  "category": "FEATURE",
+  "description": "Automation cards: snippet typing composer, quick links mock and hotkey press showcase.",
+  "purpose": "Show three automation tools (snippets, quick links, hotkeys) as live mini-demos.",
+  "scope": "Homepage only.",
+  "implementedBy": "Automation.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 22,
+        "measured": "22c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.automation.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 40,
+        "measured": "40c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.automation.subtitle"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 11,
+            "measured": "clone longest of 3",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.automation.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 94,
+            "measured": "about 85c",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-sibling",
+            "siblingNote": "Left/right card descriptions use the same Desc component and 2L as the measured top card.",
+            "evidence": [
+              "mv.copy.feature.automation.cards.description"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": true
+          },
+          "visual": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock",
+              "visual.keyboard",
+              "visual.gradient-art"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.automation.cards"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "typing-and-hotkeys",
+        "trigger": "in-view-0.1",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.feature.automation.0"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "Hotkeys cycle about 3.7s (release, IDLE_MS 2000, swap, ~1.7s presses); snippet typing starts ~1.55s after entry.",
+      "evidence": [
+        "mv.qa.hotkeys-period",
+        "mv.qa.snippet-typing"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "Top, left and right cards stack.",
+      "evidence": [
+        "mv.responsive.feature.automation.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.automation"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "routes": [
+    {
+      "route": "/",
+      "template": "template.home"
+    },
+    {
+      "route": "/store",
+      "template": "template.store"
+    },
+    {
+      "route": "/pro",
+      "template": "template.pro"
+    },
+    {
+      "route": "/pricing",
+      "template": "template.pricing"
+    },
+    {
+      "route": "/teams",
+      "template": "template.teams"
+    },
+    {
+      "route": "/core-features/ai",
+      "template": "template.ai"
+    },
+    {
+      "route": "/windows",
+      "template": "template.windows"
+    },
+    {
+      "route": "/ios",
+      "template": "template.ios"
+    }
+  ],
+  "evidence": [
+    "mv.routes"
+  ]
+}

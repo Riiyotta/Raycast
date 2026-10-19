@@ -1,0 +1,152 @@
+{
+  "id": "catalog.extensions-carousel",
+  "category": "CATALOG",
+  "description": "Extensions carousel with sliding category pill, snap-scrolling cards, slide-in stagger and pager buttons.",
+  "purpose": "Browse plugins by category: tabbed reel of plugin cards with a browse-more card and pager.",
+  "scope": "Homepage only.",
+  "implementedBy": "ExtensionsCarousel.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 30,
+        "measured": "30c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extensions-carousel.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 50,
+        "measured": "50c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extensions-carousel.subtitle"
+        ]
+      },
+      "categories": {
+        "kind": "list",
+        "required": true,
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "12, 11, 6, 7 chars",
+            "budgetRule": "max-of-list",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.extensions-carousel.categories.label"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extensions-carousel.categories"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 17,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 16,
+            "measured": "6–16c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.extensions-carousel.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 75,
+            "measured": "about 60–75c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.extensions-carousel.cards.description"
+            ]
+          },
+          "icon": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.app-tile"
+            ]
+          },
+          "illustration": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.gradient-art"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extensions-carousel.cards"
+        ]
+      },
+      "link": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 21,
+        "measured": "21c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extensions-carousel.link"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "slide-in-stagger",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.catalog.extensions-carousel.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-geometry",
+      "detail": "Cards 300x446 on mobile, gap 24.",
+      "evidence": [
+        "mv.responsive.catalog.extensions-carousel.0"
+      ]
+    },
+    {
+      "below": "breakpoint.max-ext",
+      "change": "stack",
+      "detail": "Top row stacks with gap 40 at 1024 and below.",
+      "evidence": [
+        "mv.responsive.catalog.extensions-carousel.1"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.catalog.extensions-carousel"
+  ]
+}

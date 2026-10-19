@@ -1,0 +1,108 @@
+{
+  "id": "nav.navbar",
+  "category": "NAV",
+  "description": "Fixed glass navbar: wordmark, primary route links, Log in / Download actions, hamburger menu below the 880px breakpoint.",
+  "purpose": "Persistent glass navigation so every page offers the same route links and download action.",
+  "scope": "Every route.",
+  "implementedBy": "Navbar.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "links": {
+        "kind": "list",
+        "required": true,
+        "minItems": 9,
+        "maxItems": 9,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 10,
+            "measured": "5, 3, 2, 3, 7, 5, 10, 4, 7 chars",
+            "budgetRule": "max-of-list",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.nav.navbar.links.label"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.nav.navbar.links"
+        ]
+      },
+      "loginLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 6,
+        "measured": "6c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.nav.navbar.loginLabel"
+        ]
+      },
+      "ctaLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 8,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.nav.navbar.ctaLabel"
+        ]
+      },
+      "wordmark": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "brand.wordmark"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.nav.navbar.0"
+        ]
+      },
+      {
+        "pattern": "menu-toggle",
+        "trigger": "click",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.nav.navbar.1"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.nav",
+      "change": "menu-collapse",
+      "detail": "Below 880 the links collapse into a hamburger grid menu.",
+      "evidence": [
+        "mv.responsive.nav.navbar.0"
+      ]
+    },
+    {
+      "below": "breakpoint.lg",
+      "change": "hide",
+      "detail": "Wordmark text and the Download button only show at 1064 and up.",
+      "evidence": [
+        "mv.responsive.nav.navbar.1"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.nav.navbar"
+  ]
+}

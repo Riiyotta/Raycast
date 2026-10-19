@@ -1,0 +1,129 @@
+{
+  "id": "pricing.compare-table",
+  "category": "PRICING",
+  "description": "Full feature comparison table across tiers.",
+  "purpose": "Full feature comparison across placeholder plans, grouped by separator rows.",
+  "scope": "Pricing page only.",
+  "implementedBy": "pages/Pricing.jsx > PricingTable",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "plans": {
+        "kind": "list",
+        "required": true,
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "name": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 10,
+            "measured": "4–10c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.compare-table.plans.name"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.compare-table.plans"
+        ]
+      },
+      "rows": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 22,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 26,
+            "measured": "clone longest of 2",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.pricing.compare-table.rows.label"
+            ]
+          },
+          "detail": {
+            "kind": "text",
+            "required": false,
+            "maxChars": 130,
+            "measured": "up to 130c / 7L",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.compare-table.rows.detail"
+            ]
+          },
+          "values": {
+            "kind": "list",
+            "required": true,
+            "minItems": 5,
+            "maxItems": 5,
+            "item": {
+              "value": {
+                "kind": "text",
+                "required": true,
+                "maxChars": 9,
+                "measured": "8–9c",
+                "budgetRule": "range-upper-bound",
+                "basis": "spec-measured",
+                "evidence": [
+                  "mv.copy.pricing.compare-table.rows.values.value"
+                ]
+              }
+            },
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.compare-table.rows.values"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.compare-table.rows"
+        ]
+      },
+      "groupSeparators": {
+        "kind": "integer",
+        "required": true,
+        "minimum": 0,
+        "maximum": 4,
+        "evidence": [
+          "mv.copy.pricing.compare-table.groupSeparators"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "popover",
+        "trigger": "click",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.pricing.compare-table.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "scroll-horizontal",
+      "detail": "Keeps 6 columns of 164 in a 390 wrapper and scrolls.",
+      "evidence": [
+        "mv.responsive.pricing.compare-table.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.pricing.compare-table"
+  ]
+}

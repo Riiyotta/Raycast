@@ -1,0 +1,134 @@
+{
+  "id": "feature.model-tabs",
+  "category": "FEATURE",
+  "description": "Tabbed model picker with detail panel in a wide shell.",
+  "purpose": "Compare model availability per plan behind a scrollable tab strip.",
+  "scope": "Pro page only.",
+  "implementedBy": "pages/Pro.jsx > ModelTabs",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 14,
+        "measured": "14c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.model-tabs.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 17,
+        "measured": "17c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.model-tabs.subtitle"
+        ]
+      },
+      "body": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 75,
+        "measured": "75c 2L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.model-tabs.body"
+        ]
+      },
+      "tabs": {
+        "kind": "list",
+        "required": true,
+        "minItems": 12,
+        "maxItems": 12,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 17,
+            "measured": "3–17c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.model-tabs.tabs.label"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": false
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.model-tabs.tabs"
+        ]
+      },
+      "rows": {
+        "kind": "list",
+        "required": true,
+        "minItems": 13,
+        "maxItems": 13,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "clone longest of 3",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.model-tabs.rows.label"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.model-tabs.rows"
+        ]
+      },
+      "footnote": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 28,
+        "measured": "28c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.model-tabs.footnote"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "chip-tabs",
+        "trigger": "click",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.model-tabs.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "scroll-horizontal",
+      "detail": "Same height at 390; the table scrolls.",
+      "evidence": [
+        "mv.responsive.feature.model-tabs.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.model-tabs"
+  ]
+}

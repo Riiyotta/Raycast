@@ -1,0 +1,122 @@
+{
+  "id": "showcase.shortcuts-frame",
+  "category": "SHOWCASE",
+  "description": "Framed macOS-style launcher mockup with dock, star-dot border and auto-advancing scripted slide reel.",
+  "purpose": "Prove breadth: a framed desktop mock that plays one scripted command per slide, with a dock to jump between them.",
+  "scope": "Homepage only.",
+  "implementedBy": "ShortcutsFrame.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 28,
+        "measured": "28c/4w/1L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "maxWords": 4,
+        "evidence": [
+          "mv.copy.showcase.shortcuts-frame.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 35,
+        "measured": "35c/5w/1L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "maxWords": 5,
+        "evidence": [
+          "mv.copy.showcase.shortcuts-frame.subtitle"
+        ]
+      },
+      "caption": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 87,
+        "measured": "87c / 13w / 2L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "maxWords": 13,
+        "evidence": [
+          "mv.copy.showcase.shortcuts-frame.caption"
+        ]
+      },
+      "slides": {
+        "kind": "list",
+        "required": true,
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "mock": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock"
+            ]
+          },
+          "dockIcon": {
+            "kind": "icon",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.shortcuts-frame.slides"
+        ]
+      },
+      "wallpaper": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.gradient-art"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "scripted-reel",
+        "trigger": "in-view-0.2",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.showcase.shortcuts-frame.0"
+        ]
+      }
+    ],
+    "alsoRuns": [
+      {
+        "pattern": "caret-blink",
+        "trigger": "always",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.showcase.shortcuts-frame.ambient0"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "Desktop first slide dwells ~13.8-14.1s (scripted, ends on completion); below 720 the reel steps every 6s from page load.",
+      "evidence": [
+        "mv.qa.shortcuts-reel"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-geometry",
+      "detail": "Frame 409x508 at 390, no menubar, slides advance on a fixed timer.",
+      "evidence": [
+        "mv.responsive.showcase.shortcuts-frame.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.showcase.shortcuts-frame"
+  ]
+}

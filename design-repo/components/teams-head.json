@@ -1,0 +1,20 @@
+{
+  "id": "teams-head",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/SplitFeature.jsx > TeamsHead",
+  "props": [
+    "eyebrow",
+    "icon",
+    "title",
+    "p1",
+    "p2",
+    "link"
+  ],
+  "uses": [
+    "icon"
+  ],
+  "evidence": [
+    "mv.component.teams-head"
+  ]
+}

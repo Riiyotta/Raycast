@@ -1,0 +1,183 @@
+{
+  "id": "cta.download",
+  "category": "CTA",
+  "description": "Platform download block (mac / windows / ios variants; iOS adds a QR card).",
+  "purpose": "Platform download block; mac, windows and ios variants (ios adds a QR card).",
+  "scope": "Teams and iOS pages.",
+  "implementedBy": "DownloadBlock.jsx",
+  "variants": [
+    "mac",
+    "windows",
+    "ios"
+  ],
+  "content": {
+    "byVariant": {
+      "mac": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 19,
+          "measured": "19c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.mac.title"
+          ]
+        },
+        "body": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 75,
+          "measured": "75c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.mac.body"
+          ]
+        },
+        "buttonLabel": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 16,
+          "measured": "clone longest of 1",
+          "budgetRule": "clone-implementation-longest",
+          "basis": "clone-implementation",
+          "evidence": [
+            "mv.copy.cta.download.mac.buttonLabel"
+          ]
+        },
+        "command": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 27,
+          "measured": "27c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.mac.command"
+          ]
+        },
+        "caption": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 9,
+          "measured": "9c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.mac.caption"
+          ]
+        }
+      },
+      "windows": {
+        "line": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 24,
+          "measured": "24c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.windows.line"
+          ]
+        },
+        "inlineAction": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 18,
+          "measured": "18c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.windows.inlineAction"
+          ]
+        },
+        "badge": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "brand.store-badge-placeholder"
+          ]
+        }
+      },
+      "ios": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 38,
+          "measured": "38c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.ios.title"
+          ]
+        },
+        "body": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 33,
+          "measured": "33c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.ios.body"
+          ]
+        },
+        "qrLabel": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 16,
+          "measured": "16c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.ios.qrLabel"
+          ]
+        },
+        "caption": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 15,
+          "measured": "15c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.cta.download.ios.caption"
+          ]
+        },
+        "qr": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.qr-placeholder"
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.cta.download.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "hide",
+      "detail": "ios: the fixed QR card is absent at 390; an App-Store-style button replaces it.",
+      "evidence": [
+        "mv.responsive.cta.download.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.cta.download"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "catalog.template-grid",
+  "category": "CATALOG",
+  "description": "Grid of team templates under a centered lead.",
+  "purpose": "Offer ready-made team setups as a three-up grid with one call to action.",
+  "scope": "Teams page only.",
+  "implementedBy": "pages/Teams.jsx > TemplateGrid",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 26,
+            "measured": "13–26c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.template-grid.cards.title"
+            ]
+          },
+          "body": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 127,
+            "measured": "92–127c, 3–4L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.template-grid.cards.body"
+            ]
+          },
+          "visual": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock",
+              "visual.app-tile"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.template-grid.cards"
+        ]
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 24,
+        "measured": "24c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.template-grid.buttonLabel"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.catalog.template-grid.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.catalog.template-grid"
+  ]
+}

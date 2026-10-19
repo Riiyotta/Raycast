@@ -1,0 +1,364 @@
+{
+  "color": {
+    "grey.900": {
+      "$type": "color",
+      "$value": "#07080a",
+      "evidence": [
+        "mv.tw.color.grey.900"
+      ],
+      "valueInSource": true
+    },
+    "grey.800": {
+      "$type": "color",
+      "$value": "#0c0d0f",
+      "evidence": [
+        "mv.tw.color.grey.800"
+      ],
+      "valueInSource": true
+    },
+    "grey.700": {
+      "$type": "color",
+      "$value": "#111214",
+      "evidence": [
+        "mv.tw.color.grey.700"
+      ],
+      "valueInSource": true
+    },
+    "grey.600": {
+      "$type": "color",
+      "$value": "#1b1c1e",
+      "evidence": [
+        "mv.tw.color.grey.600"
+      ],
+      "valueInSource": true
+    },
+    "grey.500": {
+      "$type": "color",
+      "$value": "#2f3031",
+      "evidence": [
+        "mv.tw.color.grey.500"
+      ],
+      "valueInSource": true
+    },
+    "grey.400": {
+      "$type": "color",
+      "$value": "#434345",
+      "evidence": [
+        "mv.tw.color.grey.400"
+      ],
+      "valueInSource": true
+    },
+    "grey.300": {
+      "$type": "color",
+      "$value": "#6a6b6c",
+      "evidence": [
+        "mv.tw.color.grey.300"
+      ],
+      "valueInSource": true
+    },
+    "grey.200": {
+      "$type": "color",
+      "$value": "#9c9c9d",
+      "evidence": [
+        "mv.tw.color.grey.200"
+      ],
+      "valueInSource": true
+    },
+    "grey.100": {
+      "$type": "color",
+      "$value": "#cdcece",
+      "evidence": [
+        "mv.tw.color.grey.100"
+      ],
+      "valueInSource": true
+    },
+    "grey.50": {
+      "$type": "color",
+      "$value": "#e6e6e6",
+      "evidence": [
+        "mv.tw.color.grey.50"
+      ],
+      "valueInSource": true
+    },
+    "bg": {
+      "$type": "color",
+      "$value": "#07080a",
+      "evidence": [
+        "mv.tw.color.bg"
+      ],
+      "valueInSource": true
+    },
+    "bg.100": {
+      "$type": "color",
+      "$value": "#101111",
+      "evidence": [
+        "mv.tw.color.bg.100"
+      ],
+      "valueInSource": true
+    },
+    "bg.200": {
+      "$type": "color",
+      "$value": "#18191a",
+      "evidence": [
+        "mv.tw.color.bg.200"
+      ],
+      "valueInSource": true
+    },
+    "bg.300": {
+      "$type": "color",
+      "$value": "#313133",
+      "evidence": [
+        "mv.tw.color.bg.300"
+      ],
+      "valueInSource": true
+    },
+    "bg.400": {
+      "$type": "color",
+      "$value": "#494b4d",
+      "evidence": [
+        "mv.tw.color.bg.400"
+      ],
+      "valueInSource": true
+    },
+    "fg": {
+      "$type": "color",
+      "$value": "#f4f4f6",
+      "evidence": [
+        "mv.tw.color.fg"
+      ],
+      "valueInSource": true
+    },
+    "fg.200": {
+      "$type": "color",
+      "$value": "#c2c7ca",
+      "evidence": [
+        "mv.tw.color.fg.200"
+      ],
+      "valueInSource": true
+    },
+    "fg.300": {
+      "$type": "color",
+      "$value": "#78787c",
+      "evidence": [
+        "mv.tw.color.fg.300"
+      ],
+      "valueInSource": true
+    },
+    "fg.400": {
+      "$type": "color",
+      "$value": "#5e6366",
+      "evidence": [
+        "mv.tw.color.fg.400"
+      ],
+      "valueInSource": true
+    },
+    "line": {
+      "$type": "color",
+      "$value": "#242728",
+      "evidence": [
+        "mv.tw.color.line"
+      ],
+      "valueInSource": true
+    },
+    "card-border": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,0.06)",
+      "evidence": [
+        "mv.tw.color.card-border"
+      ],
+      "valueInSource": true
+    },
+    "brand.red": {
+      "$type": "color",
+      "$value": "#ff6363",
+      "evidence": [
+        "mv.tw.color.brand.red"
+      ],
+      "valueInSource": true
+    },
+    "brand.blue": {
+      "$type": "color",
+      "$value": "#56c2ff",
+      "evidence": [
+        "mv.tw.color.brand.blue"
+      ],
+      "valueInSource": true
+    },
+    "accent.yellow": {
+      "$type": "color",
+      "$value": "#ffc533",
+      "evidence": [
+        "mv.tw.color.accent.yellow"
+      ],
+      "valueInSource": true
+    },
+    "accent.red": {
+      "$type": "color",
+      "$value": "#ff6161",
+      "evidence": [
+        "mv.tw.color.accent.red"
+      ],
+      "valueInSource": true
+    },
+    "accent.blue": {
+      "$type": "color",
+      "$value": "#57c1ff",
+      "evidence": [
+        "mv.tw.color.accent.blue"
+      ],
+      "valueInSource": true
+    },
+    "accent.green": {
+      "$type": "color",
+      "$value": "#59d499",
+      "evidence": [
+        "mv.tw.color.accent.green"
+      ],
+      "valueInSource": true
+    },
+    "accent.periwinkle": {
+      "$type": "color",
+      "$value": "rgb(154,170,255)",
+      "evidence": [
+        "mv.tw.color.accent.periwinkle"
+      ],
+      "valueInSource": true
+    },
+    "accent.cyan": {
+      "$type": "color",
+      "$value": "rgb(140,214,255)",
+      "evidence": [
+        "mv.tw.color.accent.cyan"
+      ],
+      "valueInSource": true
+    },
+    "announce.pink": {
+      "$type": "color",
+      "$value": "#eca5a7",
+      "evidence": [
+        "mv.tw.color.announce.pink"
+      ],
+      "valueInSource": true
+    },
+    "announce.dark": {
+      "$type": "color",
+      "$value": "#452324",
+      "evidence": [
+        "mv.tw.color.announce.dark"
+      ],
+      "valueInSource": true
+    },
+    "announce.hover": {
+      "$type": "color",
+      "$value": "#833637",
+      "evidence": [
+        "mv.tw.color.announce.hover"
+      ],
+      "valueInSource": true
+    },
+    "announce.inner": {
+      "$type": "color",
+      "$value": "#130d0e",
+      "evidence": [
+        "mv.tw.color.announce.inner"
+      ],
+      "valueInSource": true
+    },
+    "code": {
+      "$type": "color",
+      "$value": "#08090c",
+      "evidence": [
+        "mv.tw.color.code"
+      ],
+      "valueInSource": true
+    },
+    "glow.text": {
+      "$type": "color",
+      "$value": "rgb(255,205,205)",
+      "evidence": [
+        "mv.tw.color.glow.text"
+      ],
+      "valueInSource": true
+    },
+    "plan.featured-from": {
+      "$type": "color",
+      "$value": "#222326",
+      "evidence": [
+        "mv.tw.color.plan.featured-from"
+      ],
+      "valueInSource": true
+    },
+    "plan.featured-to": {
+      "$type": "color",
+      "$value": "#151619",
+      "evidence": [
+        "mv.tw.color.plan.featured-to"
+      ],
+      "valueInSource": true
+    },
+    "table.group": {
+      "$type": "color",
+      "$value": "#1b1b1f",
+      "evidence": [
+        "mv.tw.color.table.group"
+      ],
+      "valueInSource": true
+    },
+    "pro.badge": {
+      "$type": "color",
+      "$value": "#aae1ff",
+      "evidence": [
+        "mv.tw.color.pro.badge"
+      ],
+      "valueInSource": true
+    },
+    "pro.glyph": {
+      "$type": "color",
+      "$value": "#ffe2e2",
+      "evidence": [
+        "mv.tw.color.pro.glyph"
+      ],
+      "valueInSource": true
+    },
+    "teams.orange": {
+      "$type": "color",
+      "$value": "#ff9217",
+      "evidence": [
+        "mv.tw.color.teams.orange"
+      ],
+      "valueInSource": true
+    },
+    "chip.discount": {
+      "$type": "color",
+      "$value": "#2c1617",
+      "evidence": [
+        "mv.tw.color.chip.discount"
+      ],
+      "valueInSource": true
+    },
+    "window-border": {
+      "$type": "color",
+      "$value": "rgba(142,140,144,.2)",
+      "evidence": [
+        "mv.tw.color.window-border"
+      ],
+      "valueInSource": true
+    },
+    "ios-card": {
+      "$type": "color",
+      "$value": "rgba(49,49,49,.1)",
+      "evidence": [
+        "mv.tw.color.ios-card"
+      ],
+      "valueInSource": true
+    },
+    "base-white": {
+      "$type": "color",
+      "$value": "#fff",
+      "evidence": [
+        "mv.color.base-white"
+      ],
+      "valueInSource": true
+    }
+  }
+}

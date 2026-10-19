@@ -1,0 +1,149 @@
+{
+  "color.text.loud": {
+    "$type": "alias",
+    "$value": "{color.base-white}",
+    "evidence": [
+      "mv.semantic.color.text.loud"
+    ]
+  },
+  "color.text.default": {
+    "$type": "alias",
+    "$value": "{color.grey.200}",
+    "evidence": [
+      "mv.semantic.color.text.default"
+    ]
+  },
+  "color.text.muted": {
+    "$type": "alias",
+    "$value": "{color.grey.300}",
+    "evidence": [
+      "mv.semantic.color.text.muted"
+    ]
+  },
+  "color.text.faint": {
+    "$type": "alias",
+    "$value": "{color.grey.400}",
+    "evidence": [
+      "mv.semantic.color.text.faint"
+    ]
+  },
+  "color.text.on-light": {
+    "$type": "alias",
+    "$value": "{color.grey.500}",
+    "evidence": [
+      "mv.semantic.color.text.on-light"
+    ]
+  },
+  "color.text.answer": {
+    "$type": "alias",
+    "$value": "{color.fg.300}",
+    "evidence": [
+      "mv.semantic.color.text.answer"
+    ]
+  },
+  "color.text.accent": {
+    "$type": "alias",
+    "$value": "{color.brand.red}",
+    "evidence": [
+      "mv.semantic.color.text.accent"
+    ]
+  },
+  "color.surface.page": {
+    "$type": "alias",
+    "$value": "{color.grey.900}",
+    "evidence": [
+      "mv.semantic.color.surface.page"
+    ]
+  },
+  "color.surface.hover": {
+    "$type": "alias",
+    "$value": "{color.grey.800}",
+    "evidence": [
+      "mv.semantic.color.surface.hover"
+    ]
+  },
+  "color.surface.raised": {
+    "$type": "alias",
+    "$value": "{color.grey.700}",
+    "evidence": [
+      "mv.semantic.color.surface.raised"
+    ]
+  },
+  "color.surface.badge": {
+    "$type": "alias",
+    "$value": "{color.grey.600}",
+    "evidence": [
+      "mv.semantic.color.surface.badge"
+    ]
+  },
+  "color.surface.button-light": {
+    "$type": "alias",
+    "$value": "{color.grey.50}",
+    "evidence": [
+      "mv.semantic.color.surface.button-light"
+    ]
+  },
+  "color.surface.button-light-active": {
+    "$type": "alias",
+    "$value": "{color.grey.100}",
+    "evidence": [
+      "mv.semantic.color.surface.button-light-active"
+    ]
+  },
+  "color.border.card": {
+    "$type": "alias",
+    "$value": "{color.card-border}",
+    "evidence": [
+      "mv.semantic.color.border.card"
+    ]
+  },
+  "color.border.divider": {
+    "$type": "alias",
+    "$value": "{color.grey.600}",
+    "evidence": [
+      "mv.semantic.color.border.divider"
+    ]
+  },
+  "color.border.plan": {
+    "$type": "alias",
+    "$value": "{color.grey.500}",
+    "evidence": [
+      "mv.semantic.color.border.plan"
+    ]
+  },
+  "color.accent.blue": {
+    "$type": "alias",
+    "$value": "{color.brand.blue}",
+    "evidence": [
+      "mv.semantic.color.accent.blue"
+    ]
+  },
+  "color.accent.periwinkle-glow": {
+    "$type": "alias",
+    "$value": "{color.accent.periwinkle}",
+    "evidence": [
+      "mv.semantic.color.accent.periwinkle-glow"
+    ]
+  },
+  "gradient.surface.card": {
+    "$type": "alias",
+    "$value": "{gradient.card}",
+    "evidence": [
+      "mv.semantic.gradient.surface.card"
+    ]
+  },
+  "gradient.surface.glass": {
+    "$type": "alias",
+    "$value": "{gradient.glass}",
+    "evidence": [
+      "mv.semantic.gradient.surface.glass"
+    ]
+  },
+  "gradient.surface.plan-featured": {
+    "$type": "alias",
+    "$value": "{gradient.plan-featured}",
+    "evidence": [
+      "mv.semantic.gradient.surface.plan-featured"
+    ]
+  }
+}

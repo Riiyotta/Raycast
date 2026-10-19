@@ -1,0 +1,84 @@
+{
+  "id": "proof.quote-strip",
+  "category": "PROOF",
+  "description": "Strip of short user quotes with chip highlights.",
+  "purpose": "One short user quote above a selectable strip of (fictional) person chips.",
+  "scope": "Windows page only.",
+  "implementedBy": "pages/Windows.jsx > QuoteStrip",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "quote": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 164,
+        "measured": "about 141–164c, 2L",
+        "budgetRule": "range-upper-bound",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.quote-strip.quote"
+        ]
+      },
+      "people": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 22,
+        "item": {
+          "name": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 15,
+            "measured": "15c",
+            "budgetRule": "exact",
+            "basis": "spec-sibling",
+            "siblingNote": "Quote chips show the same fictional people as the testimonials carousel.",
+            "evidence": [
+              "mv.copy.proof.quote-strip.people.name"
+            ]
+          },
+          "role": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 21,
+            "measured": "7–21c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.proof.quote-strip.people.role"
+            ]
+          },
+          "avatar": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "person.avatar-placeholder"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.quote-strip.people"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "chip-tabs",
+        "trigger": "click",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.proof.quote-strip.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.proof.quote-strip"
+  ]
+}

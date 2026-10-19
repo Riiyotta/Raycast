@@ -1,0 +1,81 @@
+{
+  "id": "feature.byok-row",
+  "category": "FEATURE",
+  "description": "Bring-your-own-key row under the AI card grid.",
+  "purpose": "Bring-your-own-key note: four provider tiles and a two-line explanation.",
+  "scope": "AI page only.",
+  "implementedBy": "pages/Ai.jsx > ByokRow",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 37,
+        "measured": "37c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.byok-row.title"
+        ]
+      },
+      "body": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 81,
+        "measured": "81c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.byok-row.body"
+        ]
+      },
+      "tiles": {
+        "kind": "list",
+        "required": true,
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "tile": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.app-tile"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.byok-row.tiles"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.byok-row.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "Column layout at 390.",
+      "evidence": [
+        "mv.responsive.feature.byok-row.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.byok-row"
+  ]
+}

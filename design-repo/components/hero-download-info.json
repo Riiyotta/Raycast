@@ -1,0 +1,13 @@
+{
+  "id": "hero-download-info",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/shared.jsx > HeroDownloadInfo",
+  "props": [],
+  "uses": [
+    "button-light"
+  ],
+  "evidence": [
+    "mv.component.hero-download-info"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "feature.feature-wall",
+  "category": "FEATURE",
+  "description": "Clickable feature text wall with crossfading screenshot frame and timed progress bar.",
+  "purpose": "A clickable wall of small features with a crossfading preview frame and timed progress.",
+  "scope": "Homepage only.",
+  "implementedBy": "FeatureWall.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "heading": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 25,
+        "measured": "25c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.feature-wall.heading"
+        ]
+      },
+      "items": {
+        "kind": "list",
+        "required": true,
+        "minItems": 12,
+        "maxItems": 12,
+        "item": {
+          "text": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 25,
+            "measured": "about 15–25c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.feature-wall.items.text"
+            ]
+          },
+          "badge": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 14,
+            "measured": "clone longest of 3",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.feature-wall.items.badge"
+            ]
+          },
+          "detail": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 77,
+            "measured": "clone longest of 1",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.feature-wall.items.detail"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": true
+          },
+          "preview": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock",
+              "visual.gradient-art"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "maxTotalChars": 289,
+        "maxTotalCharsNote": "Whole paragraph is about 290c (+10% = 319) including the 25c heading and the 5c intro, so the 12 item texts may total at most 289.",
+        "evidence": [
+          "mv.copy.feature.feature-wall.items"
+        ]
+      },
+      "link": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 10,
+        "measured": "10c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.feature-wall.link"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "crossfade-auto-advance",
+        "trigger": "in-view-0.2",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.feature.feature-wall.0"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "5s linear progress, paused below 20% visibility.",
+      "evidence": [
+        "mv.qa.feature-wall"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "reorder",
+      "detail": "Image first (342x342), wall below.",
+      "evidence": [
+        "mv.responsive.feature.feature-wall.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.feature-wall"
+  ]
+}

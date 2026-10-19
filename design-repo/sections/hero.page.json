@@ -1,0 +1,286 @@
+{
+  "id": "hero.page",
+  "category": "HERO",
+  "description": "Shared secondary-page hero: pill, heading, subtitle, actions and optional art/media slot; variants sheen / store / teams / plain set background and sizing.",
+  "purpose": "Shared secondary-page opener: pill, heading, subtitle and actions over optional art, sized per page family.",
+  "scope": "Secondary product pages that open with a standard page hero (store, pro, teams, AI, iOS).",
+  "implementedBy": "PageHero.jsx (Store/Pro/Teams/Ai/Ios pass their own art: StoreArt, ProArt, TeamsOrbit, IosHeroArt)",
+  "variants": [
+    "sheen",
+    "ios",
+    "plain",
+    "store",
+    "teams"
+  ],
+  "content": {
+    "byVariant": {
+      "sheen": {
+        "pill": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 11,
+          "measured": "11c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.sheen.pill"
+          ]
+        },
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 18,
+          "measured": "18c 1L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.sheen.title"
+          ]
+        },
+        "subtitle": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 111,
+          "measured": "111c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.sheen.subtitle"
+          ]
+        },
+        "caption": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 22,
+          "measured": "22c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.sheen.caption"
+          ]
+        },
+        "art": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.gradient-art"
+          ]
+        }
+      },
+      "ios": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 29,
+          "measured": "29c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.ios.title"
+          ]
+        },
+        "subtitle": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 51,
+          "measured": "51c 1L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.ios.subtitle"
+          ]
+        },
+        "art": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.app-tile",
+            "visual.gradient-art"
+          ]
+        }
+      },
+      "plain": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 31,
+          "measured": "31c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.plain.title"
+          ]
+        },
+        "subtitle": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 63,
+          "measured": "63c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.plain.subtitle"
+          ]
+        },
+        "caption": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 38,
+          "measured": "38c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.plain.caption"
+          ]
+        }
+      },
+      "store": {
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 5,
+          "measured": "5c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.store.title"
+          ]
+        },
+        "subtitle": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 104,
+          "measured": "104c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.store.subtitle"
+          ]
+        },
+        "searchPlaceholder": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 9,
+          "measured": "9c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.store.searchPlaceholder"
+          ]
+        },
+        "art": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.gradient-art",
+            "visual.ui-mock"
+          ]
+        }
+      },
+      "teams": {
+        "pill": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 35,
+          "measured": "35c",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.teams.pill"
+          ]
+        },
+        "title": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 22,
+          "measured": "22c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.teams.title"
+          ]
+        },
+        "subtitle": {
+          "kind": "text",
+          "required": true,
+          "maxChars": 95,
+          "measured": "95c 2L",
+          "budgetRule": "exact",
+          "basis": "spec-measured",
+          "evidence": [
+            "mv.copy.hero.page.teams.subtitle"
+          ]
+        },
+        "art": {
+          "kind": "media",
+          "required": true,
+          "assetRoles": [
+            "visual.app-tile"
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "variants": [
+          "sheen",
+          "ios"
+        ],
+        "evidence": [
+          "mv.motion.hero.page.0"
+        ]
+      },
+      {
+        "pattern": "blur-in-load",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state",
+        "variants": [
+          "plain"
+        ],
+        "evidence": [
+          "mv.motion.hero.page.1"
+        ]
+      },
+      {
+        "pattern": "layer-enter-load",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state",
+        "variants": [
+          "store"
+        ],
+        "evidence": [
+          "mv.motion.hero.page.2"
+        ]
+      },
+      {
+        "pattern": "orbit",
+        "trigger": "always",
+        "reducedMotionFallback": "first-state-static",
+        "variants": [
+          "teams"
+        ],
+        "evidence": [
+          "mv.motion.hero.page.3"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-type",
+      "detail": "Store h1 80px to 44px; teams 72px to 44px; ios 48px to 27px at 390.",
+      "evidence": [
+        "mv.responsive.hero.page.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.hero.page"
+  ]
+}

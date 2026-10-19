@@ -1,0 +1,154 @@
+{
+  "id": "hero.home",
+  "category": "HERO",
+  "description": "Homepage hero: WebGL glass-bars background with CSS fallback, animated announcement pill, display heading, sub-text, download actions.",
+  "purpose": "Open the homepage with one display promise, a short supporting line and the primary download action over the ambient WebGL scene.",
+  "scope": "Homepage only.",
+  "implementedBy": "Hero.jsx + HeroCanvas.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 28,
+        "measured": "28c / 4w / 2 lines",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "maxWords": 4,
+        "maxLines": 2,
+        "evidence": [
+          "mv.copy.hero.home.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 108,
+        "measured": "108c / ~15w / 2 lines",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "maxWords": 15,
+        "maxLines": 2,
+        "evidence": [
+          "mv.copy.hero.home.subtitle"
+        ]
+      },
+      "downloadLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 16,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.hero.home.downloadLabel"
+        ]
+      },
+      "requirements": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 38,
+        "measured": "38c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.hero.home.requirements"
+        ]
+      },
+      "subLinkPrimary": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 20,
+        "measured": "20c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.hero.home.subLinkPrimary"
+        ]
+      },
+      "subLinkSecondary": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 11,
+        "measured": "11c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.hero.home.subLinkSecondary"
+        ]
+      },
+      "announcement": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 20,
+        "measured": "20c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.hero.home.announcement"
+        ]
+      },
+      "background": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.webgl-scene"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "fade-in-up-load",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.hero.home.0"
+        ]
+      }
+    ],
+    "alsoRuns": [
+      {
+        "pattern": "webgl-ambient",
+        "trigger": "in-view-0",
+        "reducedMotionFallback": "hide-decorative",
+        "evidence": [
+          "mv.motion.hero.home.ambient0"
+        ]
+      },
+      {
+        "pattern": "border-sweep",
+        "trigger": "in-view-0",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.hero.home.ambient1"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "hide",
+      "detail": "Download block is hidden below 720; only the announcement pill shows under the text.",
+      "evidence": [
+        "mv.responsive.hero.home.0"
+      ]
+    },
+    {
+      "below": "breakpoint.xs",
+      "change": "resize-type",
+      "detail": "h1 is 36px base, 48px from 420, 64px from 720.",
+      "evidence": [
+        "mv.responsive.hero.home.1"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.hero.home"
+  ]
+}

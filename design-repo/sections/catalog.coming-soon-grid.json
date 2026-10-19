@@ -1,0 +1,71 @@
+{
+  "id": "catalog.coming-soon-grid",
+  "category": "CATALOG",
+  "description": "Grid of upcoming-feature tiles.",
+  "purpose": "Preview upcoming features as a dimmed five-card masonry grid.",
+  "scope": "Windows page only.",
+  "implementedBy": "pages/Windows.jsx > SoonCard",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 5,
+        "maxItems": 5,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 24,
+            "measured": "7–24c, 2L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.catalog.coming-soon-grid.cards.title"
+            ]
+          },
+          "visual": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock",
+              "visual.gradient-art"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.coming-soon-grid.cards"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.catalog.coming-soon-grid.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "stack",
+      "detail": "One column at 390 (1554 tall).",
+      "evidence": [
+        "mv.responsive.catalog.coming-soon-grid.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.catalog.coming-soon-grid"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "use-in-view",
+  "layer": "component",
+  "kind": "behavior",
+  "implementedBy": "src/components/shared.jsx > useInView",
+  "props": [
+    "threshold",
+    "once",
+    "rootMargin"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.use-in-view"
+  ]
+}

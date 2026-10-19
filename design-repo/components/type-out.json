@@ -1,0 +1,16 @@
+{
+  "id": "type-out",
+  "layer": "component",
+  "kind": "behavior",
+  "implementedBy": "src/components/shared.jsx > typeOut",
+  "props": [
+    "text",
+    "set",
+    "prefix",
+    "base"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.type-out"
+  ]
+}

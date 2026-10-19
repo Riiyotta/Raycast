@@ -1,0 +1,133 @@
+{
+  "id": "pricing.pro-upsell",
+  "category": "PRICING",
+  "description": "Pro upsell block for teams.",
+  "purpose": "Upsell the individual plan to team buyers with a headline, visual and three cards.",
+  "scope": "Teams page only.",
+  "implementedBy": "pages/Teams.jsx > ProUpsell",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 20,
+        "measured": "20c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.pro-upsell.title"
+        ]
+      },
+      "accentWord": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 3,
+        "measured": "3c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.pro-upsell.accentWord"
+        ]
+      },
+      "body": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 111,
+        "measured": "111c 2L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.pro-upsell.body"
+        ]
+      },
+      "pill": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 17,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.pricing.pro-upsell.pill"
+        ]
+      },
+      "visual": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.ui-mock"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 17,
+            "measured": "17c",
+            "budgetRule": "exact",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.pricing.pro-upsell.cards.title"
+            ]
+          },
+          "visual": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock",
+              "visual.gradient-art"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.pro-upsell.cards"
+        ]
+      },
+      "blockCta": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 23,
+        "measured": "23c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.pricing.pro-upsell.blockCta"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.pricing.pro-upsell.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-type",
+      "detail": "h3 52px to 32px at 390.",
+      "evidence": [
+        "mv.responsive.pricing.pro-upsell.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.pricing.pro-upsell"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "app-tile",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > AppTile",
+  "props": [
+    "size",
+    "hue",
+    "radius"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.app-tile"
+  ]
+}

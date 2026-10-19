@@ -1,0 +1,76 @@
+{
+  "id": "showcase.ai-frame",
+  "category": "SHOWCASE",
+  "description": "Large framed AI chat showcase.",
+  "purpose": "Show the assistant in context: a large framed chat window under a centered label and heading.",
+  "scope": "Windows page only.",
+  "implementedBy": "pages/Windows.jsx > AiShowcaseFrame",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "label": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 7,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.showcase.ai-frame.label"
+        ]
+      },
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 25,
+        "measured": "25c 2L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.ai-frame.title"
+        ]
+      },
+      "mock": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.ui-mock"
+        ]
+      },
+      "cover": {
+        "kind": "media",
+        "required": false,
+        "assetRoles": [
+          "visual.gradient-art"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.showcase.ai-frame.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "resize-geometry",
+      "detail": "Section 566 tall at 390.",
+      "evidence": [
+        "mv.responsive.showcase.ai-frame.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.showcase.ai-frame"
+  ]
+}

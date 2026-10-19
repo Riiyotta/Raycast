@@ -1,0 +1,113 @@
+{
+  "id": "proof.social-cards",
+  "category": "PROOF",
+  "description": "The two community social cards on their own, without the video strip.",
+  "purpose": "The two community cards on their own, without background art or video strip.",
+  "scope": "Teams page only.",
+  "implementedBy": "Community.jsx > SocialCards",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 17,
+        "measured": "17c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.social-cards.title"
+        ]
+      },
+      "subtitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 74,
+        "measured": "74c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.social-cards.subtitle"
+        ]
+      },
+      "socials": {
+        "kind": "list",
+        "required": true,
+        "minItems": 2,
+        "maxItems": 2,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 9,
+            "measured": "5–9c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-sibling",
+            "evidence": [
+              "mv.copy.proof.social-cards.socials.title"
+            ]
+          },
+          "count": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "11–12c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-sibling",
+            "evidence": [
+              "mv.copy.proof.social-cards.socials.count"
+            ]
+          },
+          "body": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 77,
+            "measured": "about 70c",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-sibling",
+            "evidence": [
+              "mv.copy.proof.social-cards.socials.body"
+            ]
+          },
+          "cta": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 6,
+            "measured": "4–6c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-sibling",
+            "evidence": [
+              "mv.copy.proof.social-cards.socials.cta"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": true
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.proof.social-cards.socials"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.proof.social-cards.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.proof.social-cards"
+  ]
+}

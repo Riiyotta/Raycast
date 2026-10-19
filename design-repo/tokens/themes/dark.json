@@ -1,0 +1,41 @@
+{
+  "id": "dark",
+  "evidence": [
+    "mv.theme.dark"
+  ],
+  "fonts": {
+    "families": [
+      "Inter",
+      "Geist Mono",
+      "JetBrains Mono",
+      "Instrument Serif"
+    ],
+    "license": "OFL",
+    "evidence": [
+      "mv.fonts.loaded"
+    ]
+  },
+  "resolves": {
+    "color.text.loud": "#fff",
+    "color.text.default": "#9c9c9d",
+    "color.text.muted": "#6a6b6c",
+    "color.text.faint": "#434345",
+    "color.text.on-light": "#2f3031",
+    "color.text.answer": "#78787c",
+    "color.text.accent": "#ff6363",
+    "color.surface.page": "#07080a",
+    "color.surface.hover": "#0c0d0f",
+    "color.surface.raised": "#111214",
+    "color.surface.badge": "#1b1c1e",
+    "color.surface.button-light": "#e6e6e6",
+    "color.surface.button-light-active": "#cdcece",
+    "color.border.card": "rgba(255,255,255,0.06)",
+    "color.border.divider": "#1b1c1e",
+    "color.border.plan": "#2f3031",
+    "color.accent.blue": "#56c2ff",
+    "color.accent.periwinkle-glow": "rgb(154,170,255)",
+    "gradient.surface.card": "linear-gradient(137deg, #111214 4.87%, #0c0d0f 75.88%)",
+    "gradient.surface.glass": "linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%)",
+    "gradient.surface.plan-featured": "linear-gradient(137deg, #222326 4.87%, #151619 75.88%)"
+  }
+}

@@ -1,0 +1,6704 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "design-repo/launchpad/pagespec.schema.json",
+  "title": "PageSpec",
+  "description": "A generated page composition for the Launchpad design study. Structural/semantic rules JSON Schema cannot express live in semantic_validate.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pageSpecVersion",
+    "template",
+    "route",
+    "title",
+    "attestations",
+    "nodes"
+  ],
+  "properties": {
+    "pageSpecVersion": {
+      "const": "1.0.0"
+    },
+    "template": {
+      "enum": [
+        "template.ai",
+        "template.home",
+        "template.ios",
+        "template.pricing",
+        "template.pro",
+        "template.store",
+        "template.teams",
+        "template.windows"
+      ]
+    },
+    "route": {
+      "type": "string",
+      "pattern": "^/([a-z0-9-]+(/[a-z0-9-]+)*)?$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "originalCopy",
+        "placeholderVisualsOnly",
+        "placeholderPricing"
+      ],
+      "properties": {
+        "originalCopy": {
+          "const": true
+        },
+        "placeholderVisualsOnly": {
+          "const": true
+        },
+        "placeholderPricing": {
+          "const": true
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/definitions/node"
+      }
+    }
+  },
+  "definitions": {
+    "icon": {
+      "enum": [
+        "arrow-right",
+        "arrow-left",
+        "arrow-ne",
+        "chevron-right",
+        "download",
+        "spark",
+        "grid",
+        "clip",
+        "window",
+        "bolt",
+        "search",
+        "note",
+        "calendar",
+        "chat",
+        "cmd",
+        "hash",
+        "bird",
+        "shield",
+        "star",
+        "apple",
+        "check",
+        "dash",
+        "chevron-down",
+        "info",
+        "play",
+        "users",
+        "globe",
+        "lock",
+        "image",
+        "mic",
+        "qr"
+      ]
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern",
+        "trigger",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "pattern": {
+          "enum": [
+            "none",
+            "hover-feedback",
+            "menu-toggle",
+            "fade-in-up-load",
+            "blur-in-load",
+            "rise-in-load",
+            "layer-enter-load",
+            "webgl-ambient",
+            "border-sweep",
+            "scripted-reel",
+            "caret-blink",
+            "feature-key-stagger",
+            "slide-in-stagger",
+            "carousel-auto-advance",
+            "quote-fade",
+            "typing-and-hotkeys",
+            "crossfade-auto-advance",
+            "figure-reveal",
+            "key-glow",
+            "marquee",
+            "orbit",
+            "slideshow-autoplay",
+            "accordion",
+            "interval-toggle",
+            "popover",
+            "dot-pulse",
+            "workflow-sequence",
+            "chip-tabs",
+            "glass-settle"
+          ]
+        },
+        "trigger": {
+          "enum": [
+            "none",
+            "load",
+            "hover",
+            "click",
+            "timer",
+            "always",
+            "in-view-0",
+            "in-view-0.05",
+            "in-view-0.1",
+            "in-view-0.2",
+            "in-view-0.7",
+            "in-view-0.9",
+            "in-view-1"
+          ]
+        },
+        "reducedMotionFallback": {
+          "enum": [
+            "no-motion-needed",
+            "final-state",
+            "first-state-static",
+            "hide-decorative"
+          ]
+        }
+      }
+    },
+    "content.nav.navbar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ctaLabel",
+        "links",
+        "loginLabel",
+        "wordmark"
+      ],
+      "properties": {
+        "links": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10
+              }
+            }
+          }
+        },
+        "loginLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6
+        },
+        "ctaLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8
+        },
+        "wordmark": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "brand.wordmark"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.footer.footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "art",
+        "groups",
+        "inputPlaceholder",
+        "legal",
+        "legalLink",
+        "newsletterBody",
+        "newsletterTitle"
+      ],
+      "properties": {
+        "groups": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "heading",
+              "links"
+            ],
+            "properties": {
+              "heading": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "links": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 14,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "label"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 22
+                    },
+                    "external": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "newsletterTitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 28
+        },
+        "newsletterBody": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 55
+        },
+        "inputPlaceholder": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 19
+        },
+        "legal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 162
+        },
+        "legalLink": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 14
+        },
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art",
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.home": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "announcement",
+        "background",
+        "downloadLabel",
+        "requirements",
+        "subLinkPrimary",
+        "subLinkSecondary",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 28
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 108
+        },
+        "downloadLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "requirements": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 38
+        },
+        "subLinkPrimary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "subLinkSecondary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        },
+        "announcement": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "background": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.webgl-scene"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.page.sheen": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "art",
+        "caption",
+        "pill",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "pill": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 111
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 22
+        },
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.page.ios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "art",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 29
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 51
+        },
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.app-tile",
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.page.plain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "caption",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 31
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 63
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 38
+        }
+      }
+    },
+    "content.hero.page.store": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "art",
+        "searchPlaceholder",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 104
+        },
+        "searchPlaceholder": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 9
+        },
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art",
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.page.teams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "art",
+        "pill",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "pill": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 35
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 22
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 95
+        },
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.app-tile"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.windows-serif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "mock",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 72
+        },
+        "mock": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        },
+        "videoPoster": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.video-placeholder"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.hero.pricing-art": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "art"
+      ],
+      "properties": {
+        "art": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.shortcuts-frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "caption",
+        "slides",
+        "subtitle",
+        "title",
+        "wallpaper"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 28
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 35
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 87
+        },
+        "slides": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "dockIcon",
+              "mock"
+            ],
+            "properties": {
+              "mock": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "dockIcon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "wallpaper": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.time-keyboard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "featureKeys",
+        "keyboard",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 27
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 48
+        },
+        "featureKeys": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "icon",
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 22
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "keyboard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.keyboard"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.teams-slideshow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slides"
+      ],
+      "properties": {
+        "slides": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "body",
+              "mock",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 14
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 119
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              },
+              "mock": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.ai-frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "mock",
+        "title"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 7
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 25
+        },
+        "mock": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        },
+        "cover": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.game-launcher-marquee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rows"
+      ],
+      "properties": {
+        "rows": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "tiles"
+            ],
+            "properties": {
+              "tiles": {
+                "type": "array",
+                "minItems": 8,
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "tile"
+                  ],
+                  "properties": {
+                    "tile": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "assetRole"
+                      ],
+                      "properties": {
+                        "assetRole": {
+                          "enum": [
+                            "visual.app-tile"
+                          ]
+                        },
+                        "alt": {
+                          "type": "string",
+                          "maxLength": 125
+                        },
+                        "hue": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 359
+                        },
+                        "decorative": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.phone-composite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "band",
+        "phone"
+      ],
+      "properties": {
+        "phone": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        },
+        "band": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.showcase.full-bleed-image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "image"
+      ],
+      "properties": {
+        "image": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art",
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.catalog.extensions-carousel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "categories",
+        "link",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "categories": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              }
+            }
+          }
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 17,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "icon",
+              "illustration",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 16
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 75
+              },
+              "icon": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.app-tile"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "illustration": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 21
+        }
+      }
+    },
+    "content.catalog.extension-reel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "link",
+        "titleLead",
+        "titleTail"
+      ],
+      "properties": {
+        "titleLead": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12
+        },
+        "titleTail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 13
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "icon",
+              "illustration",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 16
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 75
+              },
+              "icon": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.app-tile"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "illustration": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 21
+        }
+      }
+    },
+    "content.catalog.featured-grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "groupSubtitle",
+        "groupTitle",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 7
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 52
+        },
+        "groupTitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8
+        },
+        "groupSubtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "author",
+              "authorAvatar",
+              "description",
+              "icon",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 14
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 112
+              },
+              "author": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 17
+              },
+              "icon": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.app-tile"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "authorAvatar": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "person.avatar-placeholder"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.catalog.store-toolbar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "searchPlaceholder",
+        "tabs",
+        "views"
+      ],
+      "properties": {
+        "tabs": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 14
+              }
+            }
+          }
+        },
+        "views": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "icon"
+            ],
+            "properties": {
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "searchPlaceholder": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 9
+        }
+      }
+    },
+    "content.catalog.store-grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "pageCount"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "authorAvatar",
+              "description",
+              "icon",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 49
+              },
+              "icon": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.app-tile"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "authorAvatar": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "person.avatar-placeholder"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "pageCount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        }
+      }
+    },
+    "content.catalog.template-grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "buttonLabel",
+        "cards"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "body",
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 26
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 127
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.app-tile"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "buttonLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        }
+      }
+    },
+    "content.catalog.coming-soon-grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.ai-bento": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "description",
+        "eyebrow",
+        "link",
+        "title"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 31
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 63
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 13
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 121
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 27
+        }
+      }
+    },
+    "content.feature.ai-card-grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 16
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 124
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.ai-wide-visual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description",
+        "eyebrow",
+        "title",
+        "visual"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 31
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 92
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.feature.ai-card-pairs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "description",
+        "eyebrow",
+        "link",
+        "title"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 7
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 79
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 15
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 43
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 46
+        }
+      }
+    },
+    "content.feature.ai-chip-tabs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chips",
+        "stage"
+      ],
+      "properties": {
+        "chips": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "icon",
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 9
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "stage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock",
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.feature.byok-row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "tiles",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 37
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 81
+        },
+        "tiles": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "tile"
+            ],
+            "properties": {
+              "tile": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.app-tile"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.model-tabs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "footnote",
+        "rows",
+        "subtitle",
+        "tabs",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 14
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 17
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 75
+        },
+        "tabs": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 17
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 13,
+          "maxItems": 13,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              }
+            }
+          }
+        },
+        "footnote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 28
+        }
+      }
+    },
+    "content.feature.automation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 22
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "icon",
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 11
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 94
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.keyboard",
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.feature-wall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heading",
+        "items",
+        "link"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 25
+        },
+        "items": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "badge",
+              "detail",
+              "icon",
+              "preview",
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 25
+              },
+              "badge": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 14
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 77
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              },
+              "preview": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 10
+        }
+      }
+    },
+    "content.feature.developer-grid": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ctaLabel",
+        "figures",
+        "intro",
+        "introLink",
+        "linkCells",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
+        "intro": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 106
+        },
+        "introLink": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 13
+        },
+        "linkCells": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "body",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 99
+              }
+            }
+          }
+        },
+        "figures": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "figure"
+            ],
+            "properties": {
+              "figure": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.isometric-figure"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ctaLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        }
+      }
+    },
+    "content.feature.section-title.size24": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 28
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 39
+        },
+        "actionLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8
+        }
+      }
+    },
+    "content.feature.section-title.size32": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 119
+        }
+      }
+    },
+    "content.feature.centered-lead.teams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 41
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 107
+        }
+      }
+    },
+    "content.feature.centered-lead.windows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 38
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 67
+        }
+      }
+    },
+    "content.feature.split.pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sub",
+        "title",
+        "visual"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "sub": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 81
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 70
+        },
+        "badge": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 13
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock",
+                "visual.gradient-art",
+                "visual.app-tile"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.feature.split.teams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "eyebrow",
+        "title",
+        "visual"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 56
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 243
+        },
+        "body2": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 116
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 25
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.feature.split.ios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "eyebrow",
+        "title",
+        "visual"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 106
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.feature.split.ai": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description",
+        "eyebrow",
+        "title",
+        "visual"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 143
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock",
+                "visual.app-tile"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.feature.media-card-grid.pro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "badge",
+              "sub",
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 16
+              },
+              "sub": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 78
+              },
+              "badge": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.media-card-grid.windows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "badge",
+              "poster",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 25
+              },
+              "badge": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 16
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              },
+              "poster": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "video": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.video-placeholder"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.media-card-grid.ios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cards"
+      ],
+      "properties": {
+        "cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "description",
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 28
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 137
+              },
+              "link": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 18
+              },
+              "footnote": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 22
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.feature.hotkeys-banner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "badge",
+        "keyboard",
+        "keys",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "badge": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "keys": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 5
+              }
+            }
+          }
+        },
+        "keyboard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.keyboard"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.proof.testimonials": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "people",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 33
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 36
+        },
+        "people": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 24,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "avatar",
+              "highlights",
+              "name",
+              "quote",
+              "role"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 15
+              },
+              "role": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 110
+              },
+              "avatar": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "person.avatar-placeholder"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "highlights": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "label"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 18
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.proof.community": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "background",
+        "footer",
+        "footerLink",
+        "socials",
+        "subtitle",
+        "title",
+        "videos"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 17
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 74
+        },
+        "socials": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "body",
+              "count",
+              "cta",
+              "icon",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 9
+              },
+              "count": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 77
+              },
+              "cta": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 6
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        },
+        "videos": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 18,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "thumb",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 45
+              },
+              "thumb": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.video-placeholder"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "footer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 83
+        },
+        "footerLink": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12
+        },
+        "background": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.gradient-art"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.proof.social-cards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "socials",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 17
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 74
+        },
+        "socials": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "body",
+              "count",
+              "cta",
+              "icon",
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 9
+              },
+              "count": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 77
+              },
+              "cta": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 6
+              },
+              "icon": {
+                "$ref": "#/definitions/icon"
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.proof.logo-strip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lead",
+        "logos"
+      ],
+      "properties": {
+        "lead": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 19
+        },
+        "logos": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "logo",
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 15
+              },
+              "logo": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "brand.customer-logo-slot"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.proof.quote-strip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "people",
+        "quote"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 164
+        },
+        "people": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 22,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "avatar",
+              "name",
+              "role"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 15
+              },
+              "role": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 21
+              },
+              "avatar": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "person.avatar-placeholder"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.pricing.plans": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "blockCta",
+        "discountChip",
+        "enterpriseCaption",
+        "enterpriseLabel",
+        "enterpriseName",
+        "enterpriseTagline",
+        "tiers"
+      ],
+      "properties": {
+        "tiers": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ctaLabel",
+              "featured",
+              "features",
+              "name",
+              "price",
+              "tagline",
+              "unit"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "tagline": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 41
+              },
+              "options": {
+                "type": "array",
+                "minItems": 0,
+                "maxItems": 4,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "label"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 4
+                    }
+                  }
+                }
+              },
+              "price": {
+                "type": "string",
+                "pattern": "^\\$[0-9]{1,3}$"
+              },
+              "unit": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 14
+              },
+              "billing": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 21
+              },
+              "ctaLabel": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 14
+              },
+              "features": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 12,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 60
+                    }
+                  }
+                }
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48
+              },
+              "featured": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "discountChip": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4
+        },
+        "enterpriseName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 22
+        },
+        "enterpriseTagline": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 33
+        },
+        "enterpriseLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 14
+        },
+        "enterpriseCaption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "blockCta": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 39
+        }
+      }
+    },
+    "content.pricing.compare-table": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "groupSeparators",
+        "plans",
+        "rows"
+      ],
+      "properties": {
+        "plans": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10
+              }
+            }
+          }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 22,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "values"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 26
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 130
+              },
+              "values": {
+                "type": "array",
+                "minItems": 5,
+                "maxItems": 5,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "value"
+                  ],
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 9
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "groupSeparators": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    },
+    "content.pricing.pro-upsell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "accentWord",
+        "blockCta",
+        "body",
+        "cards",
+        "pill",
+        "title",
+        "visual"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "accentWord": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 111
+        },
+        "pill": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 17
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.ui-mock"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "visual"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 17
+              },
+              "visual": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "assetRole"
+                ],
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "visual.ui-mock",
+                      "visual.gradient-art"
+                    ]
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 125
+                  },
+                  "hue": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 359
+                  },
+                  "decorative": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "blockCta": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 23
+        }
+      }
+    },
+    "content.faq.accordion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "items",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 39
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "answer",
+              "question"
+            ],
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 68
+              },
+              "answer": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 330
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.cta.final-keyboard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "downloadLabel",
+        "keyboard",
+        "subtitle",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 19
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 34
+        },
+        "downloadLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "keyboard": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.keyboard"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.cta.download.mac": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "buttonLabel",
+        "caption",
+        "command",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 19
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 75
+        },
+        "buttonLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "command": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 27
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 9
+        }
+      }
+    },
+    "content.cta.download.windows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "badge",
+        "inlineAction",
+        "line"
+      ],
+      "properties": {
+        "line": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
+        "inlineAction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "badge": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "brand.store-badge-placeholder"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.cta.download.ios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "body",
+        "caption",
+        "qr",
+        "qrLabel",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 38
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 33
+        },
+        "qrLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "qr": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "visual.qr-placeholder"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "content.cta.windows-final": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "badge",
+        "body",
+        "line",
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 38
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 34
+        },
+        "line": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
+        "badge": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetRole"
+          ],
+          "properties": {
+            "assetRole": {
+              "enum": [
+                "brand.store-badge-placeholder"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 125
+            },
+            "hue": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359
+            },
+            "decorative": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "variant",
+        "content",
+        "motion"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,39}$"
+        },
+        "type": {
+          "enum": [
+            "catalog.coming-soon-grid",
+            "catalog.extension-reel",
+            "catalog.extensions-carousel",
+            "catalog.featured-grid",
+            "catalog.store-grid",
+            "catalog.store-toolbar",
+            "catalog.template-grid",
+            "cta.download",
+            "cta.final-keyboard",
+            "cta.windows-final",
+            "faq.accordion",
+            "feature.ai-bento",
+            "feature.ai-card-grid",
+            "feature.ai-card-pairs",
+            "feature.ai-chip-tabs",
+            "feature.ai-wide-visual",
+            "feature.automation",
+            "feature.byok-row",
+            "feature.centered-lead",
+            "feature.developer-grid",
+            "feature.feature-wall",
+            "feature.hotkeys-banner",
+            "feature.media-card-grid",
+            "feature.model-tabs",
+            "feature.section-title",
+            "feature.split",
+            "footer.footer",
+            "hero.home",
+            "hero.page",
+            "hero.pricing-art",
+            "hero.windows-serif",
+            "nav.navbar",
+            "pricing.compare-table",
+            "pricing.plans",
+            "pricing.pro-upsell",
+            "proof.community",
+            "proof.logo-strip",
+            "proof.quote-strip",
+            "proof.social-cards",
+            "proof.testimonials",
+            "showcase.ai-frame",
+            "showcase.full-bleed-image",
+            "showcase.game-launcher-marquee",
+            "showcase.phone-composite",
+            "showcase.shortcuts-frame",
+            "showcase.teams-slideshow",
+            "showcase.time-keyboard"
+          ]
+        },
+        "variant": {
+          "type": "string"
+        },
+        "content": {
+          "type": "object"
+        },
+        "motion": {
+          "$ref": "#/definitions/motion"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "nav.navbar"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      },
+                      {
+                        "pattern": "menu-toggle",
+                        "trigger": "click",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.nav.navbar"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "footer.footer"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "cube",
+                  "windows"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.footer.footer"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.home"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "fade-in-up-load",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.hero.home"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.page"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "sheen",
+                  "ios",
+                  "plain",
+                  "store",
+                  "teams"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      },
+                      {
+                        "pattern": "blur-in-load",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      },
+                      {
+                        "pattern": "layer-enter-load",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      },
+                      {
+                        "pattern": "orbit",
+                        "trigger": "always",
+                        "reducedMotionFallback": "first-state-static"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.page"
+              },
+              "variant": {
+                "const": "sheen"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.page.sheen"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.page"
+              },
+              "variant": {
+                "const": "ios"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.page.ios"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.page"
+              },
+              "variant": {
+                "const": "plain"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.page.plain"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.page"
+              },
+              "variant": {
+                "const": "store"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.page.store"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.page"
+              },
+              "variant": {
+                "const": "teams"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.page.teams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.windows-serif"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "fade-in-up-load",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.hero.windows-serif"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.pricing-art"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.hero.pricing-art"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.shortcuts-frame"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "scripted-reel",
+                        "trigger": "in-view-0.2",
+                        "reducedMotionFallback": "first-state-static"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.shortcuts-frame"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.time-keyboard"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "feature-key-stagger",
+                        "trigger": "in-view-0",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.time-keyboard"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.teams-slideshow"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "slideshow-autoplay",
+                        "trigger": "timer",
+                        "reducedMotionFallback": "first-state-static"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.teams-slideshow"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.ai-frame"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.ai-frame"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.game-launcher-marquee"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "marquee",
+                        "trigger": "always",
+                        "reducedMotionFallback": "first-state-static"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.game-launcher-marquee"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.phone-composite"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.phone-composite"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "showcase.full-bleed-image"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.showcase.full-bleed-image"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.extensions-carousel"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "slide-in-stagger",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.extensions-carousel"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.extension-reel"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "slide-in-stagger",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.extension-reel"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.featured-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.featured-grid"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.store-toolbar"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "chip-tabs",
+                        "trigger": "click",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.store-toolbar"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.store-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.store-grid"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.template-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.template-grid"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "catalog.coming-soon-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.catalog.coming-soon-grid"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.ai-bento"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "workflow-sequence",
+                        "trigger": "in-view-0.05",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.ai-bento"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.ai-card-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.ai-card-grid"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.ai-wide-visual"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.ai-wide-visual"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.ai-card-pairs"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.ai-card-pairs"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.ai-chip-tabs"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "rise-in-load",
+                        "trigger": "load",
+                        "reducedMotionFallback": "final-state"
+                      },
+                      {
+                        "pattern": "chip-tabs",
+                        "trigger": "click",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.ai-chip-tabs"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.byok-row"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.byok-row"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.model-tabs"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "chip-tabs",
+                        "trigger": "click",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.model-tabs"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.automation"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "typing-and-hotkeys",
+                        "trigger": "in-view-0.1",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.automation"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.feature-wall"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "crossfade-auto-advance",
+                        "trigger": "in-view-0.2",
+                        "reducedMotionFallback": "first-state-static"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.feature-wall"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.developer-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "figure-reveal",
+                        "trigger": "in-view-0.7",
+                        "reducedMotionFallback": "final-state"
+                      },
+                      {
+                        "pattern": "figure-reveal",
+                        "trigger": "in-view-1",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.developer-grid"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.section-title"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "size24",
+                  "size32"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.section-title"
+              },
+              "variant": {
+                "const": "size24"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.section-title.size24"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.section-title"
+              },
+              "variant": {
+                "const": "size32"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.section-title.size32"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.centered-lead"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "teams",
+                  "windows"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.centered-lead"
+              },
+              "variant": {
+                "const": "teams"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.centered-lead.teams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.centered-lead"
+              },
+              "variant": {
+                "const": "windows"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.centered-lead.windows"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.split"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "pair",
+                  "teams",
+                  "ios",
+                  "ai"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      },
+                      {
+                        "pattern": "glass-settle",
+                        "trigger": "in-view-0.2",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.split"
+              },
+              "variant": {
+                "const": "pair"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.split.pair"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.split"
+              },
+              "variant": {
+                "const": "teams"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.split.teams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.split"
+              },
+              "variant": {
+                "const": "ios"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.split.ios"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.split"
+              },
+              "variant": {
+                "const": "ai"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.split.ai"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.media-card-grid"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "pro",
+                  "windows",
+                  "ios"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "dot-pulse",
+                        "trigger": "always",
+                        "reducedMotionFallback": "first-state-static"
+                      },
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.media-card-grid"
+              },
+              "variant": {
+                "const": "pro"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.media-card-grid.pro"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.media-card-grid"
+              },
+              "variant": {
+                "const": "windows"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.media-card-grid.windows"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.media-card-grid"
+              },
+              "variant": {
+                "const": "ios"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.feature.media-card-grid.ios"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "feature.hotkeys-banner"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.feature.hotkeys-banner"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.testimonials"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "carousel-auto-advance",
+                        "trigger": "timer",
+                        "reducedMotionFallback": "first-state-static"
+                      },
+                      {
+                        "pattern": "quote-fade",
+                        "trigger": "click",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.proof.testimonials"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.community"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.proof.community"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.social-cards"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.proof.social-cards"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.logo-strip"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.proof.logo-strip"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.quote-strip"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "chip-tabs",
+                        "trigger": "click",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.proof.quote-strip"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "pricing.plans"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "wide",
+                  "narrow"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "interval-toggle",
+                        "trigger": "click",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.pricing.plans"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "pricing.compare-table"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "popover",
+                        "trigger": "click",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.pricing.compare-table"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "pricing.pro-upsell"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "none",
+                        "trigger": "none",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.pricing.pro-upsell"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "faq.accordion"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "h20",
+                  "h48",
+                  "h18"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "accordion",
+                        "trigger": "click",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.faq.accordion"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.final-keyboard"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "key-glow",
+                        "trigger": "in-view-0.9",
+                        "reducedMotionFallback": "final-state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.cta.final-keyboard"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.download"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "mac",
+                  "windows",
+                  "ios"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.download"
+              },
+              "variant": {
+                "const": "mac"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.download.mac"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.download"
+              },
+              "variant": {
+                "const": "windows"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.download.windows"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.download"
+              },
+              "variant": {
+                "const": "ios"
+              }
+            },
+            "required": [
+              "type",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.download.ios"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.windows-final"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "variant": {
+                "enum": [
+                  "default"
+                ]
+              },
+              "motion": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/motion"
+                  },
+                  {
+                    "enum": [
+                      {
+                        "pattern": "hover-feedback",
+                        "trigger": "hover",
+                        "reducedMotionFallback": "no-motion-needed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "content": {
+                "$ref": "#/definitions/content.cta.windows-final"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

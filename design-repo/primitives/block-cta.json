@@ -1,0 +1,12 @@
+{
+  "id": "block-cta",
+  "layer": "primitive",
+  "implementedBy": "src/components/PricingSection.jsx > BlockCta",
+  "props": [
+    "children"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.block-cta"
+  ]
+}

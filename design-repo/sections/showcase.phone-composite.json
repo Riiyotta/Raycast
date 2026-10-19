@@ -1,0 +1,45 @@
+{
+  "id": "showcase.phone-composite",
+  "category": "SHOWCASE",
+  "description": "Phone mockup composited over a wide band image.",
+  "purpose": "Anchor the mobile story: a phone mock composited over a wide band image.",
+  "scope": "iOS page only.",
+  "implementedBy": "pages/Ios.jsx > HeroArt + Phone",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "phone": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.ui-mock"
+        ]
+      },
+      "band": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.gradient-art"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.showcase.phone-composite.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.showcase.phone-composite"
+  ]
+}

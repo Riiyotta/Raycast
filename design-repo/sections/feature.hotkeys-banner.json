@@ -1,0 +1,83 @@
+{
+  "id": "feature.hotkeys-banner",
+  "category": "FEATURE",
+  "description": "Wide banner showing a hotkey combination.",
+  "purpose": "One wide banner pairing a short hotkey claim with a row of keycaps.",
+  "scope": "Windows page only.",
+  "implementedBy": "pages/Windows.jsx > HotkeysBanner",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 20,
+        "measured": "20c 2L",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.hotkeys-banner.title"
+        ]
+      },
+      "badge": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 16,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.feature.hotkeys-banner.badge"
+        ]
+      },
+      "keys": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 4,
+        "item": {
+          "label": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 5,
+            "measured": "clone longest of 1",
+            "budgetRule": "clone-implementation-longest",
+            "basis": "clone-implementation",
+            "evidence": [
+              "mv.copy.feature.hotkeys-banner.keys.label"
+            ]
+          }
+        },
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.feature.hotkeys-banner.keys"
+        ]
+      },
+      "keyboard": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.keyboard"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.hotkeys-banner.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.feature.hotkeys-banner"
+  ]
+}

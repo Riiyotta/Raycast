@@ -1,0 +1,13 @@
+{
+  "id": "enterprise-plan-card",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/PricingSection.jsx > EnterprisePlanCard",
+  "props": [],
+  "uses": [
+    "button-dark"
+  ],
+  "evidence": [
+    "mv.component.enterprise-plan-card"
+  ]
+}

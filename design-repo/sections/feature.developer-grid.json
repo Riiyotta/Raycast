@@ -1,0 +1,151 @@
+{
+  "id": "feature.developer-grid",
+  "category": "FEATURE",
+  "description": "Hairline developer/API grid with dotted figure cells and per-figure scroll animations.",
+  "purpose": "Speak to developers with a hairline grid of short claims and original isometric figures.",
+  "scope": "Homepage only.",
+  "implementedBy": "DeveloperGrid.jsx",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "title": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 24,
+        "measured": "24c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.developer-grid.title"
+        ]
+      },
+      "intro": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 106,
+        "measured": "106c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.developer-grid.intro"
+        ]
+      },
+      "introLink": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 13,
+        "measured": "13c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.developer-grid.introLink"
+        ]
+      },
+      "linkCells": {
+        "kind": "list",
+        "required": true,
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 20,
+            "measured": "14–20c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.developer-grid.linkCells.title"
+            ]
+          },
+          "body": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 99,
+            "measured": "about 90c",
+            "budgetRule": "about-plus-10pct",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.developer-grid.linkCells.body"
+            ]
+          }
+        },
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.feature.developer-grid.linkCells"
+        ]
+      },
+      "figures": {
+        "kind": "list",
+        "required": true,
+        "minItems": 6,
+        "maxItems": 6,
+        "item": {
+          "figure": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.isometric-figure"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.developer-grid.figures"
+        ]
+      },
+      "ctaLabel": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 11,
+        "measured": "clone longest of 1",
+        "budgetRule": "clone-implementation-longest",
+        "basis": "clone-implementation",
+        "evidence": [
+          "mv.copy.feature.developer-grid.ctaLabel"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "figure-reveal",
+        "trigger": "in-view-0.7",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.feature.developer-grid.0"
+        ]
+      },
+      {
+        "pattern": "figure-reveal",
+        "trigger": "in-view-1",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.feature.developer-grid.1"
+        ]
+      }
+    ],
+    "measured": {
+      "summary": "float 3s ease-in-out 1.5s infinite; screen blink 1.5s ease 1s forwards (not linear).",
+      "evidence": [
+        "mv.qa.api-figure-easing"
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.api2",
+      "change": "collapse-columns",
+      "detail": "1 column below 784, 2 from 784, 3 from 1200.",
+      "evidence": [
+        "mv.responsive.feature.developer-grid.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.feature.developer-grid"
+  ]
+}

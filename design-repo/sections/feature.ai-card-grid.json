@@ -1,0 +1,72 @@
+{
+  "id": "feature.ai-card-grid",
+  "category": "FEATURE",
+  "description": "Masonry grid of AI cards of varying heights.",
+  "purpose": "Masonry of four assistant capability cards.",
+  "scope": "AI page only.",
+  "implementedBy": "AiBento.jsx > AiCard",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 4,
+        "maxItems": 4,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 16,
+            "measured": "8–16c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.ai-card-grid.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 124,
+            "measured": "84–124c 2L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.feature.ai-card-grid.cards.description"
+            ]
+          },
+          "visual": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.feature.ai-card-grid.cards"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.feature.ai-card-grid.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.feature.ai-card-grid"
+  ]
+}

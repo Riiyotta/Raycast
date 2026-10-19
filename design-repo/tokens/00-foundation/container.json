@@ -1,0 +1,52 @@
+{
+  "container": {
+    "container-xs": {
+      "$type": "dimension",
+      "$value": "746px",
+      "evidence": [
+        "mv.tw.container.container-xs"
+      ],
+      "valueInSource": true
+    },
+    "container-sm": {
+      "$type": "dimension",
+      "$value": "1064px",
+      "evidence": [
+        "mv.tw.container.container-sm"
+      ],
+      "valueInSource": true
+    },
+    "container": {
+      "$type": "dimension",
+      "$value": "1204px",
+      "evidence": [
+        "mv.tw.container.container"
+      ],
+      "valueInSource": true
+    },
+    "container-lg": {
+      "$type": "dimension",
+      "$value": "1280px",
+      "evidence": [
+        "mv.tw.container.container-lg"
+      ],
+      "valueInSource": true
+    },
+    "ai": {
+      "$type": "dimension",
+      "$value": "1060px",
+      "evidence": [
+        "mv.tw.container.ai"
+      ],
+      "valueInSource": true
+    },
+    "ext-top": {
+      "$type": "dimension",
+      "$value": "1252px",
+      "evidence": [
+        "mv.tw.container.ext-top"
+      ],
+      "valueInSource": true
+    }
+  }
+}

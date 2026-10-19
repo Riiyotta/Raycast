@@ -1,0 +1,751 @@
+{
+  "version": "1.0.0",
+  "note": "Closed set a generator may instantiate. verify_all.py checks parity with primitives/, components/, sections/ and the schema.",
+  "nodeProperties": [
+    "content",
+    "id",
+    "motion",
+    "type",
+    "variant"
+  ],
+  "motionProperties": [
+    "pattern",
+    "reducedMotionFallback",
+    "trigger"
+  ],
+  "primitives": [
+    "app-tile",
+    "arrow-link",
+    "badge",
+    "block-cta",
+    "button-dark",
+    "button-light",
+    "eyebrow",
+    "hero-pill",
+    "icon",
+    "key",
+    "logo-mark"
+  ],
+  "components": [
+    "ai-card",
+    "ai-header",
+    "dot-grid",
+    "enterprise-plan-card",
+    "extension-reel",
+    "faq-item",
+    "hero-download-info",
+    "interval-toggle",
+    "mock-window",
+    "pair-head",
+    "plan-card",
+    "qr-card",
+    "search-button",
+    "section-title",
+    "social-cards",
+    "teams-head",
+    "tier-switch",
+    "type-out",
+    "use-in-view",
+    "use-reduced-motion",
+    "use-sequence"
+  ],
+  "sections": {
+    "catalog.coming-soon-grid": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards"
+        ]
+      }
+    },
+    "catalog.extension-reel": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "link",
+          "titleLead",
+          "titleTail"
+        ]
+      }
+    },
+    "catalog.extensions-carousel": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "categories",
+          "link",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "catalog.featured-grid": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "groupSubtitle",
+          "groupTitle",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "catalog.store-grid": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "pageCount"
+        ]
+      }
+    },
+    "catalog.store-toolbar": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "searchPlaceholder",
+          "tabs",
+          "views"
+        ]
+      }
+    },
+    "catalog.template-grid": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "buttonLabel",
+          "cards"
+        ]
+      }
+    },
+    "cta.download": {
+      "variants": [
+        "mac",
+        "windows",
+        "ios"
+      ],
+      "contentFields": {
+        "mac": [
+          "body",
+          "buttonLabel",
+          "caption",
+          "command",
+          "title"
+        ],
+        "windows": [
+          "badge",
+          "inlineAction",
+          "line"
+        ],
+        "ios": [
+          "body",
+          "caption",
+          "qr",
+          "qrLabel",
+          "title"
+        ]
+      }
+    },
+    "cta.final-keyboard": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "downloadLabel",
+          "keyboard",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "cta.windows-final": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "badge",
+          "body",
+          "line",
+          "title"
+        ]
+      }
+    },
+    "faq.accordion": {
+      "variants": [
+        "h20",
+        "h48",
+        "h18"
+      ],
+      "contentFields": {
+        "*": [
+          "items",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "feature.ai-bento": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "description",
+          "eyebrow",
+          "link",
+          "title"
+        ]
+      }
+    },
+    "feature.ai-card-grid": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards"
+        ]
+      }
+    },
+    "feature.ai-card-pairs": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "description",
+          "eyebrow",
+          "link",
+          "title"
+        ]
+      }
+    },
+    "feature.ai-chip-tabs": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "chips",
+          "stage"
+        ]
+      }
+    },
+    "feature.ai-wide-visual": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "description",
+          "eyebrow",
+          "title",
+          "visual"
+        ]
+      }
+    },
+    "feature.automation": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cards",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "feature.byok-row": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "body",
+          "tiles",
+          "title"
+        ]
+      }
+    },
+    "feature.centered-lead": {
+      "variants": [
+        "teams",
+        "windows"
+      ],
+      "contentFields": {
+        "teams": [
+          "body",
+          "title"
+        ],
+        "windows": [
+          "body",
+          "title"
+        ]
+      }
+    },
+    "feature.developer-grid": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "ctaLabel",
+          "figures",
+          "intro",
+          "introLink",
+          "linkCells",
+          "title"
+        ]
+      }
+    },
+    "feature.feature-wall": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "heading",
+          "items",
+          "link"
+        ]
+      }
+    },
+    "feature.hotkeys-banner": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "badge",
+          "keyboard",
+          "keys",
+          "title"
+        ]
+      }
+    },
+    "feature.media-card-grid": {
+      "variants": [
+        "pro",
+        "windows",
+        "ios"
+      ],
+      "contentFields": {
+        "pro": [
+          "cards"
+        ],
+        "windows": [
+          "cards"
+        ],
+        "ios": [
+          "cards"
+        ]
+      }
+    },
+    "feature.model-tabs": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "body",
+          "footnote",
+          "rows",
+          "subtitle",
+          "tabs",
+          "title"
+        ]
+      }
+    },
+    "feature.section-title": {
+      "variants": [
+        "size24",
+        "size32"
+      ],
+      "contentFields": {
+        "size24": [
+          "actionLabel",
+          "subtitle",
+          "title"
+        ],
+        "size32": [
+          "body",
+          "eyebrow",
+          "title"
+        ]
+      }
+    },
+    "feature.split": {
+      "variants": [
+        "pair",
+        "teams",
+        "ios",
+        "ai"
+      ],
+      "contentFields": {
+        "pair": [
+          "badge",
+          "body",
+          "sub",
+          "title",
+          "visual"
+        ],
+        "teams": [
+          "body",
+          "body2",
+          "eyebrow",
+          "link",
+          "title",
+          "visual"
+        ],
+        "ios": [
+          "body",
+          "eyebrow",
+          "link",
+          "title",
+          "visual"
+        ],
+        "ai": [
+          "description",
+          "eyebrow",
+          "title",
+          "visual"
+        ]
+      }
+    },
+    "footer.footer": {
+      "variants": [
+        "cube",
+        "windows"
+      ],
+      "contentFields": {
+        "*": [
+          "art",
+          "groups",
+          "inputPlaceholder",
+          "legal",
+          "legalLink",
+          "newsletterBody",
+          "newsletterTitle"
+        ]
+      }
+    },
+    "hero.home": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "announcement",
+          "background",
+          "downloadLabel",
+          "requirements",
+          "subLinkPrimary",
+          "subLinkSecondary",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "hero.page": {
+      "variants": [
+        "sheen",
+        "ios",
+        "plain",
+        "store",
+        "teams"
+      ],
+      "contentFields": {
+        "sheen": [
+          "art",
+          "caption",
+          "pill",
+          "subtitle",
+          "title"
+        ],
+        "ios": [
+          "art",
+          "subtitle",
+          "title"
+        ],
+        "plain": [
+          "caption",
+          "subtitle",
+          "title"
+        ],
+        "store": [
+          "art",
+          "searchPlaceholder",
+          "subtitle",
+          "title"
+        ],
+        "teams": [
+          "art",
+          "pill",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "hero.pricing-art": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "art"
+        ]
+      }
+    },
+    "hero.windows-serif": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "body",
+          "mock",
+          "title",
+          "videoPoster"
+        ]
+      }
+    },
+    "nav.navbar": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "ctaLabel",
+          "links",
+          "loginLabel",
+          "wordmark"
+        ]
+      }
+    },
+    "pricing.compare-table": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "groupSeparators",
+          "plans",
+          "rows"
+        ]
+      }
+    },
+    "pricing.plans": {
+      "variants": [
+        "wide",
+        "narrow"
+      ],
+      "contentFields": {
+        "*": [
+          "blockCta",
+          "discountChip",
+          "enterpriseCaption",
+          "enterpriseLabel",
+          "enterpriseName",
+          "enterpriseTagline",
+          "tiers"
+        ]
+      }
+    },
+    "pricing.pro-upsell": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "accentWord",
+          "blockCta",
+          "body",
+          "cards",
+          "pill",
+          "title",
+          "visual"
+        ]
+      }
+    },
+    "proof.community": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "background",
+          "footer",
+          "footerLink",
+          "socials",
+          "subtitle",
+          "title",
+          "videos"
+        ]
+      }
+    },
+    "proof.logo-strip": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "lead",
+          "logos"
+        ]
+      }
+    },
+    "proof.quote-strip": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "people",
+          "quote"
+        ]
+      }
+    },
+    "proof.social-cards": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "socials",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "proof.testimonials": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "people",
+          "subtitle",
+          "title"
+        ]
+      }
+    },
+    "showcase.ai-frame": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "cover",
+          "label",
+          "mock",
+          "title"
+        ]
+      }
+    },
+    "showcase.full-bleed-image": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "image"
+        ]
+      }
+    },
+    "showcase.game-launcher-marquee": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "rows"
+        ]
+      }
+    },
+    "showcase.phone-composite": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "band",
+          "phone"
+        ]
+      }
+    },
+    "showcase.shortcuts-frame": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "caption",
+          "slides",
+          "subtitle",
+          "title",
+          "wallpaper"
+        ]
+      }
+    },
+    "showcase.teams-slideshow": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "slides"
+        ]
+      }
+    },
+    "showcase.time-keyboard": {
+      "variants": [
+        "default"
+      ],
+      "contentFields": {
+        "*": [
+          "featureKeys",
+          "keyboard",
+          "subtitle",
+          "title"
+        ]
+      }
+    }
+  },
+  "assetRoles": [
+    "brand.customer-logo-slot",
+    "brand.store-badge-placeholder",
+    "brand.wordmark",
+    "icon.glyph",
+    "person.avatar-placeholder",
+    "visual.app-tile",
+    "visual.gradient-art",
+    "visual.isometric-figure",
+    "visual.keyboard",
+    "visual.qr-placeholder",
+    "visual.ui-mock",
+    "visual.video-placeholder",
+    "visual.webgl-scene"
+  ]
+}

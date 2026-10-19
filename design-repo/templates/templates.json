@@ -1,0 +1,709 @@
+{
+  "version": "1.0.0",
+  "knownDeviations": {
+    "summary": "Clone page heights differ from the measured originals (mostly at 390). Recorded as deviations, not truth.",
+    "evidence": [
+      "mv.deviation.page-heights"
+    ]
+  },
+  "note": "One template per page shape. Node lists mirror ia.json template.sections in order; variants are pinned from the real JSX props. 'required' marks chrome, the template's hero and its defining section(s): a design-review decision, not a measurement.",
+  "fallbackRoute": {
+    "behavior": "Unknown paths render template.home",
+    "evidence": [
+      "mv.route.fallback"
+    ]
+  },
+  "templates": {
+    "template.home": {
+      "id": "template.home",
+      "name": "Homepage",
+      "implementedBy": "src/pages/Home.jsx",
+      "routes": [
+        "/"
+      ],
+      "routeLocked": true,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.home",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.shortcuts-frame",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.time-keyboard",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.extensions-carousel",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ai-bento",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.testimonials",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.automation",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.feature-wall",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.community",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.developer-grid",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.final-keyboard",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.home"
+      ]
+    },
+    "template.store": {
+      "id": "template.store",
+      "name": "Store",
+      "implementedBy": "src/pages/Store.jsx",
+      "routes": [
+        "/store"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page",
+          "variant": "store",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.featured-grid",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.store-toolbar",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.store-grid",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.store"
+      ]
+    },
+    "template.pro": {
+      "id": "template.pro",
+      "name": "Pro",
+      "implementedBy": "src/pages/Pro.jsx",
+      "routes": [
+        "/pro"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page",
+          "variant": "sheen",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ai-bento",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.model-tabs",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.section-title",
+          "variant": "size24",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "pair",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.media-card-grid",
+          "variant": "pro",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "pair",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plans",
+          "variant": "wide",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "variant": "h48",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.pro"
+      ]
+    },
+    "template.pricing": {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "implementedBy": "src/pages/Pricing.jsx",
+      "routes": [
+        "/pricing"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.pricing-art",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plans",
+          "variant": "narrow",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.compare-table",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "variant": "h20",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.pricing"
+      ]
+    },
+    "template.teams": {
+      "id": "template.teams",
+      "name": "Teams",
+      "implementedBy": "src/pages/Teams.jsx",
+      "routes": [
+        "/teams"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page",
+          "variant": "teams",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.centered-lead",
+          "variant": "teams",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "teams",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.teams-slideshow",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "teams",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "teams",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.pro-upsell",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.centered-lead",
+          "variant": "teams",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plans",
+          "variant": "wide",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.centered-lead",
+          "variant": "teams",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.template-grid",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.download",
+          "variant": "mac",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.social-cards",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.teams"
+      ],
+      "knownDeviations": {
+        "summary": "Uses PricingSection instead of the bespoke TeamsPlanPair; mobile height +15.4% vs the original.",
+        "evidence": [
+          "mv.deviation.teams-plan-pair",
+          "mv.deviation.page-heights"
+        ]
+      }
+    },
+    "template.ai": {
+      "id": "template.ai",
+      "name": "AI feature page",
+      "implementedBy": "src/pages/Ai.jsx",
+      "routes": [
+        "/core-features/ai"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page",
+          "variant": "plain",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ai-chip-tabs",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ai-card-grid",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.byok-row",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ai-wide-visual",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "ai",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "ai",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "ai",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.ai-card-pairs",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plans",
+          "variant": "wide",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "variant": "h20",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.ai"
+      ]
+    },
+    "template.windows": {
+      "id": "template.windows",
+      "name": "Windows",
+      "implementedBy": "src/pages/Windows.jsx",
+      "routes": [
+        "/windows"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.windows-serif",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.centered-lead",
+          "variant": "windows",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.media-card-grid",
+          "variant": "windows",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.hotkeys-banner",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.ai-frame",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "proof.quote-strip",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "pair",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.game-launcher-marquee",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.extension-reel",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.centered-lead",
+          "variant": "windows",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "catalog.coming-soon-grid",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.windows-final",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "variant": "h18",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "windows",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.windows"
+      ]
+    },
+    "template.ios": {
+      "id": "template.ios",
+      "name": "iOS",
+      "implementedBy": "src/pages/Ios.jsx",
+      "routes": [
+        "/ios"
+      ],
+      "routeLocked": false,
+      "chrome": "full",
+      "nodes": [
+        {
+          "section": "nav.navbar",
+          "variant": "default",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page",
+          "variant": "ios",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.section-title",
+          "variant": "size32",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.phone-composite",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "ios",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.media-card-grid",
+          "variant": "ios",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.section-title",
+          "variant": "size32",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "showcase.full-bleed-image",
+          "variant": "default",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split",
+          "variant": "ios",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.section-title",
+          "variant": "size32",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "feature.media-card-grid",
+          "variant": "ios",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.download",
+          "variant": "ios",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "variant": "h20",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "footer.footer",
+          "variant": "cube",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        "mv.template.template.ios"
+      ]
+    }
+  }
+}

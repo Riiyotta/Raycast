@@ -1,0 +1,12 @@
+{
+  "id": "logo-mark",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > LogoMark",
+  "props": [
+    "size"
+  ],
+  "componentTokens": [],
+  "evidence": [
+    "mv.primitive.logo-mark"
+  ]
+}

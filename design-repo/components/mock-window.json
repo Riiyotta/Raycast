@@ -1,0 +1,14 @@
+{
+  "id": "mock-window",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/MediaCard.jsx > MockWindow",
+  "props": [
+    "rows",
+    "hue"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.mock-window"
+  ]
+}

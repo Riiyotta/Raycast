@@ -1,0 +1,14 @@
+{
+  "id": "interval-toggle",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/PricingSection.jsx > IntervalToggle",
+  "props": [
+    "value",
+    "onChange"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.interval-toggle"
+  ]
+}

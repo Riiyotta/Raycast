@@ -1,0 +1,21 @@
+{
+  "id": "section-title",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/shared.jsx > SectionTitle",
+  "props": [
+    "title",
+    "subtitle",
+    "align",
+    "size",
+    "eyebrow",
+    "body",
+    "subClass"
+  ],
+  "uses": [
+    "eyebrow"
+  ],
+  "evidence": [
+    "mv.component.section-title"
+  ]
+}

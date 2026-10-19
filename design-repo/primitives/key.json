@@ -1,0 +1,17 @@
+{
+  "id": "key",
+  "layer": "primitive",
+  "implementedBy": "src/components/shared.jsx > Key",
+  "props": [
+    "alt",
+    "label",
+    "width",
+    "glyph"
+  ],
+  "componentTokens": [
+    "key"
+  ],
+  "evidence": [
+    "mv.primitive.key"
+  ]
+}

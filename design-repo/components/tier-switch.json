@@ -1,0 +1,15 @@
+{
+  "id": "tier-switch",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/PricingSection.jsx > TierSwitch",
+  "props": [
+    "options",
+    "value",
+    "onChange"
+  ],
+  "uses": [],
+  "evidence": [
+    "mv.component.tier-switch"
+  ]
+}

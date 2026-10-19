@@ -1,0 +1,76 @@
+{
+  "id": "showcase.teams-slideshow",
+  "category": "SHOWCASE",
+  "description": "Autoplaying slideshow of team-workflow mockups.",
+  "purpose": "Walk through three team workflows with an autoplaying framed slideshow and selector cards.",
+  "scope": "Teams page only.",
+  "implementedBy": "pages/Teams.jsx > TeamsSlideshow",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "slides": {
+        "kind": "list",
+        "required": true,
+        "minItems": 3,
+        "maxItems": 3,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 14,
+            "measured": "11–14c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.showcase.teams-slideshow.slides.title"
+            ]
+          },
+          "body": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 119,
+            "measured": "97–119c 3L",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.showcase.teams-slideshow.slides.body"
+            ]
+          },
+          "icon": {
+            "kind": "icon",
+            "required": false
+          },
+          "mock": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.ui-mock"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.showcase.teams-slideshow.slides"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "slideshow-autoplay",
+        "trigger": "timer",
+        "reducedMotionFallback": "first-state-static",
+        "evidence": [
+          "mv.motion.showcase.teams-slideshow.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.showcase.teams-slideshow"
+  ]
+}

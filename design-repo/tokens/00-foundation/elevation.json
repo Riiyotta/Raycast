@@ -1,0 +1,312 @@
+{
+  "shadow": {
+    "btn-light": {
+      "$type": "shadow",
+      "$value": "0 0 0 2px rgba(0,0,0,.5), 0 0 14px rgba(255,255,255,.19), inset 0 -1px .4px rgba(0,0,0,.2), inset 0 1px .4px #fff",
+      "evidence": [
+        "mv.tw.shadow.btn-light"
+      ],
+      "valueInSource": true
+    },
+    "btn-light-focus": {
+      "$type": "shadow",
+      "$value": "0 0 0 2px rgba(0,0,0,.5), 0 0 14px rgba(255,255,255,.19), inset 0 -1px .4px rgba(0,0,0,.2), inset 0 1px .4px #fff, 0 0 0 2px #f4f4f4",
+      "evidence": [
+        "mv.tw.shadow.btn-light-focus"
+      ],
+      "valueInSource": true
+    },
+    "btn-dark": {
+      "$type": "shadow",
+      "$value": "inset 0 1px rgba(255,255,255,.05), 0 0 0 1px rgba(255,255,255,.25), inset 0 -1px rgba(0,0,0,.2)",
+      "evidence": [
+        "mv.tw.shadow.btn-dark"
+      ],
+      "valueInSource": true
+    },
+    "btn-dark-hover": {
+      "$type": "shadow",
+      "$value": "inset 0 1px rgba(255,255,255,.05), 0 0 0 1px rgba(255,255,255,.5), inset 0 -1px rgba(0,0,0,.2)",
+      "evidence": [
+        "mv.tw.shadow.btn-dark-hover"
+      ],
+      "valueInSource": true
+    },
+    "nav": {
+      "$type": "shadow",
+      "$value": "inset 0 1px 1px rgba(255,255,255,.15)",
+      "evidence": [
+        "mv.tw.shadow.nav"
+      ],
+      "valueInSource": true
+    },
+    "inset-top": {
+      "$type": "shadow",
+      "$value": "inset 0 1px rgba(255,255,255,.1)",
+      "evidence": [
+        "mv.tw.shadow.inset-top"
+      ],
+      "valueInSource": true
+    },
+    "inset-top-1": {
+      "$type": "shadow",
+      "$value": "inset 0 1px 1px rgba(255,255,255,.1)",
+      "evidence": [
+        "mv.tw.shadow.inset-top-1"
+      ],
+      "valueInSource": true
+    },
+    "announce": {
+      "$type": "shadow",
+      "$value": "0 0 20px rgba(245,48,107,.1)",
+      "evidence": [
+        "mv.tw.shadow.announce"
+      ],
+      "valueInSource": true
+    },
+    "announce-hover": {
+      "$type": "shadow",
+      "$value": "0 0 20px 3px rgba(245,49,108,.25)",
+      "evidence": [
+        "mv.tw.shadow.announce-hover"
+      ],
+      "valueInSource": true
+    },
+    "frame-outer": {
+      "$type": "shadow",
+      "$value": "0 0 40px 20px rgba(255,255,255,.03), inset 0 .5px rgba(255,255,255,.3)",
+      "evidence": [
+        "mv.tw.shadow.frame-outer"
+      ],
+      "valueInSource": true
+    },
+    "frame-inner": {
+      "$type": "shadow",
+      "$value": "0 0 2px rgba(255,255,255,.19), inset 0 .5px rgba(255,255,255,.1)",
+      "evidence": [
+        "mv.tw.shadow.frame-inner"
+      ],
+      "valueInSource": true
+    },
+    "dock": {
+      "$type": "shadow",
+      "$value": "0 0 1px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.17), 0 4px 3px rgba(0,0,0,.1), 0 7px 3px rgba(0,0,0,.03), 0 4px 4px rgba(0,0,0,.25), inset 0 1px rgba(255,255,255,.1)",
+      "evidence": [
+        "mv.tw.shadow.dock"
+      ],
+      "valueInSource": true
+    },
+    "dock-item": {
+      "$type": "shadow",
+      "$value": "0 7px 3px rgba(0,0,0,.03), 0 4px 4px rgba(0,0,0,.25)",
+      "evidence": [
+        "mv.tw.shadow.dock-item"
+      ],
+      "valueInSource": true
+    },
+    "dock-item-active": {
+      "$type": "shadow",
+      "$value": "0 8.077px 3.462px rgba(0,0,0,.03), 0 4.615px 4.615px rgba(0,0,0,.25), inset 0 1.154px rgba(255,255,255,.19), 0 0 6px rgba(255,255,255,.25)",
+      "evidence": [
+        "mv.tw.shadow.dock-item-active"
+      ],
+      "valueInSource": true
+    },
+    "tooltip": {
+      "$type": "shadow",
+      "$value": "0 4px 4px rgba(0,0,0,.25)",
+      "evidence": [
+        "mv.tw.shadow.tooltip"
+      ],
+      "valueInSource": true
+    },
+    "key": {
+      "$type": "shadow",
+      "$value": "0 1.5px .5px 2.5px rgba(0,0,0,.4), 0 0 .5px 1px #000, inset 0 2px 1px 1px rgba(0,0,0,.25), inset 0 1px 1px 1px rgba(255,255,255,.2)",
+      "evidence": [
+        "mv.tw.shadow.key"
+      ],
+      "valueInSource": true
+    },
+    "key-hover": {
+      "$type": "shadow",
+      "$value": "0 0 .5px 1px #000, inset 0 2px 1px 1px rgba(0,0,0,.25), inset 0 1px 1px rgba(255,255,255,.15)",
+      "evidence": [
+        "mv.tw.shadow.key-hover"
+      ],
+      "valueInSource": true
+    },
+    "key-glow": {
+      "$type": "shadow",
+      "$value": "0 0 10px 5px rgba(255,67,7,.1), 0 0 3px 2px rgba(255,67,7,.1), inset 1px .5px .5px .5px rgba(255,118,118,.25), inset 0 0 1px 1px rgba(255,255,255,.45), inset 0 2px 1px 1px rgba(0,0,0,.25)",
+      "evidence": [
+        "mv.tw.shadow.key-glow"
+      ],
+      "valueInSource": true
+    },
+    "ext-card": {
+      "$type": "shadow",
+      "$value": "inset 0 1px rgba(255,255,255,.1), 0 0 20px 3px rgba(7,13,79,.05), 0 0 40px 20px rgba(7,13,79,.05), inset 0 0 0 1px rgba(255,255,255,.06)",
+      "evidence": [
+        "mv.tw.shadow.ext-card"
+      ],
+      "valueInSource": true
+    },
+    "ext-icon": {
+      "$type": "shadow",
+      "$value": "0 1.189px 2.377px rgba(0,0,0,.28)",
+      "evidence": [
+        "mv.tw.shadow.ext-icon"
+      ],
+      "valueInSource": true
+    },
+    "browse": {
+      "$type": "shadow",
+      "$value": "0 0 24px 8px rgba(255,255,255,.05)",
+      "evidence": [
+        "mv.tw.shadow.browse"
+      ],
+      "valueInSource": true
+    },
+    "pagination-hover": {
+      "$type": "shadow",
+      "$value": "inset 0 1px rgba(255,255,255,.1), 0 2px 40px 10px rgba(154,170,255,.05), 0 0 16px -7px rgba(154,170,255,.05)",
+      "evidence": [
+        "mv.tw.shadow.pagination-hover"
+      ],
+      "valueInSource": true
+    },
+    "periwinkle": {
+      "$type": "shadow",
+      "$value": "0 2px 40px 10px rgba(154,170,255,.05), 0 0 16px -7px rgba(154,170,255,.05)",
+      "evidence": [
+        "mv.tw.shadow.periwinkle"
+      ],
+      "valueInSource": true
+    },
+    "person-active": {
+      "$type": "shadow",
+      "$value": "inset 0 1px 1px rgba(255,255,255,.1), 0 2px 40px 10px rgba(154,170,255,.05), 0 0 16px -7px rgba(154,170,255,.05)",
+      "evidence": [
+        "mv.tw.shadow.person-active"
+      ],
+      "valueInSource": true
+    },
+    "wall-frame": {
+      "$type": "shadow",
+      "$value": "inset 1px 1px 0 rgba(var(--theme-color),.07), inset 0 .5px #ffffff40",
+      "evidence": [
+        "mv.tw.shadow.wall-frame"
+      ],
+      "valueInSource": true
+    },
+    "wall-wrap": {
+      "$type": "shadow",
+      "$value": "-72px -50px 40px -60px rgba(var(--theme-color),.05)",
+      "evidence": [
+        "mv.tw.shadow.wall-wrap"
+      ],
+      "valueInSource": true
+    },
+    "video": {
+      "$type": "shadow",
+      "$value": "0 0 20px 5px rgba(215,201,175,.05), 0 0 16px -7px rgba(215,201,175,.05)",
+      "evidence": [
+        "mv.tw.shadow.video"
+      ],
+      "valueInSource": true
+    },
+    "video-hover": {
+      "$type": "shadow",
+      "$value": "0 2px 40px 10px rgba(154,170,255,.05)",
+      "evidence": [
+        "mv.tw.shadow.video-hover"
+      ],
+      "valueInSource": true
+    },
+    "api-cell": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px #1b1c1e, inset 0 0 0 1px #07080a",
+      "evidence": [
+        "mv.tw.shadow.api-cell"
+      ],
+      "valueInSource": true
+    },
+    "footer": {
+      "$type": "shadow",
+      "$value": "0 -4px 10px rgba(0,0,0,.11)",
+      "evidence": [
+        "mv.tw.shadow.footer"
+      ],
+      "valueInSource": true
+    }
+  },
+  "blur": {
+    "15": {
+      "$type": "dimension",
+      "$value": "15px",
+      "evidence": [
+        "mv.tw.blur.15"
+      ],
+      "valueInSource": true
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px",
+      "evidence": [
+        "mv.tw.blur.20"
+      ],
+      "valueInSource": true
+    },
+    "37": {
+      "$type": "dimension",
+      "$value": "37.5px",
+      "evidence": [
+        "mv.tw.blur.37"
+      ],
+      "valueInSource": true
+    }
+  },
+  "backdropBlur": {
+    "2": {
+      "$type": "dimension",
+      "$value": "2px",
+      "evidence": [
+        "mv.tw.backdropBlur.2"
+      ],
+      "valueInSource": true
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "5px",
+      "evidence": [
+        "mv.tw.backdropBlur.5"
+      ],
+      "valueInSource": true
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px",
+      "evidence": [
+        "mv.tw.backdropBlur.8"
+      ],
+      "valueInSource": true
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "10px",
+      "evidence": [
+        "mv.tw.backdropBlur.10"
+      ],
+      "valueInSource": true
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px",
+      "evidence": [
+        "mv.tw.backdropBlur.20"
+      ],
+      "valueInSource": true
+    }
+  }
+}

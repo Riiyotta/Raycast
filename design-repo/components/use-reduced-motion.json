@@ -1,0 +1,11 @@
+{
+  "id": "use-reduced-motion",
+  "layer": "component",
+  "kind": "behavior",
+  "implementedBy": "src/components/shared.jsx > useReducedMotion",
+  "props": [],
+  "uses": [],
+  "evidence": [
+    "mv.component.use-reduced-motion"
+  ]
+}

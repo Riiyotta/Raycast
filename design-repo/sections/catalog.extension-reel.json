@@ -1,0 +1,112 @@
+{
+  "id": "catalog.extension-reel",
+  "category": "CATALOG",
+  "description": "Bare extension card reel (no category tabs or pager) with centered two-tone title and browse link.",
+  "purpose": "A bare plugin reel (no tabs, no pager) under a centered two-tone title.",
+  "scope": "Windows page only.",
+  "implementedBy": "ExtensionsCarousel.jsx > ExtensionReel",
+  "variants": [
+    "default"
+  ],
+  "content": {
+    "shared": {
+      "titleLead": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 12,
+        "measured": "12c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extension-reel.titleLead"
+        ]
+      },
+      "titleTail": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 13,
+        "measured": "13c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extension-reel.titleTail"
+        ]
+      },
+      "cards": {
+        "kind": "list",
+        "required": true,
+        "minItems": 1,
+        "maxItems": 12,
+        "item": {
+          "title": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 16,
+            "measured": "6–16c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-sibling",
+            "evidence": [
+              "mv.copy.catalog.extension-reel.cards.title"
+            ]
+          },
+          "description": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 75,
+            "measured": "about 60–75c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-sibling",
+            "evidence": [
+              "mv.copy.catalog.extension-reel.cards.description"
+            ]
+          },
+          "icon": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.app-tile"
+            ]
+          },
+          "illustration": {
+            "kind": "media",
+            "required": true,
+            "assetRoles": [
+              "visual.gradient-art"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extension-reel.cards"
+        ]
+      },
+      "link": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 21,
+        "measured": "21c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.catalog.extension-reel.link"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "slide-in-stagger",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state",
+        "evidence": [
+          "mv.motion.catalog.extension-reel.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "evidence": [
+    "mv.impl.catalog.extension-reel"
+  ]
+}

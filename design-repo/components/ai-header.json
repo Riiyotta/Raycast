@@ -1,0 +1,18 @@
+{
+  "id": "ai-header",
+  "layer": "component",
+  "kind": "visual",
+  "implementedBy": "src/components/AiBento.jsx > AiHeader",
+  "props": [
+    "eyebrow",
+    "title",
+    "desc",
+    "align"
+  ],
+  "uses": [
+    "eyebrow"
+  ],
+  "evidence": [
+    "mv.component.ai-header"
+  ]
+}

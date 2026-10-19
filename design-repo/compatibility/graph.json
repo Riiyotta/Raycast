@@ -1,0 +1,229 @@
+{
+  "version": "1.0.0",
+  "knownGaps": {
+    "summary": "reducedMotionFallback is required on every node, but the clone only implements reduced motion for the AI workflow. Builders must implement the declared fallback.",
+    "evidence": [
+      "mv.deviation.reduced-motion"
+    ]
+  },
+  "note": "Rules here and in schema/semantic_validate.py RULES are two sources for one fact; verify_all.py fails if their ids or severities differ.",
+  "evidence": [
+    "mv.graph.observed"
+  ],
+  "rules": [
+    {
+      "id": "NAV_FIRST",
+      "severity": "error",
+      "rule": "nav.navbar appears exactly once and is node 0.",
+      "exceptions": []
+    },
+    {
+      "id": "FOOTER_LAST",
+      "severity": "error",
+      "rule": "footer.footer appears exactly once and is the last node.",
+      "exceptions": []
+    },
+    {
+      "id": "ONE_HERO_AFTER_NAV",
+      "severity": "error",
+      "rule": "Exactly one HERO-category node, at index 1. All 8 real templates satisfy this (template.pricing's hero is hero.pricing-art).",
+      "exceptions": []
+    },
+    {
+      "id": "TEMPLATE_SEQUENCE",
+      "severity": "error",
+      "rule": "The node sequence must be an in-order match of the declared template's own node list: every node maps to a slot, slots are used in order, optional slots may be skipped.",
+      "exceptions": []
+    },
+    {
+      "id": "REQUIRED_SLOT_MISSING",
+      "severity": "error",
+      "rule": "Every slot with required:true in the declared template must be filled.",
+      "exceptions": []
+    },
+    {
+      "id": "VARIANT_PIN",
+      "severity": "error",
+      "rule": "A node's (section, variant) must equal the matched slot's (section, variant).",
+      "exceptions": []
+    },
+    {
+      "id": "MOTION_VARIANT",
+      "severity": "error",
+      "rule": "A node's motion object must be one of its section contract's allowed motions for that variant.",
+      "exceptions": []
+    },
+    {
+      "id": "MAX_PER_PAGE",
+      "severity": "error",
+      "rule": "A section may not appear more often than the max observed across real templates.",
+      "limits": {
+        "nav.navbar": 1,
+        "hero.home": 1,
+        "showcase.shortcuts-frame": 1,
+        "showcase.time-keyboard": 1,
+        "catalog.extensions-carousel": 1,
+        "feature.ai-bento": 1,
+        "proof.testimonials": 1,
+        "feature.automation": 1,
+        "feature.feature-wall": 1,
+        "proof.community": 1,
+        "feature.developer-grid": 1,
+        "cta.final-keyboard": 1,
+        "footer.footer": 1,
+        "hero.page": 1,
+        "catalog.featured-grid": 1,
+        "catalog.store-toolbar": 1,
+        "catalog.store-grid": 1,
+        "feature.model-tabs": 1,
+        "feature.section-title": 3,
+        "feature.split": 3,
+        "feature.media-card-grid": 2,
+        "pricing.plans": 1,
+        "faq.accordion": 1,
+        "hero.pricing-art": 1,
+        "pricing.compare-table": 1,
+        "proof.logo-strip": 1,
+        "feature.centered-lead": 3,
+        "showcase.teams-slideshow": 1,
+        "pricing.pro-upsell": 1,
+        "catalog.template-grid": 1,
+        "cta.download": 1,
+        "proof.social-cards": 1,
+        "feature.ai-chip-tabs": 1,
+        "feature.ai-card-grid": 1,
+        "feature.byok-row": 1,
+        "feature.ai-wide-visual": 1,
+        "feature.ai-card-pairs": 1,
+        "hero.windows-serif": 1,
+        "feature.hotkeys-banner": 1,
+        "showcase.ai-frame": 1,
+        "proof.quote-strip": 1,
+        "showcase.game-launcher-marquee": 1,
+        "catalog.extension-reel": 1,
+        "catalog.coming-soon-grid": 1,
+        "cta.windows-final": 1,
+        "showcase.phone-composite": 1,
+        "showcase.full-bleed-image": 1
+      },
+      "exceptions": []
+    },
+    {
+      "id": "NO_ADJACENT_SAME_SECTION",
+      "severity": "error",
+      "rule": "The same section may not appear twice in a row.",
+      "exceptions": [
+        "feature.split"
+      ],
+      "exceptionNote": "Sections that really sit back to back in a real template (teams and AI pages)."
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "rule": "Two different sections of the same category in a row is a rhythm smell unless the pair occurs in a real template.",
+      "exceptions": [
+        "catalog.featured-grid>catalog.store-toolbar",
+        "catalog.store-toolbar>catalog.store-grid",
+        "feature.ai-bento>feature.model-tabs",
+        "feature.ai-card-grid>feature.byok-row",
+        "feature.ai-chip-tabs>feature.ai-card-grid",
+        "feature.ai-wide-visual>feature.split",
+        "feature.automation>feature.feature-wall",
+        "feature.byok-row>feature.ai-wide-visual",
+        "feature.centered-lead>feature.media-card-grid",
+        "feature.centered-lead>feature.split",
+        "feature.media-card-grid>feature.hotkeys-banner",
+        "feature.media-card-grid>feature.section-title",
+        "feature.media-card-grid>feature.split",
+        "feature.model-tabs>feature.section-title",
+        "feature.section-title>feature.media-card-grid",
+        "feature.section-title>feature.split",
+        "feature.split>feature.ai-card-pairs",
+        "feature.split>feature.media-card-grid",
+        "feature.split>feature.section-title",
+        "pricing.plans>pricing.compare-table",
+        "showcase.shortcuts-frame>showcase.time-keyboard"
+      ]
+    },
+    {
+      "id": "FAQ_BEFORE_FOOTER",
+      "severity": "error",
+      "rule": "faq.accordion, when present, is immediately before footer.footer (true on all 5 templates that have it).",
+      "exceptions": []
+    },
+    {
+      "id": "COMPARE_AFTER_PLANS",
+      "severity": "error",
+      "rule": "pricing.compare-table, when present, immediately follows pricing.plans.",
+      "exceptions": []
+    },
+    {
+      "id": "TOOLBAR_BEFORE_GRID",
+      "severity": "error",
+      "rule": "catalog.store-toolbar, when present, immediately precedes catalog.store-grid.",
+      "exceptions": []
+    },
+    {
+      "id": "HOME_ROUTE_ONLY",
+      "severity": "error",
+      "rule": "template.home (routeLocked) must use route '/'.",
+      "exceptions": []
+    },
+    {
+      "id": "WINDOWS_FOOTER_ART",
+      "severity": "error",
+      "rule": "footer.footer variant 'windows' only on template.windows (App.jsx picks art by path).",
+      "exceptions": []
+    },
+    {
+      "id": "AUTOPLAY_BUDGET",
+      "severity": "warn",
+      "rule": "At most `limit` nodes whose motion pattern auto-plays.",
+      "limit": 4,
+      "autoplayPatterns": [
+        "scripted-reel",
+        "carousel-auto-advance",
+        "typing-and-hotkeys",
+        "crossfade-auto-advance",
+        "slideshow-autoplay",
+        "marquee",
+        "orbit",
+        "dot-pulse"
+      ],
+      "exceptions": []
+    },
+    {
+      "id": "MAX_WORDS",
+      "severity": "error",
+      "rule": "Text fields with maxWords may not exceed it (schema enforces maxChars).",
+      "exceptions": []
+    },
+    {
+      "id": "LIST_TOTAL_CHARS",
+      "severity": "error",
+      "rule": "List fields with maxTotalChars may not exceed it summed over items.",
+      "exceptions": []
+    },
+    {
+      "id": "FORBIDDEN_SOURCE_BRAND",
+      "severity": "error",
+      "rule": "No string in a PageSpec may contain the source company's name. Copy must be original.",
+      "terms": [
+        "raycast"
+      ],
+      "exceptions": []
+    },
+    {
+      "id": "ASSET_ROLE_SLOT",
+      "severity": "error",
+      "rule": "A media field's assetRole must be one of that field's allowed roles in the section contract.",
+      "exceptions": []
+    },
+    {
+      "id": "UNIQUE_NODE_IDS",
+      "severity": "error",
+      "rule": "Node ids are unique within a PageSpec.",
+      "exceptions": []
+    }
+  ]
+}

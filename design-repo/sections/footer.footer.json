@@ -1,0 +1,160 @@
+{
+  "id": "footer.footer",
+  "category": "FOOTER",
+  "description": "Site footer: link columns, newsletter row, legal line, decorative background art (art prop selects cube or windows variant).",
+  "purpose": "Close every page with the full link index and a newsletter sign-up.",
+  "scope": "Every route.",
+  "implementedBy": "Footer.jsx",
+  "variants": [
+    "cube",
+    "windows"
+  ],
+  "content": {
+    "shared": {
+      "groups": {
+        "kind": "list",
+        "required": true,
+        "minItems": 6,
+        "maxItems": 6,
+        "item": {
+          "heading": {
+            "kind": "text",
+            "required": true,
+            "maxChars": 12,
+            "measured": "4–12c",
+            "budgetRule": "range-upper-bound",
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.footer.footer.groups.heading"
+            ]
+          },
+          "links": {
+            "kind": "list",
+            "required": true,
+            "minItems": 1,
+            "maxItems": 14,
+            "item": {
+              "label": {
+                "kind": "text",
+                "required": true,
+                "maxChars": 22,
+                "measured": "3–22c",
+                "budgetRule": "range-upper-bound",
+                "basis": "spec-measured",
+                "evidence": [
+                  "mv.copy.footer.footer.groups.links.label"
+                ]
+              },
+              "external": {
+                "kind": "boolean",
+                "required": false
+              }
+            },
+            "basis": "spec-measured",
+            "evidence": [
+              "mv.copy.footer.footer.groups.links"
+            ]
+          }
+        },
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.footer.footer.groups"
+        ]
+      },
+      "newsletterTitle": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 28,
+        "measured": "28c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.footer.footer.newsletterTitle"
+        ]
+      },
+      "newsletterBody": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 55,
+        "measured": "about 50c",
+        "budgetRule": "about-plus-10pct",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.footer.footer.newsletterBody"
+        ]
+      },
+      "inputPlaceholder": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 19,
+        "measured": "about 17c",
+        "budgetRule": "about-plus-10pct",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.footer.footer.inputPlaceholder"
+        ]
+      },
+      "legal": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 162,
+        "measured": "162c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.footer.footer.legal"
+        ]
+      },
+      "legalLink": {
+        "kind": "text",
+        "required": true,
+        "maxChars": 14,
+        "measured": "14c",
+        "budgetRule": "exact",
+        "basis": "spec-measured",
+        "evidence": [
+          "mv.copy.footer.footer.legalLink"
+        ]
+      },
+      "art": {
+        "kind": "media",
+        "required": true,
+        "assetRoles": [
+          "visual.gradient-art",
+          "visual.ui-mock"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowed": [
+      {
+        "pattern": "hover-feedback",
+        "trigger": "hover",
+        "reducedMotionFallback": "no-motion-needed",
+        "evidence": [
+          "mv.motion.footer.footer.0"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "below": "breakpoint.sm",
+      "change": "collapse-columns",
+      "detail": "Link grid goes from 6 columns to 2; newsletter stacks.",
+      "evidence": [
+        "mv.responsive.footer.footer.0"
+      ]
+    }
+  ],
+  "evidence": [
+    "mv.impl.footer.footer"
+  ],
+  "knownDeviations": {
+    "summary": "Clone ships 56 footer links; 47 were measured. Budgets follow the measurement.",
+    "evidence": [
+      "mv.deviation.footer-links"
+    ]
+  }
+}
