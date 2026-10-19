@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+# User-saved copy of the original site: third-party content, never commit
+Raycast - Your shortcut to everything.html
+Raycast - Your shortcut to everything_files/
+# Design-repo is generated separately (in progress); zip is a build artifact
+design-repo/
+design-repo.zip

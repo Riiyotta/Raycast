@@ -1,0 +1,504 @@
+{
+  "meta": {
+    "source": "Design/motion study clone of https://www.raycast.com/ (homepage + 7 main-nav pages); structure from CLONE_SPEC.md and PAGES_SPEC.md, components from src/. Content is original placeholder.",
+    "status": "built \u2014 all 8 routes implemented; reconciled against src/pages/",
+    "totalRoutes": 8,
+    "totalTemplates": 8
+  },
+  "categories": {
+    "NAV": "Global navigation chrome",
+    "HERO": "Top-of-page opener",
+    "SHOWCASE": "Large product mockup or media showcase",
+    "CATALOG": "Browsable collections of extensions/templates",
+    "FEATURE": "Feature explanation blocks and section headings",
+    "PROOF": "Social proof: testimonials, community, logos, quotes",
+    "PRICING": "Plans and plan comparison",
+    "FAQ": "Question-and-answer blocks",
+    "CTA": "Download / call-to-action blocks",
+    "FOOTER": "Global footer chrome"
+  },
+  "sections": {
+    "nav.navbar": {
+      "category": "NAV",
+      "description": "Fixed glass navbar: wordmark, primary route links, Log in / Download actions, hamburger menu below the 880px breakpoint.",
+      "scope": "Every route.",
+      "implementedBy": "Navbar.jsx"
+    },
+    "footer.footer": {
+      "category": "FOOTER",
+      "description": "Site footer: link columns, newsletter row, legal line, decorative background art (art prop selects cube or windows variant).",
+      "scope": "Every route.",
+      "implementedBy": "Footer.jsx"
+    },
+    "hero.home": {
+      "category": "HERO",
+      "description": "Homepage hero: WebGL glass-bars background with CSS fallback, animated announcement pill, display heading, sub-text, download actions.",
+      "scope": "Homepage only.",
+      "implementedBy": "Hero.jsx + HeroCanvas.jsx"
+    },
+    "hero.page": {
+      "category": "HERO",
+      "description": "Shared secondary-page hero: pill, heading, subtitle, actions and optional art/media slot; variants sheen / store / teams / plain set background and sizing.",
+      "scope": "Secondary product pages that open with a standard page hero (store, pro, teams, AI, iOS).",
+      "implementedBy": "PageHero.jsx (Store/Pro/Teams/Ai/Ios pass their own art: StoreArt, ProArt, TeamsOrbit, IosHeroArt)"
+    },
+    "hero.windows-serif": {
+      "category": "HERO",
+      "description": "Windows hero with serif display heading and embedded Windows download block.",
+      "scope": "Windows page only.",
+      "implementedBy": "pages/Windows.jsx > SerifHero (+ DownloadBlock.jsx)"
+    },
+    "hero.pricing-art": {
+      "category": "HERO",
+      "description": "Decorative soft-glow image positioned behind the pricing toggle; no animation.",
+      "scope": "Pricing page only.",
+      "implementedBy": "pages/Pricing.jsx > TopArt"
+    },
+    "showcase.shortcuts-frame": {
+      "category": "SHOWCASE",
+      "description": "Framed macOS-style launcher mockup with dock, star-dot border and auto-advancing scripted slide reel.",
+      "scope": "Homepage only.",
+      "implementedBy": "ShortcutsFrame.jsx"
+    },
+    "showcase.time-keyboard": {
+      "category": "SHOWCASE",
+      "description": "Text column beside a masked 3D keyboard grid whose feature keys light up in a staggered sequence on scroll-in.",
+      "scope": "Homepage only.",
+      "implementedBy": "TimeKeyboard.jsx"
+    },
+    "showcase.teams-slideshow": {
+      "category": "SHOWCASE",
+      "description": "Autoplaying slideshow of team-workflow mockups.",
+      "scope": "Teams page only.",
+      "implementedBy": "pages/Teams.jsx > TeamsSlideshow"
+    },
+    "showcase.ai-frame": {
+      "category": "SHOWCASE",
+      "description": "Large framed AI chat showcase.",
+      "scope": "Windows page only.",
+      "implementedBy": "pages/Windows.jsx > AiShowcaseFrame"
+    },
+    "showcase.game-launcher-marquee": {
+      "category": "SHOWCASE",
+      "description": "Slow infinite marquee of game-launcher tiles paired with a split feature.",
+      "scope": "Windows page only.",
+      "implementedBy": "pages/Windows.jsx > GameLauncherMarquee"
+    },
+    "showcase.phone-composite": {
+      "category": "SHOWCASE",
+      "description": "Phone mockup composited over a wide band image.",
+      "scope": "iOS page only.",
+      "implementedBy": "pages/Ios.jsx > HeroArt + Phone"
+    },
+    "showcase.full-bleed-image": {
+      "category": "SHOWCASE",
+      "description": "Full-bleed wide image under a section title.",
+      "scope": "iOS page only.",
+      "implementedBy": "pages/Ios.jsx > Vis"
+    },
+    "catalog.extensions-carousel": {
+      "category": "CATALOG",
+      "description": "Extensions carousel with sliding category pill, snap-scrolling cards, slide-in stagger and pager buttons.",
+      "scope": "Homepage only.",
+      "implementedBy": "ExtensionsCarousel.jsx"
+    },
+    "catalog.extension-reel": {
+      "category": "CATALOG",
+      "description": "Bare extension card reel (no category tabs or pager) with centered two-tone title and browse link.",
+      "scope": "Windows page only.",
+      "implementedBy": "ExtensionsCarousel.jsx > ExtensionReel"
+    },
+    "catalog.featured-grid": {
+      "category": "CATALOG",
+      "description": "Featured extensions block: headings over a three-card grid.",
+      "scope": "Store page only.",
+      "implementedBy": "pages/Store.jsx > FeaturedExtensionCard"
+    },
+    "catalog.store-toolbar": {
+      "category": "CATALOG",
+      "description": "Store search / filter / sort toolbar.",
+      "scope": "Store page only.",
+      "implementedBy": "pages/Store.jsx > StoreToolbar"
+    },
+    "catalog.store-grid": {
+      "category": "CATALOG",
+      "description": "Paginated grid of store extension cards.",
+      "scope": "Store page only.",
+      "implementedBy": "pages/Store.jsx > StoreExtensionCard + Pagination"
+    },
+    "catalog.template-grid": {
+      "category": "CATALOG",
+      "description": "Grid of team templates under a centered lead.",
+      "scope": "Teams page only.",
+      "implementedBy": "pages/Teams.jsx > TemplateGrid"
+    },
+    "catalog.coming-soon-grid": {
+      "category": "CATALOG",
+      "description": "Grid of upcoming-feature tiles.",
+      "scope": "Windows page only.",
+      "implementedBy": "pages/Windows.jsx > SoonCard"
+    },
+    "feature.ai-bento": {
+      "category": "FEATURE",
+      "description": "Homepage-style AI section: header plus one wide and two half cards in a bento grid with in-card scripted workflow.",
+      "scope": "Homepage and Pro page.",
+      "implementedBy": "AiBento.jsx"
+    },
+    "feature.ai-card-grid": {
+      "category": "FEATURE",
+      "description": "Masonry grid of AI cards of varying heights.",
+      "scope": "AI page only.",
+      "implementedBy": "AiBento.jsx > AiCard"
+    },
+    "feature.ai-wide-visual": {
+      "category": "FEATURE",
+      "description": "AI header over a single wide card visual.",
+      "scope": "AI page only.",
+      "implementedBy": "AiBento.jsx > AiHeader + AiCard"
+    },
+    "feature.ai-card-pairs": {
+      "category": "FEATURE",
+      "description": "AI header over a two-by-two card grid with an arrow link.",
+      "scope": "AI page only.",
+      "implementedBy": "AiBento.jsx > AiHeader + AiCard"
+    },
+    "feature.ai-chip-tabs": {
+      "category": "FEATURE",
+      "description": "Row of chip tabs switching the AI stage below the hero.",
+      "scope": "AI page only.",
+      "implementedBy": "pages/Ai.jsx > AiChipTabs"
+    },
+    "feature.byok-row": {
+      "category": "FEATURE",
+      "description": "Bring-your-own-key row under the AI card grid.",
+      "scope": "AI page only.",
+      "implementedBy": "pages/Ai.jsx > ByokRow"
+    },
+    "feature.model-tabs": {
+      "category": "FEATURE",
+      "description": "Tabbed model picker with detail panel in a wide shell.",
+      "scope": "Pro page only.",
+      "implementedBy": "pages/Pro.jsx > ModelTabs"
+    },
+    "feature.automation": {
+      "category": "FEATURE",
+      "description": "Automation cards: snippet typing composer, quick links mock and hotkey press showcase.",
+      "scope": "Homepage only.",
+      "implementedBy": "Automation.jsx"
+    },
+    "feature.feature-wall": {
+      "category": "FEATURE",
+      "description": "Clickable feature text wall with crossfading screenshot frame and timed progress bar.",
+      "scope": "Homepage only.",
+      "implementedBy": "FeatureWall.jsx"
+    },
+    "feature.developer-grid": {
+      "category": "FEATURE",
+      "description": "Hairline developer/API grid with dotted figure cells and per-figure scroll animations.",
+      "scope": "Homepage only.",
+      "implementedBy": "DeveloperGrid.jsx"
+    },
+    "feature.section-title": {
+      "category": "FEATURE",
+      "description": "Standalone section heading (optional eyebrow and body) introducing the content that follows.",
+      "scope": "Pro and iOS pages, repeated within a page.",
+      "implementedBy": "shared.jsx > SectionTitle"
+    },
+    "feature.centered-lead": {
+      "category": "FEATURE",
+      "description": "Centered heading and short body introducing a section on older-style pages.",
+      "scope": "Teams and Windows pages.",
+      "implementedBy": "CenteredLead.jsx"
+    },
+    "feature.split": {
+      "category": "FEATURE",
+      "description": "Text column beside a visual; side and head style vary by prop.",
+      "scope": "Pro, teams, AI, Windows and iOS pages, often several per page.",
+      "implementedBy": "SplitFeature.jsx"
+    },
+    "feature.media-card-grid": {
+      "category": "FEATURE",
+      "description": "Grid of feature cards each pairing a visual with text; pro / windows / ios variants.",
+      "scope": "Pro, Windows and iOS pages.",
+      "implementedBy": "MediaCard.jsx"
+    },
+    "feature.hotkeys-banner": {
+      "category": "FEATURE",
+      "description": "Wide banner showing a hotkey combination.",
+      "scope": "Windows page only.",
+      "implementedBy": "pages/Windows.jsx > HotkeysBanner"
+    },
+    "proof.testimonials": {
+      "category": "PROOF",
+      "description": "Person carousel with auto-advance and click-select, plus quote panel and highlight grid.",
+      "scope": "Homepage only.",
+      "implementedBy": "Testimonials.jsx"
+    },
+    "proof.community": {
+      "category": "PROOF",
+      "description": "Community section: two social cards plus a draggable video thumbnail strip.",
+      "scope": "Homepage only.",
+      "implementedBy": "Community.jsx"
+    },
+    "proof.social-cards": {
+      "category": "PROOF",
+      "description": "The two community social cards on their own, without the video strip.",
+      "scope": "Teams page only.",
+      "implementedBy": "Community.jsx > SocialCards"
+    },
+    "proof.logo-strip": {
+      "category": "PROOF",
+      "description": "Row of customer logo placeholders.",
+      "scope": "Teams page only.",
+      "implementedBy": "pages/Teams.jsx > LogoStrip"
+    },
+    "proof.quote-strip": {
+      "category": "PROOF",
+      "description": "Strip of short user quotes with chip highlights.",
+      "scope": "Windows page only.",
+      "implementedBy": "pages/Windows.jsx > QuoteStrip"
+    },
+    "pricing.plans": {
+      "category": "PRICING",
+      "description": "Plan section: monthly/yearly toggle, tier cards, tier switch and enterprise card.",
+      "scope": "Pricing, Pro, AI and Teams pages.",
+      "implementedBy": "PricingSection.jsx"
+    },
+    "pricing.compare-table": {
+      "category": "PRICING",
+      "description": "Full feature comparison table across tiers.",
+      "scope": "Pricing page only.",
+      "implementedBy": "pages/Pricing.jsx > PricingTable"
+    },
+    "pricing.pro-upsell": {
+      "category": "PRICING",
+      "description": "Pro upsell block for teams.",
+      "scope": "Teams page only.",
+      "implementedBy": "pages/Teams.jsx > ProUpsell"
+    },
+    "faq.accordion": {
+      "category": "FAQ",
+      "description": "Question-and-answer accordion with heading.",
+      "scope": "Pricing, Pro, AI, Windows and iOS pages.",
+      "implementedBy": "FaqAccordion.jsx"
+    },
+    "cta.final-keyboard": {
+      "category": "CTA",
+      "description": "Final call to action over a large keyboard whose Cmd and Space keys glow at high visibility.",
+      "scope": "Homepage only.",
+      "implementedBy": "FinalCta.jsx"
+    },
+    "cta.download": {
+      "category": "CTA",
+      "description": "Platform download block (mac / windows / ios variants; iOS adds a QR card).",
+      "scope": "Teams and iOS pages.",
+      "implementedBy": "DownloadBlock.jsx"
+    },
+    "cta.windows-final": {
+      "category": "CTA",
+      "description": "Windows closing call to action: centered lead over the Windows download block, no keyboard art.",
+      "scope": "Windows page only.",
+      "implementedBy": "CenteredLead.jsx + DownloadBlock.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.home",
+        "showcase.shortcuts-frame",
+        "showcase.time-keyboard",
+        "catalog.extensions-carousel",
+        "feature.ai-bento",
+        "proof.testimonials",
+        "feature.automation",
+        "feature.feature-wall",
+        "proof.community",
+        "feature.developer-grid",
+        "cta.final-keyboard",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Home.jsx"
+    },
+    {
+      "id": "template.store",
+      "name": "Store",
+      "routeCount": 1,
+      "routes": [
+        "/store"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.page",
+        "catalog.featured-grid",
+        "catalog.store-toolbar",
+        "catalog.store-grid",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Store.jsx"
+    },
+    {
+      "id": "template.pro",
+      "name": "Pro",
+      "routeCount": 1,
+      "routes": [
+        "/pro"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.page",
+        "feature.ai-bento",
+        "feature.model-tabs",
+        "feature.section-title",
+        "feature.split",
+        "feature.media-card-grid",
+        "feature.split",
+        "pricing.plans",
+        "faq.accordion",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Pro.jsx"
+    },
+    {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "routeCount": 1,
+      "routes": [
+        "/pricing"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.pricing-art",
+        "pricing.plans",
+        "pricing.compare-table",
+        "faq.accordion",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Pricing.jsx"
+    },
+    {
+      "id": "template.teams",
+      "name": "Teams",
+      "routeCount": 1,
+      "routes": [
+        "/teams"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.page",
+        "proof.logo-strip",
+        "feature.centered-lead",
+        "feature.split",
+        "showcase.teams-slideshow",
+        "feature.split",
+        "feature.split",
+        "pricing.pro-upsell",
+        "feature.centered-lead",
+        "pricing.plans",
+        "feature.centered-lead",
+        "catalog.template-grid",
+        "cta.download",
+        "proof.social-cards",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Teams.jsx"
+    },
+    {
+      "id": "template.ai",
+      "name": "AI feature page",
+      "routeCount": 1,
+      "routes": [
+        "/core-features/ai"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.page",
+        "feature.ai-chip-tabs",
+        "feature.ai-card-grid",
+        "feature.byok-row",
+        "feature.ai-wide-visual",
+        "feature.split",
+        "feature.split",
+        "feature.split",
+        "feature.ai-card-pairs",
+        "pricing.plans",
+        "faq.accordion",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Ai.jsx"
+    },
+    {
+      "id": "template.windows",
+      "name": "Windows",
+      "routeCount": 1,
+      "routes": [
+        "/windows"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.windows-serif",
+        "feature.centered-lead",
+        "feature.media-card-grid",
+        "feature.hotkeys-banner",
+        "showcase.ai-frame",
+        "proof.quote-strip",
+        "feature.split",
+        "showcase.game-launcher-marquee",
+        "catalog.extension-reel",
+        "feature.centered-lead",
+        "catalog.coming-soon-grid",
+        "cta.windows-final",
+        "faq.accordion",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Windows.jsx"
+    },
+    {
+      "id": "template.ios",
+      "name": "iOS",
+      "routeCount": 1,
+      "routes": [
+        "/ios"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "nav.navbar",
+        "hero.page",
+        "feature.section-title",
+        "showcase.phone-composite",
+        "feature.split",
+        "feature.media-card-grid",
+        "feature.section-title",
+        "showcase.full-bleed-image",
+        "feature.split",
+        "feature.section-title",
+        "feature.media-card-grid",
+        "cta.download",
+        "faq.accordion",
+        "footer.footer"
+      ],
+      "implementedBy": "pages/Ios.jsx"
+    }
+  ]
+}
