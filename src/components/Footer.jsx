@@ -77,7 +77,7 @@ export default function Footer({ art = 'cube' }) {
             <p className="text-[14px] font-medium leading-[1.6] tracking-ui text-grey-200">New features, plugins and tips, once a month at most.</p>
           </div>
           <form className="w-full max-w-[430px]" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 gap-4 xs:grid-cols-[276px_138px]">
+            <div className="grid grid-cols-1 gap-4 xs:grid-cols-[276px_138px] sm:grid-cols-1 nav:grid-cols-[276px_138px]">
               <input
                 type="email"
                 placeholder="you@yourmail.com"

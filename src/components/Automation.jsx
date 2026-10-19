@@ -163,8 +163,8 @@ function HotkeyIllustration() {
   const keys = COMBOS[exiting ? swap.from : combo]
   const cls = swap ? `${exiting ? 'hk-exit' : 'hk-enter'} ${swap.active ? 'hk-active' : ''}` : ''
   return (
-    <div ref={ref} data-inview={inView} className="flex h-[114px] items-center justify-center sm:h-auto sm:px-6 sm:pt-10">
-      <div className="flex flex-none scale-[.61] items-center gap-3 sm:scale-100">
+    <div ref={ref} data-inview={inView} className="flex h-[114px] items-center justify-center sm:h-auto sm:px-6 api3:pt-10">
+      <div className="flex flex-none scale-[.61] items-center gap-3 sm:scale-[.6] nav:scale-[.8] lg:scale-100">
         <Combo keys={keys} stage={exiting ? 0 : stage} className={cls} />
       </div>
     </div>
@@ -201,18 +201,18 @@ export default function Automation() {
           </div>
 
           {/* Left */}
-          <div className={`${cardCls} flex flex-col border-b-0 sm:min-h-[341px] sm:[grid-area:left]`}>
+          <div className={`${cardCls} flex flex-col border-b-0 sm:min-h-0 api3:min-h-[341px] sm:[grid-area:left]`}>
             <QuicklinksMock />
             <Desc icon="bolt" title="Quick links" className="max-w-[399px]">
-              Bookmark any URL or folder with a slot for a query, then open it anywhere with two keystrokes.
+              <span className="sm:hidden">Bookmark any URL or folder with a slot for a query, then open it anywhere with two keystrokes.</span><span className="hidden sm:inline">Bookmark any URL or folder with a query slot and open it in two keystrokes.</span>
             </Desc>
           </div>
 
           {/* Right */}
-          <div className={`${cardCls} grid grid-cols-[minmax(0,1fr)] grid-rows-[1fr_auto] border-b-0 sm:min-h-[341px] sm:[grid-area:right]`}>
+          <div className={`${cardCls} grid grid-cols-[minmax(0,1fr)] grid-rows-[1fr_auto] border-b-0 sm:min-h-0 api3:min-h-[341px] sm:[grid-area:right]`}>
             <HotkeyIllustration />
             <Desc icon="cmd" title="Hotkeys">
-              Bind any command, script or plugin to a key combo or alias and trigger it from every app.
+              <span className="sm:hidden">Bind any command, script or plugin to a key combo or alias and trigger it from every app.</span><span className="hidden sm:inline">Bind any command, script or plugin to a key combo or alias and trigger it from every app, on any screen.</span>
             </Desc>
           </div>
         </div>

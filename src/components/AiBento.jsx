@@ -186,7 +186,7 @@ export default function AiBento({
           <>
             <AiCard
               className="md:col-span-2"
-              visualH="h-[130px] md:h-[332px]"
+              visualH="h-[130px] md:h-[min(332px,calc(40.65vw-99px))]"
               title="Chat that acts"
               desc="Hand off small chores in plain language. The assistant calls the right app, confirms what changed and keeps a log."
             >

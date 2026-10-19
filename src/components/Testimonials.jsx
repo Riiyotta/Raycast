@@ -12,7 +12,7 @@ const QUOTES = [
   ['It is the first app I install on a new machine ', 'before anything else', ', even before my editor.'],
 ]
 const HIGHLIGHTS = [
-  [['Favorite command:', 'Clipboard', 'Pulls back anything copied this week.'], ['Daily hotkey:', 'Window snap', 'Uses ', 'ctrl+opt', ' to tile two apps side by side for review.']],
+  [['Favorite command:', 'Clipboard', 'Pulls back anything you copied this week.'], ['Daily hotkey:', 'Window snap', 'Uses ', 'ctrl+opt', ' to arrange two applications beside each other, then returns instantly.']],
   [['Built a plugin:', 'Deploy Bot', 'A release helper the whole team uses.'], ['Favorite command:', 'Quick math', 'Converts units and time zones without opening a calculator.']],
 ]
 

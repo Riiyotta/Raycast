@@ -66,7 +66,10 @@ export default function Navbar() {
 
         {/* Desktop right group */}
         <div className="absolute right-8 top-1/2 hidden -translate-y-1/2 items-center gap-6 nav:flex">
-          <a href="#" className={linkCls}>Log in</a>
+          <a href="#" className={`${linkCls} hidden lg:block`}>Log in</a>
+          <span className="inline-flex lg:hidden">
+            <LightButton icon={null} className="w-[66px]">Log in</LightButton>
+          </span>
           <span className="hidden lg:inline-flex">
             <LightButton icon="download" className="w-[117px]">Download</LightButton>
           </span>

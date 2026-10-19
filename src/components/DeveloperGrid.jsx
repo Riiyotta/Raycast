@@ -192,12 +192,12 @@ className="api-inner">
             <Spacer h="h-12" />
 
             <DottedCell ref={r1} active={a1} variant="layers" className="h-[281px] api2:col-span-2 api2:h-[485px] api3:col-start-2 api3:row-span-2" />
-            <div className={`${cellBase} flex h-[123px] flex-col gap-sp-4 p-6 api2:h-[271px]`}>
+            <div className={`${cellBase} flex h-[123px] flex-col gap-sp-4 p-6 api2:h-auto api3:h-[271px]`}>
               <h3 className="text-[32px] font-normal leading-[1.1718] tracking-ui text-white api2:text-[56px]">
                 Extend it with your code
               </h3>
             </div>
-            <div className={`${cellBase} flex h-[186px] flex-col justify-between gap-sp-4 p-6 api2:h-[213px]`}>
+            <div className={`${cellBase} flex h-[186px] flex-col justify-between gap-sp-4 p-6 api2:h-auto api3:h-[213px]`}>
               <p className="font-geist text-[14px] font-medium leading-[1.6] tracking-link text-grey-300">
                 Write plugins with familiar web tools and share them with your whole team in minutes.
               </p>
@@ -209,20 +209,20 @@ className="api-inner">
 
             <Spacer h="h-12" />
 
-            <DottedCell ref={r2} active={a2} variant="computer" className="h-[326px] api2:col-span-2 api2:h-[456px]" />
-            <LinkCell h="h-[300px] api2:h-[456px]" title="Typed toolkit" body="A strongly typed library of list, form and detail views that look native out of the box." />
+            <DottedCell ref={r2} active={a2} variant="computer" className="h-[326px] api2:h-[var(--api-h6)] api3:col-span-2 api3:h-[456px]" />
+            <LinkCell h="h-[300px] api2:h-[var(--api-h6)] api3:h-[456px]" title="Typed toolkit" body="A strongly typed library of list, form and detail views that look native out of the box." />
 
-            <DottedCell active={a34} variant="toggle" className="h-[330px] api2:h-[355px]" />
-            <LinkCell h="h-[300px] api2:h-[355px]" title="Hot reload" body="Save a file and see the change in the bar instantly, with logs streamed to your terminal." />
-            <DottedCell ref={r34} active={a34} toggle={flip} variant="disks" className="hidden h-[355px] api2:flex" />
+            <DottedCell active={a34} variant="toggle" className="h-[330px] api2:hidden api3:flex api3:h-[355px]" />
+            <LinkCell h="h-[300px] api2:h-[var(--api-h4)] api3:h-[355px]" title="Hot reload" body="Save a file and see the change in the bar instantly, with logs streamed to your terminal." />
+            <DottedCell ref={r34} active={a34} toggle={flip} variant="disks" className="hidden h-[355px] api2:flex api2:h-[var(--api-h4)] api3:h-[355px]" />
 
             <Spacer h="h-12" min2 />
 
             <LinkCell h="hidden h-[429px] api2:flex" title="Local storage" body="Persist settings and cached data with a simple key value store that syncs per user." />
-            <DottedCell ref={r5} active={a5} variant="pieces" className="hidden h-[429px] api2:col-span-2 api2:flex" />
+            <DottedCell ref={r5} active={a5} variant="pieces" className="hidden h-[429px] api2:flex api3:col-span-2" />
 
-            <DottedCell ref={r6} active={a6} variant="float" className="h-[326px] api2:col-span-2 api2:h-[456px]" />
-            <LinkCell h="h-[300px] api2:h-[456px]" title="Team publishing" body="Share private plugins inside your organization with versioning and review built in." />
+            <DottedCell ref={r6} active={a6} variant="float" className="h-[326px] api2:h-[var(--api-h6)] api3:col-span-2 api3:h-[456px]" />
+            <LinkCell h="h-[300px] api2:h-[var(--api-h6)] api3:h-[456px]" title="Team publishing" body="Share private plugins inside your organization with versioning and review built in." />
 
             <div className={`${cellBase} hidden h-16 api3:block`} />
             <a

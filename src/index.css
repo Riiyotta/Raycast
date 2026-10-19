@@ -407,6 +407,8 @@
 
   /* ---------- API grid ---------- */
   .api-wrap { --grid-width: min(100vw - 60px, 1065px); }
+  /* 2-col (784-1199) figure rows: height tracks the cell width, capped (measured on the original) */
+  .api-inner { --api-h6: min(456px, calc((var(--grid-width) / 2 - 100px) * .98342 + 100px)); --api-h4: min(400px, calc(var(--grid-width) / 2)); }
   .api-inner {
     --n: 1;
     display: grid;
